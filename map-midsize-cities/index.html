@@ -1,0 +1,19 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Map of midsize U.S. cities | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="map" id="map-midsize-cities" data-source="cities.geojson"></div>
+  
+  <script src="midsize-cities.js"></script>
+</body>
+</html>
