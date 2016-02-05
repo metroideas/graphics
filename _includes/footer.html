@@ -1,0 +1,41 @@
+<footer class="footer black inverse">
+  <article class="grid">
+    <div class="flex row">
+      <section class="span-4">
+        <h1>Metro Ideas Project</h1>
+        <address>
+          800 Market St. Suite 200<br>
+          Chattanooga, Tenn. 37402<br>
+          423-521-1400
+        </address>
+      </section>
+
+      <section class="span-4">
+        <ul class="list-inline social-buttons">
+          <li>
+            <a href="http://facebook.com/{{ site.facebook }}" class="social-button collecticon-facebook text-xxlarge" alt="Link to Facebook page"></a>
+          </li>
+
+          <li>
+            <a href="http://twitter.com/{{ site.twitter }}" class="social-button collecticon-twitter text-xxlarge" alt="Link to Twitter account"></a>
+          </li>
+
+          <li>
+            <a href="http://instagram.com/{{ site.instagram }}" class="social-button collecticon-instagram text-xxlarge" alt="Link to Instagram account"></a>
+          </li>
+
+          <li>
+            <a href="mailto:{{ site.email }}" class="social-button collecticon-envelope text-xxlarge" alt="Link to email address"></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="span-4">
+        <h2>Subscribe</h2>
+        <p>Get updates sent to your inbox.</p>
+
+        {% include mailchimp.html %}
+      </section>
+    </div>
+  </article>
+</footer>

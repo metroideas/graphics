@@ -1,0 +1,76 @@
+// ======================================
+// Variables
+// ======================================
+
+// To do: Calculate input line height
+// To do: Infographic colors
+// ----------------------------------
+
+// Base, typography
+$sans-serif:          "Avenir Next", "AvenirNextLTW01-Regular", sans-serif;
+$strong-sans-serif:   "Avenir Next", "Avenir Next LT W01 Bold", sans-serif;
+$serif:               Martel, Georgia, serif;
+$monospace:           Consolas, Courier, monospace;
+$font-size:           16px;
+$base-line-height:    1.5;
+$heading-line-height: 1.3;
+
+// Viewports and media queries
+$xsmall:              512px;
+$small:               640px;
+$medium:              768px;
+$large:               1024px;
+$xlarge:              1280px;
+
+// Primary colors
+$black:               #252525;
+$white:               #ffffff;
+$gray:                #6d6e70;
+$navy:                #1e3567;
+$blue:                #0060ae;
+
+// Secondary colors
+$lime:                #8dbd45;
+$pine:                #0d382e;
+$red:                 #df2027;
+$sky:                 #7cadbb;
+$stone:               #a4968d;
+$teal:                #1d8376;
+$lt-gray:             #b1b3b5;
+
+// Color aliases
+$mip:                 $navy;
+$primary:             $blue;
+$meta:                $gray;
+$inverse:             $white;
+$mute:                $lt-gray;
+$muted:               $lt-gray;
+$disable:             $lt-gray;
+$disabled:            $lt-gray;
+$success:             $lime;
+$error:               $red;
+$info:                $sky;
+$subtle-gray:         lighten($muted, 25%);
+
+// Infographic colors
+$brand-75:            #56678d;
+$brand-50:            #8f9ab3;
+$brand-25:            #c7cdd9;
+$primary-75:          #0961ae;
+$primary-50:          #4689c2;
+$primary-25:          #c2d7eb;
+$meta-30:             #bcbec0;
+$meta-15:             #dcddde;
+
+// Inputs
+$input-font-size:      12px;
+$input-height:         floor($input-font-size * 2.5);
+$input-line-height:    $input-height; // To do: Calculate input line height
+$border-radius:        3px;
+
+// Components
+$component-font-size:   14px;
+$component-height:      floor($font-size * 2.5);
+$component-line-height: $component-height;
+$nav-top:               20px;
+

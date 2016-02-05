@@ -1,0 +1,40 @@
+// ======================================
+// Metro Ideas Project template
+// http://metroideas.org
+// 
+// MIT license
+// http://github.com/metroideas/template/
+// ======================================
+// 
+// style.scss imports dependencies and _*.scss in order.
+// 
+// -----------------------------------------
+
+@charset "UTF-8";
+
+@import "template/normalize";
+// $visual-grid: true;
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+
+/*! Metro Ideas Project template | MIT license | http://github.com/metroideas/template */
+@import "template/variables";
+@import "template/mixins";
+@import "template/base";
+@import "template/type";
+@import "template/forms";
+// @import "template/tables";
+@import "template/layout";
+@import "template/components";
+@import "template/utilities";
+@import "template/brand";
+// @import "template/icons";
+// @import "template/animations";
+
+// -----------------------------------------
+
+// Additional imports
+@import "docs";
+@import "examples";
+
+// -----------------------------------------

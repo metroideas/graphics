@@ -1,0 +1,33 @@
+{
+  "name": "mip-template",
+  "version": "0.0.0",
+  "description": "Template for creating MIP static pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metroideas/template.git"
+  },
+  "author": "David Morton <michaeldavidmorton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metroideas/template/issues"
+  },
+  "homepage": "https://github.com/metroideas/template#readme",
+  "devDependencies": {
+    "bower": "^1.6.5",
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
+    "grunt-shell": "^1.1.2",
+    "load-grunt-tasks": "^3.3.0",
+    "time-grunt": "^1.2.2"
+  }
+}

@@ -1,0 +1,16 @@
+/* ======================================
+/* Base
+/* =================================== */
+
+hr {
+  margin: 1em 0;
+  border: 0;
+  border-bottom: 1px solid $muted;
+}
+
+img { vertical-align: middle; }
+
+figure,
+aside { margin: 0; }
+
+pre { background-color: lighten($muted, 20%); }

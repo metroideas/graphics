@@ -1,0 +1,193 @@
+// ======================================
+// Mixins
+// ======================================
+// Text size mixins
+// + @mixin text-xlarge
+// + @mixin text-large
+// + @mixin text-medium
+// + @mixin text-small
+// + @mixin text-xsmall
+// ----------------------------------
+// Text alignment mixins
+// + @mixin text-left
+// + @mixin text-center
+// + @mixin text-right
+// ----------------------------------
+// Text weight mixins
+// + @mixin text-strong
+// + @mixin text-normal
+// + @mixin text-light
+// ----------------------------------
+// Text color mixins
+// + @mixin text-mip
+// + @mixin text-meta
+// + @mixin text-primary
+// + @mixin text-success
+// + @mixin text-info
+// + @mixin text-warning
+// + @mixin text-error
+// + @mixin text-muted
+// ----------------------------------
+// Text misc mixins
+// + @mixin text-uppercase
+// + @mixin text-inverse
+// + @mixin text-inverse-meta
+// ----------------------------------
+// List mixins
+// + @mixin list-unstyled
+// + @mixin list-inline
+// ----------------------------------
+// Color mixins
+// + @mixin navbar-color
+// + @mixin hero-color
+// + @mixin button-color
+// + @mixin alert-color
+// ----------------------------------
+// Layout mixins
+// + @mixin clearfix
+// + @mixin padded-container
+// + @mixin transform-translate
+// ----------------------------------
+//
+// To do: Consolidate color mixins
+// To do: IE8 fallback for hero box-shadow
+// To do: Consolidate input mixins
+// ----------------------------------
+
+// Text
+@mixin text-xxlarge   { font-size: 200%; }
+@mixin text-xlarge    { font-size: 150%; }
+@mixin text-large     { font-size: 120%; }
+@mixin text-medium    { font-size: 100%; }
+@mixin text-small     { font-size: 88.9%; }
+@mixin text-xsmall    { font-size: 75%; }
+@mixin text-left      { text-align: left; }
+@mixin text-center    { text-align: center; }
+@mixin text-right     { text-align: right; }
+@mixin text-strong    { font-family: $strong-sans-serif; font-weight: 700; }
+@mixin text-normal    { font-weight: 400; }
+@mixin text-light     { font-weight: 100; }
+@mixin text-uppercase { text-transform: uppercase; }
+// Text color
+@mixin text-mip       { color: $mip; }
+@mixin text-meta      { color: $meta; }
+@mixin text-primary   { color: $primary; }
+@mixin text-success   { color: $success; }
+@mixin text-error     { color: $error; }
+@mixin text-muted     { color: $muted; }
+@mixin text-inverse   { color: $inverse; }
+
+// Miscellaneous
+@mixin sans-serif     { font-family: $sans-serif; }
+@mixin serif          { font-family: $serif; }
+@mixin letter-spacing { letter-spacing: 0.08em; }
+
+// ----------------------------------
+
+// Lists
+@mixin list-unstyled {
+  list-style-type: none;
+}
+
+@mixin list-inline {
+  display: inline-block;
+  margin-right: 1.5em;
+
+  &:last-child { margin-right: 0; }
+}
+
+// ----------------------------------
+
+// Round borders
+@mixin round($border-color:transparent) {
+  border-radius: 50%;
+  border: 1px solid $border-color;
+}
+
+// ----------------------------------
+
+// Used as the base for most components (_components.scss)
+// Pass with false to skip rounded borders
+@mixin base-component($border:true) {
+  min-height: $component-height;
+  
+  font-size: $component-font-size;
+  line-height: $component-line-height;
+
+  @if $border {
+    border-radius: $border-radius;
+    border: 1px solid $subtle-gray;  
+  }
+}
+
+// ----------------------------------
+// Background image overlays
+@mixin overlay-filter($color) {
+  box-shadow: inset 5000px 0 0 0 rgba($color, 0.5);
+}
+
+// Buttons
+@mixin button-color($color) {
+  background-color: $color;
+  border-color: $color;
+  color: white;
+  
+  &:active { background-color: darken($color, 15%); }
+
+}
+
+// Alerts
+@mixin alert-color($color) {
+  background-color: $color;
+  border-color: $color;
+  color: white;
+
+  > a {
+    &:link, 
+    &:active,
+    &:hover,
+    &:visited {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+// ----------------------------------
+
+// Micro clearfix hack overrides Bourbon mixin
+// http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after { clear: both; }
+  
+  *zoom: 1;
+}
+
+// -----------------------------------------
+
+// Adds L/R padding to Neat's outer-container
+
+@mixin padded-container($max-width) {
+  @include outer-container($max-width);
+  
+  padding: 16px;
+}
+
+// -----------------------------------------
+
+// Vertically positions .*-row classes in hero containers
+
+@mixin transform-translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+// -----------------------------------------

@@ -1,0 +1,305 @@
+/* ======================================
+/* Utilities
+/* =================================== */
+// Media utilities
+// + .cover
+// + .responsive
+// + .responsive-embed
+// + .responsive-embed.aspect-ratio-*
+// ----------------------------------
+// + .round
+// + .flex.row
+// + .wider
+// + .invisible (but audible)
+// + .center, centered
+// + .left
+// + .right
+// + .clearfix
+// + .inverse (parent)
+// + .list-unstyled
+// + .list-inline
+// ----------------------------------
+// Colors
+// + Background image overlays
+// + Primary, secondary background colors
+// + Buttons
+// ----------------------------------
+
+// Media utilities
+// ----------------------------------
+// Image covers container
+
+.cover {
+  // Background images
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// ----------------------------------
+
+// Image resizes with container
+img.responsive { 
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+img.cover {
+  background: none;
+  object-fit: cover;
+}
+
+// Sizes for inline cover images
+img.cover {
+  &.whole  { height: 100vh; }
+  &.half   { height: 50vh;  }
+  &.fourth { height: 25vh;  }
+}
+
+// ----------------------------------
+
+// Embed resizes with window (container)
+.responsive-embed {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+
+  padding-top: 1em;
+  padding-bottom: 96.69%; // 1:1 aspect ratio
+
+  & iframe,
+  & object,
+  & embed,
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    border-width: 0;
+  }
+}
+
+// Other aspect ratios
+.responsive-embed {
+  &.widescreen,
+  &.aspect-ratio-16x9 { padding-bottom: 56.25%; } // 16:9
+  &.aspect-ratio-8x5  { padding-bottom: 62.5%;  } // 8:5
+  &.aspect-ratio-4x3  { padding-bottom: 75%;    } // 4:3
+  &.aspect-ratio-3x2  { padding-bottom: 66.6%;  } // 3:2
+}
+
+
+// ----------------------------------
+// Round borders
+.round {
+  @include round;
+}
+
+// ----------------------------------
+
+// Adding .flex will make .row children equal height on $small width and up (among other things)
+.flex.row {
+  @media (min-width: $small) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+// ----------------------------------
+
+// Container is wider than parent on displays > $small.
+// Requires centered or .responsive* child. 
+.wider {
+  margin: 1.5em 0;
+
+  @media (min-width: $small) {
+    width: 110%;
+    padding: 0 1em;
+    margin-left: -5%;
+    margin-right: -5%;
+  }
+
+  @media (min-width: $medium) {
+    width: 125%;
+    margin-left: -12.5%;
+    margin-right: -12.5%;
+  }
+
+  @media (min-width: $large) {
+    width: 150%;
+    margin-left: -25%;
+    margin-right: -25%;
+  }
+}
+
+// ----------------------------------
+
+// Invisible (but audible)
+// Visually hides element 
+// http://webaim.org/techniques/css/invisiblecontent/#techniques
+.invisible {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// ----------------------------------
+
+// Text left-aligned on mobile, centered on larger 
+.small-center {
+  @media (min-width:$small) and (min-width:$small) {
+    @include text-center;
+  }
+}
+
+// ----------------------------------
+
+// Centers elements in their container
+@media (min-width: $small) {
+  .center,
+  .centered {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    
+    // Overrides margin on .span-*:last-child
+    &:last-child { margin-right: auto; }
+  }
+}
+
+.left     { float: left; }
+.right    { float: right; }
+.clearfix { @include clearfix; }
+
+// ----------------------------------
+
+// Inverts font color on dark backgrounds
+// Add class to parent container to invert child elements.
+.inverse {
+  &,
+  .category,
+  .date,
+  .lead,
+  .logo,
+  .toggle,
+  .toggle:before,
+  .toggle:after,
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    color: $inverse !important;
+    border-color: $inverse !important;
+  }
+}
+
+// ----------------------------------
+
+// List styles
+.list-unstyled { @include list-unstyled; }
+
+.list-inline > li { @include list-inline; }
+
+// ----------------------------------
+
+// Background image color overlays
+
+// Primary colors
+.overlay.black { @include overlay-filter($black); }
+
+.overlay.gray,
+.overlay.meta { @include overlay-filter($gray); }
+
+.overlay.navy,
+.overlay.mip { @include overlay-filter($navy); }
+
+.overlay.blue,
+.overlay.primary { @include overlay-filter($primary); }
+
+.overlay.white { @include overlay-filter($white); }
+
+// Secondary colors
+.overlay.lime,
+.overlay.success { @include overlay-filter($success); }
+
+.overlay.pine { @include overlay-filter($pine); }
+
+.overlay.red,
+.overlay.error { @include overlay-filter($error); }
+
+.overlay.sky { @include overlay-filter($sky); }
+
+.overlay.lt-gray,
+.overlay.disable,
+.overlay.disabled,
+.overlay.mute,
+.overlay.muted { @include overlay-filter($lt-gray); }
+
+.overlay.teal { @include overlay-filter($teal); }
+
+.overlay.stone { @include overlay-filter($stone); }
+
+.overlay.subtle-gray { @include overlay-filter($subtle-gray); }
+
+// ----------------------------------
+
+// Primary background colors
+.black { background-color: $black; }
+
+.gray,
+.meta { background-color: $gray; }
+
+.navy,
+.mip { background-color: $navy; }
+
+.blue,
+.primary { background-color: $primary; }
+
+.white { background-color: $white; }
+
+// Secondary background colors
+.lime,
+.success { background-color: $success; }
+
+.pine { background-color: $pine; }
+
+.red,
+.error { background-color: $error; }
+
+.sky { background-color: $sky; }
+
+.lt-gray,
+.disable,
+.disabled,
+.mute,
+.muted { background-color: $lt-gray; }
+
+.teal { background-color: $teal; }
+
+.stone { background-color: $stone; }
+
+.subtle-gray { background-color: $subtle-gray; }
+
+// Infographic background colors
+
+.brand-75   { background-color: $brand-75; }
+.brand-50   { background-color: $brand-50; }
+.brand-25   { background-color: $brand-25; }
+.primary-75 { background-color: $primary-75; }
+.primary-50 { background-color: $primary-50; }
+.primary-25 { background-color: $primary-25; }
+.meta-30    { background-color: $meta-30; }
+.meta-15    { background-color: $meta-15; }
+

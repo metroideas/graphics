@@ -1,0 +1,32 @@
+# Meta
+title: Metro Ideas Project
+description: "The Metro Ideas Project is a nonpartisan, independent public policy research organization."
+keywords: "chattanooga, policy, research, think tank"
+
+# Paths
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - node_modules/
+  - bower_components/
+  - assets/sass/
+  - bower.json
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - package.json
+  - README.md
+
+# Social
+twitter: thinkmetro
+facebook: Metro-Ideas-Project-176974182643152
+instagram: metroideas
+github: metroideas
+email: info@metroideas.org
+
+# API
+ga_key: "UA-68712194-1"

@@ -1,0 +1,6 @@
+_site/
+.sass-cache/
+.DS_Store
+Gemfile.lock
+node_modules/
+bower_components/

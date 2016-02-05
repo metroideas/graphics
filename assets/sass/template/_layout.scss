@@ -1,0 +1,193 @@
+/* ======================================
+/* Layouts
+/* =================================== */
+// Grid-based containers
+// + .grid, .grid-*
+// + .row
+// + .span-*
+// + .shift-*
+// + .span-*.no-gap
+// -----------------------------------------
+// Hero containers
+// + .hero-whole
+// + .hero-half
+// + .hero-fourth
+// + .absolute-upper
+// + .absolute-middle
+// + .absolute-lower
+// -----------------------------------------
+// Media objects
+// -----------------------------------------
+// To do: Fix tiny columns on .grid-small
+// -----------------------------------------
+
+// Grid-based containers
+// Percentage-based grid with a primary breakpoint at 640px.
+
+.grid-small  { @include padded-container($small); } // 640px wide
+.grid        { @include padded-container($large); } // 1024px wide
+.grid-full   { @include outer-container(100%);    } // 100% wide
+
+.row { @include row; }
+
+.span-12,
+.span-11,
+.span-10,
+.span-9,
+.span-8,
+.span-7,
+.span-6,
+.span-5,
+.span-4,
+.span-3,
+.span-2,
+.span-1 { margin-bottom: 1em; }
+
+@media (min-width: $small) {
+
+  .row { margin-bottom: 2em; }
+  
+  .span-12,
+  .span-11,
+  .span-10,
+  .span-9,
+  .span-8,
+  .span-7,
+  .span-6,
+  .span-5,
+  .span-4,
+  .span-3,
+  .span-2,
+  .span-1 { margin-bottom: 0; }
+
+  // Columns
+  .span-12 { @include span-columns(12); }
+  .span-11 { @include span-columns(11); }
+  .span-10 { @include span-columns(10); }
+  .span-9  { @include span-columns(9); }
+  .span-8  { @include span-columns(8); }
+  .span-7  { @include span-columns(7); }
+  .span-6  { @include span-columns(6); }
+  .span-5  { @include span-columns(5); }
+  .span-4  { @include span-columns(4); }
+  .span-3  { @include span-columns(3); }
+  .span-2  { @include span-columns(2); }
+  .span-1  { @include span-columns(1); }
+
+
+
+  // Offsets
+  .shift-12 { @include shift(12); }
+  .shift-11 { @include shift(11); }
+  .shift-10 { @include shift(10); }
+  .shift-9  { @include shift(9); }
+  .shift-8  { @include shift(8); }
+  .shift-7  { @include shift(7); }
+  .shift-6  { @include shift(6); }
+  .shift-5  { @include shift(5); }
+  .shift-4  { @include shift(4); }
+  .shift-3  { @include shift(3); }
+  .shift-2  { @include shift(2); }
+  .shift-1  { @include shift(1); }
+
+  // Add .no-gap to remove column gutters
+  .span-12.no-gap,
+  .span-11.no-gap,
+  .span-10.no-gap,
+  .span-9.no-gap,
+  .span-8.no-gap,
+  .span-7.no-gap,
+  .span-6.no-gap,
+  .span-5.no-gap,
+  .span-4.no-gap,
+  .span-3.no-gap,
+  .span-2.no-gap,
+  .span-1.no-gap { margin: 0; }
+
+  // To do: Fix tiny columns on .grid-small
+}
+
+// -----------------------------------------
+
+// Hero containers
+.hero-whole,
+.hero-half,
+.hero-fourth {
+  position: relative;
+  z-index: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1em 0;
+
+  overflow: auto;
+  -ms-overflow-style: none; // Prevents auto scrollbar in IE10
+}
+
+// Centers elements on $small width or height
+[class^="hero-"] header {
+  margin: 3em auto;
+
+  @media (min-height: $small) and (min-width: $small) {
+    margin: 0 auto;
+  }
+}
+
+.absolute-upper,
+.absolute-middle,
+.absolute-lower { position: static; }
+
+// Absolute vertical positions on $small
+@media (min-height: $small) and (min-width: $small) {
+
+  .hero-whole  { min-height: 100vh; }
+  .hero-half   { min-height: 50vh; }
+  .hero-fourth { min-height: 25vh; }
+
+  .absolute-upper,
+  .absolute-middle,
+  .absolute-lower {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+  }
+  
+  .absolute-upper {
+    top: 25%;
+    @include transform-translate(-50%, -25%);
+  }
+
+  .absolute-middle {
+    top: 50%;
+    @include transform-translate(-50%, -50%);
+  }
+
+  .absolute-lower {
+    top: 80%;
+    @include transform-translate(-50%, -80%);
+  }
+}
+
+// -----------------------------------------
+
+// Media objects
+.media {
+  @include text-small;
+  
+  &,
+  .media-body {
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  .media-body :first-child { margin-top: 0; }
+
+  img {
+    display: block;
+    float: left;
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 1em;
+  }
+}

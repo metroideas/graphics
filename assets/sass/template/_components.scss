@@ -1,0 +1,284 @@
+/* ======================================
+/* Components
+/* =================================== */
+// 
+// + .toggle
+// + .nav
+// + .nav.inline
+// + .dropdown-menu
+// + .navbar
+// + .menu-selector
+// + .accordion
+// 
+// To do: Increase click area for .navbar dropdown
+// -----------------------------------------
+
+// Notes:
+// Components are intended to be used with ~/assets/js/components.js
+//
+// Many of them also share CSS classes like .toggle and .nav.
+// Components are marked with ! if they are used by other components and patterns
+// Accompanying .js-* classes are also noted
+
+// -----------------------------------------
+
+// !Default icon toggle used by .dropdown-menu, .accordion and .navbar
+// components.js assigns an event listener for .toggle "click"
+.toggle {
+  display: block;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    float: right;
+
+    font-size: 16px;
+    font-family: "collecticons";
+    color: $muted;
+  }
+
+  // Small-chevron-down icon when item is closed
+  &:before { content: "\EA64"; }
+}
+
+// !Used by same components as .toggle
+// Small x mark icon when item is open
+.open .toggle {
+  &:before { content: ""; }
+  &:after  { content: "\EA70"; }
+}
+
+// -----------------------------------------
+
+// !Default block .nav used by .navbar, .dropdown-menu, and .menu-selector
+.nav {
+  @include list-unstyled;
+  @include base-component;
+
+  & > li { @include base-component($border:false); }
+  
+  & > li:hover { background-color: darken(white, 2%); }
+
+  a {
+    padding: 0 1em;
+    display: block;
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+// Inline nav
+.nav.inline {
+  & > li {
+    @include list-inline;
+    padding: 0;
+  }
+}
+
+// -----------------------------------------
+
+// !Active item used by .nav, .nav.inline and .dropdown-menu
+.nav > li.active {
+  background-color: $subtle-gray;
+
+  a {
+    color: $meta;
+    cursor: default;
+  }
+}
+
+// -----------------------------------------
+
+// Default dropdown menu
+// Use with .js-dropdown-menu for open/close
+.dropdown-menu {
+  @include base-component($border:true);
+
+  .toggle {
+    padding: 0 1em;
+    text-decoration: none;
+  }
+
+  .nav {
+    display: none;
+    margin: -100% 0 0;
+    border-width: 0;
+  }
+
+  &.open .nav {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+// -----------------------------------------
+
+// Default navbar has a transparent background and gray font color
+// Use with .js-navbar
+.navbar {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+
+  // Removes vertical padding
+  .grid {
+    padding: 0 16px;
+  }
+
+  // Set minimum height, font-size
+  &,
+  .logo,
+  .toggle { @include base-component($border:false); }
+
+  a {
+    padding: 0; // Resets .nav default
+    color: $meta;
+    @include text-uppercase;
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+    
+    &:before {
+      content: "Metro Ideas Project";
+    }
+  }
+  
+  // Menu icon
+  .toggle {
+    float: right;
+    height: $component-height;
+    padding-right: 0;
+
+    &:before {
+      content: "\EA3A"; // Replace default toggle icon
+    }
+  }
+
+  // Dropdown menu hidden on page load
+  .nav {
+    display: none;
+    margin: ($component-height + 2px) -16px 0;
+    
+    @include text-center;
+
+    // Remove default border
+    border-width: 0;
+    border-radius: 0;
+
+    // Semi-transparent dark background with white text
+    & > li {
+      background-color: rgba($black, 0.8);
+
+      & a { color: $inverse; }
+
+      &:hover { background-color: rgba($black, 0.6); }
+    }
+  }
+
+  // Open dropdown
+  // Icon in &:after handled by .nav
+  &.open {
+    .nav { display: block; }
+
+    .toggle {
+      color: $meta;
+
+      &:before { content: ""; }
+    }
+  }
+
+  // Expanded navbar on displays larger than 640px x 640px
+  @media (min-width: $small) and (min-height: $small) {
+    
+    & { top: $nav-top; }
+
+    .toggle { display: none; }
+
+    .logo:before {
+      display: block;
+      width: 120px;
+      content: url(../media/logo-navbar.svg);
+    }
+
+    .logo,
+    .nav > li {
+      margin-top: 0;
+      height: 60px;
+      line-height: 60px;
+    }
+
+    .nav {
+      display: block;
+      float: right;
+      margin: 0;
+
+      background-color: transparent;
+    }
+
+    .nav > li {
+      @include list-inline;
+      margin-right: 3em;
+
+      &,
+      & > a { color: $meta; }
+
+      // Keeps nav items transparent with expanded navbar
+      &,
+      & > a,
+      &:hover { background-color: transparent; }
+    }
+
+    // Overrides nav position when in an "open" state
+    &.open .nav { margin-top: 0; }
+  }
+}
+
+// -----------------------------------------
+
+// Menu selector, CSS setup
+// Use with .js-menu-selector for open/close
+.menu-selector {
+
+  .target { display: none; }
+
+  .target.open,
+  .target:target { display: block; }
+}
+
+// -----------------------------------------
+
+// Accordion
+// Use with .js-accordion for open/close
+.accordion {
+  @include list-unstyled;
+
+  > li {
+    @include base-component($border:true);
+    padding: 0 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .toggle {
+    padding-right: 0;
+    text-decoration: none;
+  }
+    
+  .description {
+    display: none;
+    line-height: $base-line-height;
+    
+    &:before {
+      display: block;
+      content: "";
+      margin: -1em -1em 0;
+      padding-top: 1em;
+      border-top: 1px solid $subtle-gray;
+    }
+  }
+
+  .open .description { display: block; }
+}
+

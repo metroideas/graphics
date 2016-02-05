@@ -1,0 +1,49 @@
+/* ======================================
+/* Graphics
+/* =================================== */
+
+.brand {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  padding: 6.25%;
+  background-color: transparent;
+}
+
+// Default SVG colors
+.brand {
+  .mark-body {fill: #1e3567; }
+  .mark-line {fill: #fff; }
+  .logo-text {fill: #6e6f71; }
+}
+
+// SVG primary fill
+.brand {
+  &.navy,
+  &.blue,
+  &.gray,
+  &.black {
+    .mark-line { fill: $white; }
+  }
+
+  &.navy {
+    .mark-body,
+    .logo-text { fill: $navy; }
+  }
+
+  &.blue {
+    .mark-body,
+    .logo-text { fill: $blue; }
+  }
+
+  &.black {
+    .mark-body,
+    .logo-text { fill: $black; }
+  }
+
+  &.gray {
+    .mark-body,
+    .logo-text { fill: $gray; }
+  }
+}

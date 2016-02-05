@@ -1,0 +1,212 @@
+/* ======================================
+/* Forms & form elements
+/* =================================== */
+// Forms
+// + form.block
+// + form.inline
+// -----------------------------------------
+// Form elements
+// + button
+// + button styles
+// + input (text fields)
+// + label
+// + textarea
+// + select*
+// -----------------------------------------
+// Form element classes
+// + .button
+// + .alert
+// -----------------------------------------
+// 
+// To do: form messages
+// To do: * Select, radio and checkbox styles
+// To do: input disabled styles
+
+// -----------------------------------------
+
+// Forms
+form {
+  button,
+  input,
+  textarea,
+  select,
+  .button,
+  .alert { margin-bottom: 0.5em; }
+
+  &.block {
+    display: block;
+
+    #{$all-text-inputs} { width: 100%; }
+  }
+
+  &.inline {
+    button,
+    input,
+    select,
+    .button {
+      display: inline;
+      float: left;
+      margin-top: 0;
+      margin-right: 0.5em;
+    }
+
+    :last-child { margin-right: 0; }
+  }
+}
+
+// -----------------------------------------
+
+// Shared input styles
+input,
+label,
+textarea,
+.alert,
+.message { font-size: $input-font-size; }
+
+button,
+input,
+textarea,
+.button,
+.alert {
+  border-radius: $border-radius;
+  border: 1px solid $meta;
+}
+
+button,
+input,
+select,
+textarea,
+.button {
+  &:focus { border-radius: $border-radius; }
+}
+
+button,
+input,
+.button,
+.alert {
+  min-height: $input-height;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button,
+.alert {
+  padding: 0 16px;
+  
+  font-size: 12px;
+  line-height: ($input-line-height - 2px);
+  vertical-align: middle;
+  text-align: center;
+  
+  background-image: none;
+  background-color: transparent;
+}
+
+// -----------------------------------------
+
+// To do: input disabled styles
+
+// -----------------------------------------
+
+// Text fields
+#{$all-text-inputs} {
+  display: block;
+  padding-left: 8px;
+
+  background-color: white;
+  box-shadow: none;
+
+  color: $black !important; // Overrides .inverse in parent container
+}
+
+textarea { padding-top: 10px; }
+
+// -----------------------------------------
+
+// Buttons
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button {
+  display: inline-block;
+  min-width: 0;
+  white-space: nowrap;
+  @include text-uppercase;
+  @include letter-spacing;
+
+  // Overrides anchor styles on a.button
+  text-decoration: none;
+  cursor: pointer;
+
+  &:link,
+  &:visited,
+  &:hover { color: $black; }
+
+  // Button states
+  &:focus { outline: 1px solid $sky; }
+
+  &:active {
+    color: white;
+    background-color: $meta;
+    background-color: rgba($meta, 0.5);
+  }
+}
+
+// Button styles
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  &.primary { @include button-color($primary); }
+
+  // Add additional button colors here
+}
+
+// ----------------------------------
+
+// Buttons for social icons
+a.social-button {
+  padding: 0.5em;
+  vertical-align: middle;
+  text-decoration: none;
+
+  color: $primary;
+  
+  @include round($primary)
+
+  &:hover,
+  &:active {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+a.large.social-button {
+  font-size: 32px;
+  border-width: 2px;
+}
+
+// -----------------------------------------
+
+// Other input types
+
+// To do: * Select, radio and checkbox styles
+select { margin-right: 32px; }
+
+label {
+  padding-right: 16px;
+  color: $meta;
+}
+
+.alert {
+  display: block;
+  margin: ($input-font-size / 2) 0;
+}
+
+// To do: form messages and alerts
+
+

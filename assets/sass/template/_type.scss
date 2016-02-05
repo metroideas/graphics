@@ -1,0 +1,234 @@
+/* ======================================
+/* Typography
+/* =================================== */
+// Elements
+// + body
+// + headers
+// + anchors
+// + header > anchor
+// + small
+// + figcaption
+// + blockquote
+// + ul
+// + ol
+// + address
+// + code
+// + footer
+// ----------------------------------
+// Type classes
+// + .headline
+// + .category
+// + .date
+// + .lead
+// + .pullquote
+// + .byline
+// ----------------------------------
+// Text utilities
+// + Size
+// + Alignment
+// + Weight
+// + Color
+// ----------------------------------
+
+// Elements
+body {
+  font-size: $font-size;
+  font-family: $sans-serif;
+  line-height: $base-line-height;
+  text-rendering: optimizeLegibility;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: $heading-line-height;
+}
+
+strong {
+  font-family: $strong-sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: $blue;
+  
+  &:visited { color: $navy; } 
+  
+  &:hover,
+  &:active  { color: $sky; }
+}
+
+// Header anchors look like headers
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: $black;
+  text-decoration: none;
+
+  &:visited { color: inherit; }
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+    color: $sky;
+  }
+}
+
+small { @include text-small; }
+
+blockquote {
+  margin: 0 5px 0 2px;
+  padding-left: 1em;
+
+  @media (min-width: $medium) {
+    margin: 24px 16px 24px 12px;
+  }
+  
+  border-left: 2px solid $muted;
+}
+
+blockquote,
+figcaption { @include text-meta; }
+
+figcaption {
+  padding-top: 1em;
+  @include serif;
+  @include text-xsmall;
+  font-style: italic;
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+address { font-style: normal; }
+
+code {
+  font-family: $monospace;
+  font-size: 14px;
+}
+
+footer {
+  padding: 1em 0;
+
+  @media (min-width: $medium) {
+    padding: 3em 0;
+  }
+
+  h1,
+  h2 {
+    @include text-small;
+    @include text-uppercase;
+    @include text-strong;
+    @include letter-spacing;
+  }
+
+  a { text-decoration: none; }
+
+  p,
+  ul,
+  address { @include text-xsmall; }
+
+  ul { @include list-unstyled; }
+
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+// ----------------------------------
+
+// Type classes
+.headline,
+.category,
+.date,
+.lead,
+.pullquote { margin: 0; }
+
+.lead { line-height: $heading-line-height; }
+
+.lead,
+.pullquote { @include text-large; }
+
+.pullquote,
+.subhead { @include serif; }
+
+.pullquote { font-weight: 600; }
+.subhead   { font-weight: 700; }
+
+.category,
+.date,
+.byline { @include text-xsmall; }
+
+.category,
+.date,
+.lead,
+.byline { @include text-meta; }
+
+.category,
+.date { @include text-uppercase; }
+
+.category,
+.date,
+.byline { @include letter-spacing; }
+
+// Subhead sizes shifted down
+h1.subhead { @include text-xlarge; }
+h2.subhead { @include text-large;  }
+h3.subhead { @include text-medium; }
+h4.subhead { @include text-small; }
+
+// ----------------------------------
+
+// Text sizes correspond to h1-h6 sizes
+.text-xxlarge { @include text-xxlarge; } // h1
+.text-xlarge  { @include text-xlarge; }  // h2
+.text-large   { @include text-large;  }  // h3
+.text-medium  { @include text-medium; }  // h4
+.text-small   { @include text-small;  }  // h5
+.text-xsmall  { @include text-xsmall; }  // h6
+
+// Text alignment
+.text-left    { @include text-left; }
+.text-center  { @include text-center; }
+.text-right   { @include text-right; }
+
+// Text weight
+.text-strong  { @include text-strong; }
+.text-normal  { @include text-normal; }
+.text-light   { @include text-light; }
+
+// Text colors
+.text-navy,
+.text-mip     { @include text-mip; }
+.text-blue,
+.text-primary { @include text-primary; }
+
+.text-lime,
+.text-success { @include text-success; }
+
+.text-red,
+.text-error   { @include text-error; }
+
+.text-gray,
+.text-meta    { @include text-meta; }
+
+.text-disable,
+.text-disabled,
+.text-mute,
+.text-muted,
+.text-lt-gray { @include text-muted; }
+
+.text-inverse { @include text-inverse; }
+
+.text-uppercase { @include text-uppercase; }
+
