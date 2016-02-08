@@ -1931,30 +1931,34 @@ img.cover.fourth {
   fill: #6d6e70;
 }
 
-.docs .swatch,
-.docs .swatch-small {
+pre {
+  padding: 1em 0.5em;
+}
+
+.swatch,
+.swatch-small {
   padding-left: 1em;
   font-size: 14px;
   color: #ffffff;
   text-align: middle;
 }
 
-.docs .swatch {
+.swatch {
   height: 80px;
   line-height: 80px;
 }
 
-.docs .swatch-small {
+.swatch-small {
   height: 20px;
   line-height: 20px;
 }
 
-.docs .white.swatch,
-.docs .white.swatch-small {
+.white.swatch,
+.white.swatch-small {
   color: #252525;
 }
 
-.docs .sample {
+.sample {
   position: relative;
   min-height: 80px;
   padding: 1em;
@@ -1963,319 +1967,17 @@ img.cover.fourth {
   *zoom: 1;
 }
 
-.docs .sample:before, .docs .sample:after {
+.sample:before, .sample:after {
   content: " ";
   display: table;
 }
 
-.docs .sample:after {
+.sample:after {
   clear: both;
 }
 
-.docs .sample + pre.sample {
+.sample + pre.sample {
   margin-top: 0;
   border-top-width: 0;
   border-radius: 0 0 3px 3px;
-}
-
-/* ======================================
-/* Examples
-/* =================================== */
-.index .label {
-  margin-top: 0;
-  font-size: 120%;
-  text-transform: uppercase;
-  color: #6d6e70;
-  font-family: "Avenir Next", "Avenir Next LT W01 Bold", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.index .label:after {
-  display: block;
-  content: "";
-  margin-left: 460px;
-  margin-right: 460px;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid #6d6e70;
-}
-
-.index article img {
-  min-height: 25vh;
-  object-fit: cover;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .index article img {
-    min-height: 33vh;
-  }
-}
-
-.index article.featured img {
-  max-height: 50vh;
-}
-
-.index article header {
-  margin: 1em auto;
-}
-
-.index article header .headline {
-  margin: 4px 0;
-}
-
-.index article header .byline {
-  margin: 0;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .index {
-    padding-top: 1em;
-  }
-  .index .label {
-    padding-bottom: 2em;
-  }
-  .index header {
-    margin: 2em auto;
-  }
-}
-
-.big.headline {
-  text-transform: uppercase;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .big.headline {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-family: "Avenir Next", "Avenir Next LT W01 Bold", sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-  }
-  h1.big.headline {
-    font-size: 48px;
-  }
-  h2.big.headline {
-    font-size: 32px;
-  }
-  h3.big.headline {
-    font-size: 24px;
-  }
-}
-
-.readmore {
-  margin-bottom: 1em;
-  font-size: 75%;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.readmore a {
-  color: #6d6e70;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .readmore {
-    margin-bottom: 3em;
-  }
-}
-
-.about-page .splash {
-  background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&w=350&h=150);
-}
-
-.about-page .map {
-  background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&w=350&h=150);
-}
-
-.about-page .chattanooga {
-  background-color: #ffffff;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .about-page .chattanooga {
-    background-color: #ffffff;
-    background: linear-gradient(to right, white 0%, white 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%), url(https://placeholdit.imgix.net/~text?txtsize=33&w=350&h=150);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .about-page .chattanooga .lead {
-    margin-top: 1em;
-    text-transform: uppercase;
-    font-size: 88.9%;
-    color: #b1b3b5;
-    letter-spacing: 0.08em;
-  }
-  .about-page .chattanooga .copy {
-    width: 60%;
-    padding-top: 160px;
-    padding-right: 2em;
-  }
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .about-page .process .nav {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-width: 0;
-    text-align: right;
-  }
-  .about-page .process .nav a {
-    color: #6d6e70;
-  }
-  .about-page .process .nav .active {
-    background-color: transparent;
-  }
-  .about-page .process .nav .active a {
-    color: #0060ae;
-  }
-  .about-page .process .targets {
-    height: 360px;
-    padding-left: 20px;
-    border-left: 3px solid #f2f3f3;
-  }
-  .about-page .process .targets .lead {
-    color: #b1b3b5;
-  }
-  .about-page .process .target {
-    padding-top: 40px;
-  }
-}
-
-.about-page .team .profile .name {
-  margin-bottom: 0.25em;
-}
-
-.about-page .team .profile .title {
-  margin-top: 0.25em;
-  font-size: 75%;
-  text-transform: uppercase;
-  color: #6d6e70;
-  letter-spacing: 0.08em;
-}
-
-.about-page .team .profile hr.third {
-  display: none;
-  width: 33%;
-  border-bottom: 1px solid #0060ae;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .about-page .team .profile hr.third {
-    display: block;
-  }
-}
-
-.about-page .team .profile .social-icons.list-inline > li {
-  margin-right: 12px;
-}
-
-.about-page .call-to-action {
-  background-image: url(https://placeholdit.imgix.net/~text?txtsize=33&w=300&h=200);
-}
-
-.about-page .call-to-action.inverse input.email,
-.about-page .call-to-action.inverse input.zip {
-  color: #ffffff !important;
-  border-color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0) !important;
-}
-
-.homepage .description {
-  display: none;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .homepage .description {
-    display: block;
-  }
-}
-
-.homepage .splash .readmore {
-  display: none;
-}
-
-.homepage .splash .readmore a.button {
-  padding: 0.5em 2em;
-  font-size: 120%;
-  text-transform: uppercase;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .homepage .splash header {
-    font-size: 150%;
-  }
-  .homepage .splash .readmore {
-    display: block;
-  }
-}
-
-.homepage .about .headline {
-  text-transform: uppercase;
-}
-
-.homepage .about .lead {
-  font-size: 88.9%;
-  color: #b1b3b5;
-}
-
-.homepage .about .readmore {
-  margin-top: 1em;
-  text-align: left;
-  text-transform: none;
-}
-
-@media (min-width: 640px) and (min-height: 640px) {
-  .homepage .about {
-    padding-top: 3em;
-    padding-bottom: 4em;
-  }
-}
-
-@media (min-width: 640px) {
-  .homepage .naked,
-  .homepage .reserved {
-    margin-bottom: 2em;
-  }
-}
-
-@media (min-width: 640px) {
-  .homepage .naked {
-    padding: 2em 4em 2em 3em;
-    background-color: white;
-  }
-  .homepage .naked .readmore {
-    margin-bottom: 0;
-  }
-}
-
-.homepage .reserved {
-  min-height: 15vh;
-  padding: 1em;
-}
-
-.homepage .reserved .lead {
-  margin: 1em 0;
-  font-size: 88.9%;
-}
-
-@media (min-width: 640px) {
-  .homepage .reserved {
-    min-height: 25vh;
-  }
-  .homepage .reserved .readmore {
-    margin-top: 2em;
-    margin-bottom: 0;
-  }
-}
-
-.article .headline {
-  font-size: 150%;
-  margin: 0.5em 0;
-}
-
-@media (min-width: 640px) {
-  .article .byline {
-    margin-top: 4em;
-  }
 }

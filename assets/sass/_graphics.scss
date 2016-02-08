@@ -1,0 +1,48 @@
+// ======================================
+// Graphics
+// ======================================
+
+pre {
+  padding: 1em 0.5em;
+}
+
+.swatch,
+.swatch-small {
+  padding-left: 1em;
+  font-size: $component-font-size;
+  color: $inverse;
+  text-align: middle;
+}
+
+.swatch {
+  height: ($component-height * 2);
+  line-height: ($component-height * 2);
+}
+
+.swatch-small {
+  height: ($component-height / 2);
+  line-height: ($component-height / 2);
+}
+
+.white.swatch,
+.white.swatch-small { color: $black; }
+
+.sample {
+  position: relative;
+
+  min-height: ($component-height * 2);
+  padding: 1em;
+  
+  border-radius: $border-radius $border-radius 0 0;
+  border: 1px solid $meta;
+
+  @include clearfix;
+}
+
+.sample + pre.sample {
+  margin-top: 0;
+  border-top-width: 0;
+  border-radius: 0 0 $border-radius $border-radius;
+}
+
+

@@ -1,4 +1,3 @@
-// To do: Have Chattanooga popup open on page load
 // To do: On small screens, lower circle radius and hide zoom controls
 (function() {
   "use strict";

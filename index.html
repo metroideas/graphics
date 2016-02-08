@@ -1,10 +1,46 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
   <title>Graphics | Metro Ideas Project</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
+  
+  <style>
+    article img    { margin: 1em 0; }
+    article header { margin: 2em 0; }
+  </style>
 </head>
 <body>
-  
+  {% include navbar.html %}
+
+  <div class="hero-half primary-50 inverse">
+    <div class="absolute-middle grid-small">
+      <h1>Graphics</h1>
+    </div>
+  </div>
+
+  <div class="grid-small">
+    {% for post in site.posts %}
+    <article>
+      {% if post.image %}
+        <img src="" alt="" class="responsive">
+      {% endif %}
+      
+      <header style="">
+        <h2 class="headline"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <span class="date">{{ post.date | date: '%B %d, %Y'}}</span>  
+      <header>
+
+      <p>{{ post.description }}</p>
+
+      <hr>
+
+    </article>
+    {% endfor %}
+  </div>
 </body>
 </html>

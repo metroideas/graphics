@@ -6,8 +6,6 @@
 // http://github.com/metroideas/template/
 // ======================================
 // 
-// style.scss imports dependencies and _*.scss in order.
-// 
 // -----------------------------------------
 
 @charset "UTF-8";
@@ -28,13 +26,9 @@
 @import "template/components";
 @import "template/utilities";
 @import "template/brand";
-// @import "template/icons";
-// @import "template/animations";
-
 // -----------------------------------------
 
 // Additional imports
-@import "docs";
-@import "examples";
+@import "graphics";
 
 // -----------------------------------------

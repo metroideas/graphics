@@ -1,0 +1,17 @@
+---
+title: "Barchart: Cities grouped by population"
+date: 2016-02-06 09:00:00 -0500
+layout: default
+related:
+embed_source: "/charts/barchart-city-population/"
+description: Interactive bar chart shows number of midsize cities grouped by population and region.
+---
+
+
+<div id="barchart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url       = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var barchart  = new pym.Parent("barchart", url, {});
+</script>

@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% include head.html %}
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
+  <style>
+    header { margin: 2em 0; }
+  </style>
 </head>
 <body>
+  <div class="grid-small">
+    <header>
+      <h1 class="headline">{{ page.title }}</h1>
+      <span class="date">{{ page.date | date: '%B %d, %Y'}}</span>  
+    </header>
+    
+    <p>{{ page.description }}</p>
 
-{% include navbar.html %}
+    <p>
+      <small>
+        {% if page.related %}<a href="{{ page.related }}">Related article</a> | {% endif %}
+      </small>
+    </p>
 
-<main>
-
-{{ content }}
-
-{% include footer.html %}
-</main>
-
-{% include scripts.html %}
+    {{ content }}
+    
+    <pre><code>{{ content | escape }}</code></pre>
+  </div>
 </body>
 </html>

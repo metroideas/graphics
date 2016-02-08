@@ -1,5 +1,5 @@
 # Meta
-title: Metro Ideas Project
+title: Metro Ideas Project Graphics
 description: "The Metro Ideas Project is a nonpartisan, independent public policy research organization."
 keywords: "chattanooga, policy, research, think tank"
 
@@ -9,6 +9,7 @@ url: ""
 
 # Build settings
 markdown: kramdown
+permalink: /:year/:month/:day/:title/
 
 exclude:
   - node_modules/
