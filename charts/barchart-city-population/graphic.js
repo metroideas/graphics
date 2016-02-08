@@ -4,7 +4,7 @@
   pymChild,
   container    = document.querySelector("#graphic"),
   url          = "data.csv",
-  aspect_ratio = { width: 1, height: 1 }
+  aspect_ratio = { width: 3, height: 2 }
   ;
 
   function drawGraphic(container_width) {
