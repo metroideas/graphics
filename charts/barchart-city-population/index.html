@@ -1,83 +1,14 @@
 ---
+layout: d3
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="robots" content="noindex">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
-
-  <style>
-    body {
-      font-size: 12px; 
-    }
-
-    rect {
-      fill: #4689c2;
-    }
-
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #dcddde;
-      shape-rendering: crispEdges;
-    }
-
-    .x.axis path,
-    .x.axis line {
-      display: none;
-    }
-
-    .axis .label {
-      /*font-size: 14px;*/
-    }
   
-    .tooltip {
-      position: absolute;
-      width: 164px;
-      height: auto;
-      padding: 16px;
-      font-size: 16px;
-      background-color: white;
-      pointer-events: none;
-      border-radius: 3px;
-      border: 1px solid #dcddde;
-    }
+<div class="tooltip hidden">
+  <p style="margin-top:0;">Cities by region</p>
+  <ul>
+    <li class="northeast"></li>
+    <li class="south"></li>
+    <li class="midwest"></li>
+    <li class="west"></li>
+  </ul>
+</div> 
 
-    .tooltip.hidden {
-      display: none;
-    }
-
-    .tooltip ul {
-      list-style-type: none;
-      list-style-position: inside;
-      padding-left: 0;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  
-  <div id="graphic">
-    <!-- png fallback -->
-  </div>
-
-  <div class="tooltip hidden">
-    <p style="margin-top:0;">Cities by region</p>
-    <ul>
-      <li class="northeast"></li>
-      <li class="south"></li>
-      <li class="midwest"></li>
-      <li class="west"></li>
-    </ul>
-  </div> 
-  
-  <script src="graphic.js"></script>
-</body>
-</html>

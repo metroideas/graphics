@@ -1,0 +1,46 @@
+body {
+  font-size: 12px; 
+}
+
+rect {
+  fill: #4689c2;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path,
+.x.axis line {
+  display: none;
+}
+
+.axis .label {
+  /*font-size: 14px;*/
+}
+
+.tooltip {
+  position: absolute;
+  width: 164px;
+  height: auto;
+  padding: 16px;
+  font-size: 16px;
+  background-color: white;
+  pointer-events: none;
+  border-radius: 3px;
+  border: 1px solid #dcddde;
+}
+
+.tooltip.hidden {
+  display: none;
+}
+
+.tooltip ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+  font-size: 14px;
+}
