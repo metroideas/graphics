@@ -10,7 +10,9 @@
 </head>
 <body>
   <div id="graphic">
-    <!-- png fallback -->
+    {% if page.image %}
+      <img src="{{ page.image | prepend: "/assets/img/" | prepend: site.baseurl | prepend: site.url }}" alt="" class="responsive">
+    {% endif %}
   </div>
 
   {{ content }}
