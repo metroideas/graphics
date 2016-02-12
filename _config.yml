@@ -5,7 +5,7 @@ keywords: "chattanooga, policy, research, think tank"
 
 # Paths
 baseurl: ""
-url: "graphics.metroideas.org"
+url: "http://graphics.metroideas.org"
 
 # Build settings
 markdown: kramdown
