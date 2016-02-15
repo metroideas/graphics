@@ -2,12 +2,6 @@ body {
   font-size: 14px;
 }
 
-#graphic {
-  /*max-width: 100%;
-  width: 768px;
-  margin: 2em auto;*/
-}
-
 .axis line,
 .axis path {
   fill: none;
@@ -16,13 +10,6 @@ body {
 }
 
 .axis path {
-  display: none;
-}
-
-/*.y.axis line {
-  display: none;
-}*/
-.x.axis line {
   display: none;
 }
 

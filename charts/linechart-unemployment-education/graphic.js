@@ -4,32 +4,35 @@
   pymChild,
   container      = document.querySelector("#graphic"),
   url            = "data.csv",
-  aspect_ratio   = { width: 3, height: 2 },
+  aspect_ratio   = { width: 3, height: 2 }, // Default, reset by dimensions()
   dateFmt        = d3.time.format("%Y")
   ;
 
-  function drawGraphic(container_width) {
-
+  function drawGraphic(containerWidth) {
     var
     x,
     y,
     color,
+    line,
     xAxis,
     yAxis,
     ticks,
+    yTicks,
     svg,
+    education,    // Data for line()
     legend,
     key,
     keys           = d3.keys(data[0]).filter(function(k) { return k !== "year"; }), // Excludes year
-    margin         = { top: 24, right: 48, bottom: 24, left: 48 },
+    margin         = { top: 24, right: 24, bottom: 24, left: 24 },
     width          = calculateWidth(),
     mobile         = (width <= 512) ? true : false,
     columns        = (mobile) ? 2 : 4,   // legend columns (qty) for mobile and desktop 
     row            = (mobile) ? 16 : 24  // legend row height (px) for mobile and desktop
     ;
 
-    // Check aspect ratio and calculate height
+    // Check aspect ratio
     dimensions();
+    // Calculate height
     var height = calculateHeight();
 
     // Empty #graphic container
@@ -52,48 +55,41 @@
     // Axis
     // -------------------------------------------------
     xAxis = d3.svg.axis()
-      .orient("top")
+      .orient("bottom")
       .scale(x)
-      .ticks(4)
-      .tickSize(-height, 0, 0);
+      .ticks(4);
+
+    yTicks = (mobile) ? 4 : 6;
 
     yAxis = d3.svg.axis()
       .orient("left")
       .scale(y)
-      .ticks(6, "%")
+      .ticks(yTicks, "%")
       .tickSize(-width, 0, 0);
 
     // Chart
     // -------------------------------------------------
     svg = d3.select("#graphic").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+        .attr("width", width + marginWidth())
+        .attr("height", height + marginHeight())
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     svg.append("g")
       .attr("class", "x axis")
       .call(xAxis)
-      .attr("transform", "translate(0," + height + ")")
-      ;
+      .attr("transform", "translate(0," + height + ")");
 
     svg.append("g")
       .attr("class", "y axis")
-      .call(yAxis)
-      // Removes first 0 tick
-      .selectAll(".tick").each(function(d,i) {
-          if (i == 0) {
-            this.remove();
-          };
-        });
+      .call(yAxis);
 
-    var line = d3.svg.line()
-      // f
+    line = d3.svg.line()
       .x(function(d) { return x(+d.year); })
-      .y(function(d) { return y(+d.rate); })
-      ;
+      .y(function(d) { return y(+d.rate); });
 
-    var education = keys.map(function(key) {
+    // Remap data for line()
+    education = keys.map(function(key) {
       return {
         id: key,
         unemployment: data.map(function(row) {
@@ -116,7 +112,7 @@
     // Legend and keys
     // -------------------------------------------------
     legend = d3.select("#graphic").append("svg")
-        .attr("width", width + margin.left + margin.right)
+        .attr("width", width + marginWidth())
         .attr("height", function() {
           return rows(keys.length, columns) * (row * 2);
         })
@@ -160,23 +156,23 @@
       aspect_ratio = (mobile) ? { width: 2, height: 3 } : { width: 3, height: 2 };
     }
 
+    // Returns margin totals 
+    function marginWidth()  { return margin.left + margin.right; }
+    function marginHeight() { return margin.top + margin.bottom; }
+
     // Container width
     function calculateWidth() {
-      var m = margin.left + margin.right;
       
-      if (!container_width) {
-        var container_width = +(container.offsetWidth);
+      if (!containerWidth) {
+        var containerWidth = +(container.offsetWidth);
       }
 
-      return Math.ceil(container_width - m);
+      return Math.ceil(containerWidth - marginWidth());
     }
 
     // Container height
     function calculateHeight() {
-
-      var m = margin.top + margin.bottom;
-      
-      return Math.ceil(width * aspect_ratio.height / aspect_ratio.width) - m;
+      return Math.ceil(width * aspect_ratio.height / aspect_ratio.width) - marginHeight();
     }
   }
   // End of drawGraphic()
