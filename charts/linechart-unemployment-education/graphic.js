@@ -26,7 +26,7 @@
     margin         = { top: 24, right: 24, bottom: 24, left: 24 },
     width          = calculateWidth(),
     mobile         = (width <= 512) ? true : false,
-    columns        = (mobile) ? 2 : 4,   // legend columns (qty) for mobile and desktop 
+    columns        = (mobile) ? 2 : 3,   // legend columns (qty) for mobile and desktop 
     row            = (mobile) ? 16 : 24  // legend row height (px) for mobile and desktop
     ;
 
