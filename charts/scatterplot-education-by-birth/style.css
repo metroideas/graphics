@@ -1,0 +1,45 @@
+body {
+  font-size: 14px;
+}
+
+#graphic {
+  max-width: 100%;
+  width: 768px;
+  margin: auto;
+}
+
+.tooltip {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 3px;
+  border: 1px solid #dcddde;
+}
+
+.hidden {
+  display: none;
+}
+
+.college {
+  fill: #0961ae;
+}
+
+.high-school {
+  fill: #bcbec0;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.tick {
+  font-size: 12px; 
+}

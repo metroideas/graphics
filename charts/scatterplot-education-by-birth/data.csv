@@ -1,0 +1,490 @@
+geoid,geoid2,geodisplaylabel,city,region,state,natural_population,foreign_population,natural_hs,natural_college,foreign_hs,foreign_college
+1600000US0107000,107000,"Birmingham city, Alabama",Birmingham,South,Alabama,135181,6107,0.84,0.22,0.76,0.49
+1600000US0135896,135896,"Hoover city, Alabama",Hoover,South,Alabama,50264,6012,0.97,0.57,0.73,0.59
+1600000US0137000,137000,"Huntsville city, Alabama",Huntsville,South,Alabama,111341,9695,0.91,0.39,0.73,0.51
+1600000US0150000,150000,"Mobile city, Alabama",Mobile,South,Alabama,121081,4946,0.87,0.26,0.85,0.47
+1600000US0151000,151000,"Montgomery city, Alabama",Montgomery,South,Alabama,120317,7194,0.86,0.31,0.73,0.52
+1600000US0177256,177256,"Tuscaloosa city, Alabama",Tuscaloosa,South,Alabama,47910,3349,0.88,0.33,0.82,0.52
+1600000US0203000,203000,"Anchorage municipality, Alaska",Anchorage,West,Alaska,158972,24233,0.95,0.34,0.77,0.33
+1600000US0404720,404720,"Avondale city, Arizona",Avondale,West,Arizona,33180,10917,0.85,0.21,0.57,0.19
+1600000US0412000,412000,"Chandler city, Arizona",Chandler,West,Arizona,122610,31285,0.95,0.39,0.77,0.55
+1600000US0427400,427400,"Gilbert town, Arizona",Gilbert,West,Arizona,115087,18316,0.97,0.4,0.86,0.48
+1600000US0427820,427820,"Glendale city, Arizona",Glendale,West,Arizona,108083,32468,0.9,0.23,0.6,0.26
+1600000US0428380,428380,"Goodyear city, Arizona",Goodyear,West,Arizona,39721,6714,0.94,0.28,0.78,0.28
+1600000US0446000,446000,"Mesa city, Arizona",Mesa,West,Arizona,242392,49223,0.93,0.26,0.6,0.25
+1600000US0454050,454050,"Peoria city, Arizona",Peoria,West,Arizona,92357,13301,0.94,0.28,0.74,0.33
+1600000US0464210,464210,"San Tan Valley CDP, Arizona",San Tan Valley,West,Arizona,42383,5935,0.93,0.21,0.73,0.35
+1600000US0465000,465000,"Scottsdale city, Arizona",Scottsdale,West,Arizona,146092,21792,0.98,0.54,0.86,0.56
+1600000US0471510,471510,"Surprise city, Arizona",Surprise,West,Arizona,71577,9253,0.95,0.3,0.75,0.24
+1600000US0473000,473000,"Tempe city, Arizona",Tempe,West,Arizona,79715,15383,0.94,0.42,0.71,0.53
+1600000US0485540,485540,"Yuma city, Arizona",Yuma,West,Arizona,36744,17218,0.88,0.17,0.56,0.22
+1600000US0523290,523290,"Fayetteville city, Arkansas",Fayetteville,South,Arkansas,38569,4060,0.94,0.46,0.73,0.6
+1600000US0524550,524550,"Fort Smith city, Arkansas",Fort Smith,South,Arkansas,46770,9262,0.87,0.23,0.46,0.23
+1600000US0541000,541000,"Little Rock city, Arkansas",Little Rock,South,Arkansas,118458,10935,0.91,0.38,0.8,0.5
+1600000US0566080,566080,"Springdale city, Arkansas",Springdale,South,Arkansas,28309,13337,0.87,0.25,0.37,0.15
+1600000US0600562,600562,"Alameda city, California",Alameda,West,California,35265,18527,0.96,0.54,0.81,0.5
+1600000US0600884,600884,"Alhambra city, California",Alhambra,West,California,21819,38569,0.92,0.36,0.74,0.41
+1600000US0602000,602000,"Anaheim city, California",Anaheim,West,California,101226,112707,0.92,0.29,0.61,0.34
+1600000US0602252,602252,"Antioch city, California",Antioch,West,California,45286,19560,0.92,0.18,0.75,0.34
+1600000US0602553,602553,"Arden-Arcade CDP, California",Arden-Arcade,West,California,52111,10954,0.93,0.37,0.75,0.38
+1600000US0603526,603526,"Bakersfield city, California",Bakersfield,West,California,148341,58007,0.89,0.22,0.56,0.32
+1600000US0603666,603666,"Baldwin Park city, California",Baldwin Park,West,California,15117,31020,0.79,0.11,0.51,0.22
+1600000US0604982,604982,"Bellflower city, California",Bellflower,West,California,26572,20488,0.87,0.15,0.65,0.25
+1600000US0606000,606000,"Berkeley city, California",Berkeley,West,California,53950,16207,0.97,0.72,0.89,0.73
+1600000US0608786,608786,"Buena Park city, California",Buena Park,West,California,25039,27972,0.89,0.21,0.78,0.47
+1600000US0608954,608954,"Burbank city, California",Burbank,West,California,41753,33728,0.95,0.42,0.78,0.43
+1600000US0611194,611194,"Carlsbad city, California",Carlsbad,West,California,61906,13596,0.98,0.55,0.87,0.59
+1600000US0611530,611530,"Carson city, California",Carson,West,California,31078,28775,0.89,0.23,0.71,0.36
+1600000US0613014,613014,"Chico city, California",Chico,West,California,43723,5208,0.94,0.36,0.68,0.36
+1600000US0613210,613210,"Chino city, California",Chino,West,California,35080,16891,0.85,0.19,0.65,0.42
+1600000US0613214,613214,"Chino Hills city, California",Chino Hills,West,California,27604,20717,0.96,0.38,0.88,0.58
+1600000US0613392,613392,"Chula Vista city, California",Chula Vista,West,California,83475,70571,0.92,0.3,0.69,0.35
+1600000US0613588,613588,"Citrus Heights city, California",Citrus Heights,West,California,48305,9268,0.93,0.19,0.72,0.23
+1600000US0614218,614218,"Clovis city, California",Clovis,West,California,49325,10537,0.92,0.29,0.75,0.42
+1600000US0615044,615044,"Compton city, California",Compton,West,California,28143,25301,0.81,0.1,0.37,0.07
+1600000US0616000,616000,"Concord city, California",Concord,West,California,57072,27895,0.95,0.32,0.71,0.4
+1600000US0616350,616350,"Corona city, California",Corona,West,California,59625,36265,0.93,0.26,0.71,0.38
+1600000US0616532,616532,"Costa Mesa city, California",Costa Mesa,West,California,51731,23486,0.96,0.42,0.63,0.38
+1600000US0617918,617918,"Daly City city, California",Daly City,West,California,23051,49111,0.94,0.33,0.81,0.41
+1600000US0619766,619766,"Downey city, California",Downey,West,California,34536,36931,0.91,0.25,0.64,0.28
+1600000US0620802,620802,"East Los Angeles CDP, California",East Los Angeles,West,California,25452,48847,0.75,0.1,0.3,0.11
+1600000US0621712,621712,"El Cajon city, California",El Cajon,West,California,39693,22509,0.9,0.21,0.6,0.22
+1600000US0622020,622020,"Elk Grove city, California",Elk Grove,West,California,63551,33092,0.95,0.34,0.81,0.45
+1600000US0622230,622230,"El Monte city, California",El Monte,West,California,20921,52479,0.81,0.14,0.47,0.22
+1600000US0622804,622804,"Escondido city, California",Escondido,West,California,55549,35237,0.91,0.28,0.42,0.27
+1600000US0623182,623182,"Fairfield city, California",Fairfield,West,California,45594,20567,0.92,0.24,0.7,0.32
+1600000US0624638,624638,"Folsom city, California",Folsom,West,California,39342,10013,0.92,0.41,0.91,0.69
+1600000US0624680,624680,"Fontana city, California",Fontana,West,California,61664,53258,0.87,0.18,0.56,0.25
+1600000US0626000,626000,"Fremont city, California",Fremont,West,California,62582,88840,0.94,0.37,0.9,0.69
+1600000US0628000,628000,"Fullerton city, California",Fullerton,West,California,50643,37088,0.94,0.37,0.76,0.49
+1600000US0629000,629000,"Garden Grove city, California",Garden Grove,West,California,43592,68204,0.91,0.22,0.63,0.27
+1600000US0630000,630000,"Glendale city, California",Glendale,West,California,46604,94590,0.95,0.48,0.79,0.42
+1600000US0632548,632548,"Hawthorne city, California",Hawthorne,West,California,26440,26113,0.91,0.22,0.58,0.28
+1600000US0633000,633000,"Hayward city, California",Hayward,West,California,46116,50182,0.9,0.25,0.7,0.34
+1600000US0633182,633182,"Hemet city, California",Hemet,West,California,42209,11307,0.87,0.13,0.53,0.18
+1600000US0633434,633434,"Hesperia city, California",Hesperia,West,California,40396,11668,0.84,0.1,0.52,0.16
+1600000US0636000,636000,"Huntington Beach city, California",Huntington Beach,West,California,107416,30569,0.96,0.42,0.79,0.48
+1600000US0636448,636448,"Indio city, California",Indio,West,California,30097,20044,0.87,0.2,0.5,0.21
+1600000US0636546,636546,"Inglewood city, California",Inglewood,West,California,41447,28745,0.9,0.24,0.45,0.19
+1600000US0636770,636770,"Irvine city, California",Irvine,West,California,74888,71281,0.99,0.63,0.93,0.73
+1600000US0637692,637692,"Jurupa Valley city, California",Jurupa Valley,West,California,33010,24096,0.84,0.12,0.44,0.16
+1600000US0639496,639496,"Lake Forest city, California",Lake Forest,West,California,35834,16722,0.97,0.45,0.8,0.52
+1600000US0639892,639892,"Lakewood city, California",Lakewood,West,California,37686,15796,0.92,0.26,0.75,0.41
+1600000US0640130,640130,"Lancaster city, California",Lancaster,West,California,75329,19637,0.85,0.15,0.61,0.26
+1600000US0641992,641992,"Livermore city, California",Livermore,West,California,43627,12721,0.96,0.4,0.75,0.48
+1600000US0643000,643000,"Long Beach city, California",Long Beach,West,California,186660,109143,0.92,0.35,0.58,0.32
+1600000US0646842,646842,"Menifee city, California",Menifee,West,California,43230,10548,0.91,0.17,0.62,0.26
+1600000US0646898,646898,"Merced city, California",Merced,West,California,30043,14187,0.89,0.19,0.43,0.26
+1600000US0648256,648256,"Mission Viejo city, California",Mission Viejo,West,California,49133,16893,0.97,0.46,0.86,0.51
+1600000US0648354,648354,"Modesto city, California",Modesto,West,California,97213,31757,0.88,0.19,0.6,0.26
+1600000US0649270,649270,"Moreno Valley city, California",Moreno Valley,West,California,67345,43997,0.88,0.16,0.54,0.24
+1600000US0649670,649670,"Mountain View city, California",Mountain View,West,California,28824,25794,0.97,0.64,0.88,0.74
+1600000US0650076,650076,"Murrieta city, California",Murrieta,West,California,50222,13051,0.95,0.27,0.82,0.42
+1600000US0650258,650258,"Napa city, California",Napa,West,California,36715,15161,0.94,0.35,0.46,0.26
+1600000US0651182,651182,"Newport Beach city, California",Newport Beach,West,California,52969,10960,0.98,0.65,0.95,0.65
+1600000US0652526,652526,"Norwalk city, California",Norwalk,West,California,31023,34853,0.85,0.14,0.62,0.26
+1600000US0653000,653000,"Oakland city, California",Oakland,West,California,181722,95112,0.93,0.47,0.57,0.4
+1600000US0653322,653322,"Oceanside city, California",Oceanside,West,California,80042,30433,0.95,0.29,0.58,0.3
+1600000US0653896,653896,"Ontario city, California",Ontario,West,California,54588,44192,0.86,0.15,0.49,0.22
+1600000US0653980,653980,"Orange city, California",Orange,West,California,57907,31549,0.94,0.37,0.64,0.45
+1600000US0654652,654652,"Oxnard city, California",Oxnard,West,California,55368,63383,0.88,0.23,0.44,0.22
+1600000US0655156,655156,"Palmdale city, California",Palmdale,West,California,49844,36444,0.86,0.18,0.57,0.2
+1600000US0656000,656000,"Pasadena city, California",Pasadena,West,California,60653,37792,0.95,0.56,0.72,0.52
+1600000US0657792,657792,"Pleasanton city, California",Pleasanton,West,California,32187,15742,0.97,0.53,0.9,0.75
+1600000US0658072,658072,"Pomona city, California",Pomona,West,California,41590,45982,0.84,0.2,0.52,0.26
+1600000US0659451,659451,"Rancho Cucamonga city, California",Rancho Cucamonga,West,California,77687,31413,0.94,0.29,0.84,0.45
+1600000US0659920,659920,"Redding city, California",Redding,West,California,56211,4066,0.91,0.23,0.77,0.34
+1600000US0660102,660102,"Redwood City city, California",Redwood City,West,California,31049,22416,0.95,0.49,0.71,0.43
+1600000US0660466,660466,"Rialto city, California",Rialto,West,California,30471,24841,0.82,0.12,0.49,0.16
+1600000US0660620,660620,"Richmond city, California",Richmond,West,California,39228,29873,0.89,0.3,0.6,0.33
+1600000US0662000,662000,"Riverside city, California",Riverside,West,California,120369,62359,0.9,0.25,0.55,0.29
+1600000US0662938,662938,"Roseville city, California",Roseville,West,California,66982,13657,0.96,0.36,0.87,0.43
+1600000US0664000,664000,"Sacramento city, California",Sacramento,West,California,213512,90609,0.91,0.33,0.64,0.31
+1600000US0664224,664224,"Salinas city, California",Salinas,West,California,38810,48484,0.86,0.19,0.41,0.19
+1600000US0665000,665000,"San Bernardino city, California",San Bernardino,West,California,75768,42696,0.8,0.13,0.46,0.19
+1600000US0665042,665042,"San Buenaventura (Ventura) city, California",San Buenaventura (Ventura),West,California,59355,14141,0.94,0.35,0.7,0.37
+1600000US0668084,668084,"San Leandro city, California",San Leandro,West,California,32275,28089,0.92,0.31,0.71,0.33
+1600000US0668196,668196,"San Marcos city, California",San Marcos,West,California,37072,18672,0.95,0.33,0.53,0.42
+1600000US0668252,668252,"San Mateo city, California",San Mateo,West,California,41547,29625,0.97,0.52,0.78,0.47
+1600000US0668378,668378,"San Ramon city, California",San Ramon,West,California,25955,21251,0.99,0.58,0.96,0.77
+1600000US0669000,669000,"Santa Ana city, California",Santa Ana,West,California,55330,136088,0.85,0.23,0.41,0.17
+1600000US0669070,669070,"Santa Barbara city, California",Santa Barbara,West,California,41428,18683,0.95,0.53,0.58,0.34
+1600000US0669084,669084,"Santa Clara city, California",Santa Clara,West,California,36070,43075,0.95,0.44,0.89,0.7
+1600000US0669088,669088,"Santa Clarita city, California",Santa Clarita,West,California,81956,32224,0.95,0.32,0.74,0.41
+1600000US0669196,669196,"Santa Maria city, California",Santa Maria,West,California,29679,27804,0.85,0.19,0.3,0.21
+1600000US0670000,670000,"Santa Monica city, California",Santa Monica,West,California,51553,18764,0.98,0.69,0.87,0.62
+1600000US0670098,670098,"Santa Rosa city, California",Santa Rosa,West,California,86361,27391,0.93,0.34,0.6,0.3
+1600000US0672016,672016,"Simi Valley city, California",Simi Valley,West,California,61758,21846,0.95,0.31,0.79,0.46
+1600000US0673080,673080,"South Gate city, California",South Gate,West,California,17889,38641,0.82,0.13,0.38,0.11
+1600000US0675000,675000,"Stockton city, California",Stockton,West,California,105997,67591,0.86,0.19,0.57,0.25
+1600000US0677000,677000,"Sunnyvale city, California",Sunnyvale,West,California,44574,56681,0.95,0.51,0.89,0.74
+1600000US0678120,678120,"Temecula city, California",Temecula,West,California,47621,14498,0.96,0.31,0.79,0.37
+1600000US0678582,678582,"Thousand Oaks city, California",Thousand Oaks,West,California,64333,22050,0.97,0.49,0.79,0.6
+1600000US0680000,680000,"Torrance city, California",Torrance,West,California,65224,37973,0.96,0.43,0.89,0.55
+1600000US0680238,680238,"Tracy city, California",Tracy,West,California,30155,18922,0.92,0.2,0.7,0.36
+1600000US0680854,680854,"Tustin city, California",Tustin,West,California,25054,24846,0.95,0.44,0.7,0.48
+1600000US0681344,681344,"Upland city, California",Upland,West,California,36776,12708,0.94,0.3,0.76,0.39
+1600000US0681554,681554,"Vacaville city, California",Vacaville,West,California,50880,10893,0.92,0.22,0.69,0.33
+1600000US0681666,681666,"Vallejo city, California",Vallejo,West,California,49188,29299,0.92,0.21,0.79,0.36
+1600000US0682590,682590,"Victorville city, California",Victorville,West,California,45669,19401,0.86,0.12,0.57,0.13
+1600000US0682954,682954,"Visalia city, California",Visalia,West,California,60325,15699,0.89,0.23,0.55,0.3
+1600000US0682996,682996,"Vista city, California",Vista,West,California,39970,22067,0.93,0.23,0.44,0.25
+1600000US0684200,684200,"West Covina city, California",West Covina,West,California,35711,34160,0.9,0.22,0.75,0.42
+1600000US0684550,684550,"Westminster city, California",Westminster,West,California,23919,38031,0.91,0.25,0.65,0.29
+1600000US0685292,685292,"Whittier city, California",Whittier,West,California,40341,14385,0.9,0.27,0.63,0.26
+1600000US0803455,803455,"Arvada city, Colorado",Arvada,West,Colorado,70886,4497,0.95,0.37,0.8,0.42
+1600000US0804000,804000,"Aurora city, Colorado",Aurora,West,Colorado,156119,55663,0.94,0.3,0.64,0.27
+1600000US0807850,807850,"Boulder city, Colorado",Boulder,West,Colorado,48705,7718,0.98,0.73,0.8,0.73
+1600000US0812815,812815,"Centennial city, Colorado",Centennial,West,Colorado,63087,7510,0.98,0.54,0.92,0.56
+1600000US0816000,816000,"Colorado Springs city, Colorado",Colorado Springs,West,Colorado,241246,29521,0.95,0.38,0.75,0.34
+1600000US0827425,827425,"Fort Collins city, Colorado",Fort Collins,West,Colorado,78852,6500,0.97,0.51,0.84,0.63
+1600000US0832155,832155,"Greeley city, Colorado",Greeley,West,Colorado,47159,8191,0.91,0.29,0.47,0.17
+1600000US0836410,836410,"Highlands Ranch CDP, Colorado",Highlands Ranch,West,Colorado,56405,6568,0.99,0.62,0.95,0.68
+1600000US0843000,843000,"Lakewood city, Colorado",Lakewood,West,Colorado,90927,10461,0.94,0.37,0.68,0.39
+1600000US0845970,845970,"Longmont city, Colorado",Longmont,West,Colorado,47566,9553,0.94,0.4,0.58,0.4
+1600000US0862000,862000,"Pueblo city, Colorado",Pueblo,West,Colorado,66712,4198,0.87,0.2,0.58,0.19
+1600000US0877290,877290,"Thornton city, Colorado",Thornton,West,Colorado,63502,12024,0.91,0.28,0.65,0.27
+1600000US0883835,883835,"Westminster city, Colorado",Westminster,West,Colorado,62565,9902,0.94,0.36,0.66,0.37
+1600000US0908000,908000,"Bridgeport city, Connecticut",Bridgeport,Northeast,Connecticut,47678,34434,0.85,0.2,0.67,0.23
+1600000US0918430,918430,"Danbury city, Connecticut",Danbury,Northeast,Connecticut,32846,22884,0.94,0.39,0.66,0.28
+1600000US0937000,937000,"Hartford city, Connecticut",Hartford,Northeast,Connecticut,35192,22312,0.8,0.18,0.7,0.25
+1600000US0952000,952000,"New Haven city, Connecticut",New Haven,Northeast,Connecticut,56331,16367,0.87,0.34,0.76,0.58
+1600000US0955990,955990,"Norwalk city, Connecticut",Norwalk,Northeast,Connecticut,43410,18571,0.95,0.46,0.77,0.41
+1600000US0973000,973000,"Stamford city, Connecticut",Stamford,Northeast,Connecticut,47979,36656,0.95,0.55,0.77,0.45
+1600000US0980000,980000,"Waterbury city, Connecticut",Waterbury,Northeast,Connecticut,49629,13245,0.86,0.18,0.7,0.18
+1600000US1200410,1200410,"Alafaya CDP, Florida",Alafaya,South,Florida,29641,15186,0.98,0.48,0.87,0.39
+1600000US1207300,1207300,"Boca Raton city, Florida",Boca Raton,South,Florida,47550,15135,0.98,0.54,0.89,0.51
+1600000US1208150,1208150,"Brandon CDP, Florida",Brandon,South,Florida,55495,11495,0.93,0.27,0.88,0.36
+1600000US1210275,1210275,"Cape Coral city, Florida",Cape Coral,South,Florida,91163,20658,0.93,0.21,0.8,0.24
+1600000US1212875,1212875,"Clearwater city, Florida",Clearwater,South,Florida,64417,13986,0.91,0.29,0.77,0.31
+1600000US1214400,1214400,"Coral Springs city, Florida",Coral Springs,South,Florida,47526,29381,0.95,0.37,0.87,0.37
+1600000US1216475,1216475,"Davie town, Florida",Davie,South,Florida,38531,22796,0.94,0.34,0.86,0.37
+1600000US1216725,1216725,"Deerfield Beach city, Florida",Deerfield Beach,South,Florida,33883,21325,0.91,0.27,0.77,0.24
+1600000US1217200,1217200,"Deltona city, Florida",Deltona,South,Florida,43212,7289,0.9,0.15,0.76,0.21
+1600000US1224000,1224000,"Fort Lauderdale city, Florida",Fort Lauderdale,South,Florida,90362,34382,0.89,0.37,0.74,0.35
+1600000US1225175,1225175,"Gainesville city, Florida",Gainesville,South,Florida,52970,9481,0.91,0.39,0.92,0.66
+1600000US1230000,1230000,"Hialeah city, Florida",Hialeah,South,Florida,17644,146747,0.86,0.17,0.69,0.19
+1600000US1232000,1232000,"Hollywood city, Florida",Hollywood,South,Florida,57779,42465,0.91,0.3,0.82,0.29
+1600000US1236100,1236100,"Kendall CDP, Florida",Kendall,South,Florida,23108,30994,0.97,0.51,0.84,0.47
+1600000US1238250,1238250,"Lakeland city, Florida",Lakeland,South,Florida,57826,7094,0.9,0.25,0.75,0.36
+1600000US1239425,1239425,"Largo city, Florida",Largo,South,Florida,49934,8575,0.9,0.2,0.79,0.26
+1600000US1239925,1239925,"Lehigh Acres CDP, Florida",Lehigh Acres,South,Florida,40254,21032,0.85,0.13,0.67,0.18
+1600000US1243975,1243975,"Melbourne city, Florida",Melbourne,South,Florida,47806,6446,0.9,0.24,0.8,0.3
+1600000US1245000,1245000,"Miami city, Florida",Miami,South,Florida,80417,213651,0.86,0.35,0.67,0.29
+1600000US1245025,1245025,"Miami Beach city, Florida",Miami Beach,South,Florida,25276,42901,0.95,0.6,0.8,0.42
+1600000US1245060,1245060,"Miami Gardens city, Florida",Miami Gardens,South,Florida,39340,30071,0.85,0.16,0.75,0.17
+1600000US1245975,1245975,"Miramar city, Florida",Miramar,South,Florida,28166,50123,0.95,0.35,0.87,0.34
+1600000US1253000,1253000,"Orlando city, Florida",Orlando,South,Florida,113527,38331,0.92,0.36,0.83,0.35
+1600000US1254000,1254000,"Palm Bay city, Florida",Palm Bay,South,Florida,55860,12063,0.9,0.18,0.76,0.2
+1600000US1254200,1254200,"Palm Coast city, Florida",Palm Coast,South,Florida,43977,10622,0.92,0.21,0.82,0.3
+1600000US1255775,1255775,"Pembroke Pines city, Florida",Pembroke Pines,South,Florida,53439,51784,0.94,0.33,0.88,0.36
+1600000US1256825,1256825,"Pine Hills CDP, Florida",Pine Hills,South,Florida,21627,15784,0.84,0.14,0.66,0.14
+1600000US1257425,1257425,"Plantation city, Florida",Plantation,South,Florida,39833,21381,0.97,0.44,0.88,0.39
+1600000US1258050,1258050,"Pompano Beach city, Florida",Pompano Beach,South,Florida,49709,23348,0.88,0.25,0.72,0.27
+1600000US1258715,1258715,"Port St. Lucie city, Florida",Port St. Lucie,South,Florida,85457,25901,0.92,0.19,0.78,0.23
+1600000US1260950,1260950,"Riverview CDP, Florida",Riverview,South,Florida,38464,8169,0.93,0.27,0.85,0.38
+1600000US1263000,1263000,"St. Petersburg city, Florida",St. Petersburg,South,Florida,153704,22878,0.9,0.3,0.81,0.34
+1600000US1268350,1268350,"Spring Hill CDP, Florida",Spring Hill,South,Florida,60864,7376,0.89,0.14,0.75,0.21
+1600000US1269700,1269700,"Sunrise city, Florida",Sunrise,South,Florida,31289,27872,0.92,0.25,0.84,0.32
+1600000US1270600,1270600,"Tallahassee city, Florida",Tallahassee,South,Florida,85359,10359,0.93,0.46,0.91,0.65
+1600000US1271000,1271000,"Tampa city, Florida",Tampa,South,Florida,172477,45471,0.9,0.36,0.75,0.39
+1600000US1272145,1272145,"Town 'n' Country CDP, Florida",Town 'n' Country,South,Florida,33714,19805,0.91,0.29,0.78,0.25
+1600000US1276600,1276600,"West Palm Beach city, Florida",West Palm Beach,South,Florida,46420,23779,0.91,0.36,0.73,0.32
+1600000US1303440,1303440,"Athens-Clarke County unified government (balance), Georgia",Athens-Clarke County,South,Georgia,53510,8670,0.89,0.4,0.65,0.52
+1600000US1304000,1304000,"Atlanta city, Georgia",Atlanta,South,Georgia,264120,25801,0.89,0.46,0.84,0.64
+1600000US1304204,1304204,"Augusta-Richmond County consolidated government (balance), Georgia",Augusta-Richmond County,South,Georgia,115543,6093,0.84,0.2,0.84,0.4
+1600000US1319000,1319000,"Columbus city, Georgia",Columbus,South,Georgia,111878,9468,0.86,0.23,0.73,0.4
+1600000US1342425,1342425,"Johns Creek city, Georgia",Johns Creek,South,Georgia,32847,17869,0.99,0.63,0.91,0.73
+1600000US1349008,1349008,"Macon-Bibb County, Georgia",Macon-Bibb County,South,Georgia,93804,4807,0.83,0.23,0.78,0.5
+1600000US1367284,1367284,"Roswell city, Georgia",Roswell,South,Georgia,47979,14737,0.97,0.61,0.8,0.47
+1600000US1368516,1368516,"Sandy Springs city, Georgia",Sandy Springs,South,Georgia,52632,15502,0.98,0.63,0.84,0.5
+1600000US1369000,1369000,"Savannah city, Georgia",Savannah,South,Georgia,79719,6394,0.87,0.26,0.71,0.47
+1600000US1571550,1571550,"Urban Honolulu CDP, Hawaii",Urban Honolulu,West,Hawaii,158959,82972,0.95,0.4,0.76,0.34
+1600000US1608830,1608830,"Boise City city, Idaho",Boise City,West,Idaho,127291,11521,0.95,0.4,0.76,0.46
+1600000US1652120,1652120,"Meridian city, Idaho",Meridian,West,Idaho,46623,3168,0.96,0.34,0.82,0.31
+1600000US1656260,1656260,"Nampa city, Idaho",Nampa,West,Idaho,42440,6075,0.88,0.19,0.47,0.18
+1600000US1703012,1703012,"Aurora city, Illinois",Aurora,Midwest,Illinois,73880,43404,0.92,0.37,0.51,0.41
+1600000US1706613,1706613,"Bloomington city, Illinois",Bloomington,Midwest,Illinois,43510,5854,0.95,0.43,0.91,0.71
+1600000US1712385,1712385,"Champaign city, Illinois",Champaign,Midwest,Illinois,36548,7849,0.95,0.47,0.91,0.71
+1600000US1714351,1714351,"Cicero town, Illinois",Cicero,Midwest,Illinois,15443,30660,0.8,0.13,0.52,0.09
+1600000US1723074,1723074,"Elgin city, Illinois",Elgin,Midwest,Illinois,42854,24524,0.91,0.29,0.57,0.28
+1600000US1724582,1724582,"Evanston city, Illinois",Evanston,Midwest,Illinois,35958,11190,0.96,0.69,0.85,0.67
+1600000US1738570,1738570,"Joliet city, Illinois",Joliet,Midwest,Illinois,69683,19103,0.91,0.27,0.56,0.22
+1600000US1751622,1751622,"Naperville city, Illinois",Naperville,Midwest,Illinois,69183,22611,0.98,0.65,0.93,0.74
+1600000US1759000,1759000,"Peoria city, Illinois",Peoria,Midwest,Illinois,65226,7549,0.89,0.3,0.84,0.67
+1600000US1765000,1765000,"Rockford city, Illinois",Rockford,Midwest,Illinois,83214,14137,0.86,0.21,0.65,0.26
+1600000US1768003,1768003,"Schaumburg village, Illinois",Schaumburg,Midwest,Illinois,35358,17732,0.96,0.4,0.9,0.61
+1600000US1772000,1772000,"Springfield city, Illinois",Springfield,Midwest,Illinois,74548,4326,0.92,0.34,0.87,0.54
+1600000US1779293,1779293,"Waukegan city, Illinois",Waukegan,Midwest,Illinois,27835,23420,0.87,0.24,0.51,0.24
+1600000US1805860,1805860,"Bloomington city, Indiana",Bloomington,Midwest,Indiana,31029,5602,0.93,0.53,0.91,0.84
+1600000US1810342,1810342,"Carmel city, Indiana",Carmel,Midwest,Indiana,46121,8181,0.99,0.68,0.95,0.78
+1600000US1822000,1822000,"Evansville city, Indiana",Evansville,Midwest,Indiana,77727,2095,0.88,0.18,0.74,0.41
+1600000US1823278,1823278,"Fishers town, Indiana",Fishers,Midwest,Indiana,44383,5215,0.98,0.6,0.92,0.75
+1600000US1825000,1825000,"Fort Wayne city, Indiana",Fort Wayne,Midwest,Indiana,147162,14124,0.91,0.26,0.6,0.36
+1600000US1831000,1831000,"Hammond city, Indiana",Hammond,Midwest,Indiana,41902,7516,0.84,0.14,0.52,0.18
+1600000US1871000,1871000,"South Bend city, Indiana",South Bend,Midwest,Indiana,57684,5846,0.87,0.23,0.64,0.41
+1600000US1912000,1912000,"Cedar Rapids city, Iowa",Cedar Rapids,Midwest,Iowa,79836,3348,0.94,0.3,0.84,0.54
+1600000US1919000,1919000,"Davenport city, Iowa",Davenport,Midwest,Iowa,62403,3438,0.92,0.27,0.71,0.42
+1600000US1921000,1921000,"Des Moines city, Iowa",Des Moines,Midwest,Iowa,113707,17935,0.92,0.26,0.59,0.25
+1600000US1973335,1973335,"Sioux City city, Iowa",Sioux City,Midwest,Iowa,44916,6793,0.91,0.23,0.37,0.09
+1600000US2036000,2036000,"Kansas City city, Kansas",Kansas City,Midwest,Kansas,72829,18309,0.86,0.17,0.44,0.18
+1600000US2038900,2038900,"Lawrence city, Kansas",Lawrence,Midwest,Kansas,43511,4246,0.96,0.52,0.87,0.74
+1600000US2052575,2052575,"Olathe city, Kansas",Olathe,Midwest,Kansas,68997,11178,0.97,0.47,0.77,0.43
+1600000US2053775,2053775,"Overland Park city, Kansas",Overland Park,Midwest,Kansas,106384,15436,0.98,0.57,0.87,0.67
+1600000US2071000,2071000,"Topeka city, Kansas",Topeka,Midwest,Kansas,77678,5521,0.9,0.28,0.64,0.39
+1600000US2079000,2079000,"Wichita city, Kansas",Wichita,Midwest,Kansas,210281,32264,0.91,0.3,0.6,0.34
+1600000US2146027,2146027,"Lexington-Fayette urban county, Kentucky",Lexington-Fayette,South,Kentucky,173661,21072,0.91,0.4,0.73,0.55
+1600000US2205000,2205000,"Baton Rouge city, Louisiana",Baton Rouge,South,Louisiana,127027,8987,0.86,0.32,0.79,0.59
+1600000US2240735,2240735,"Lafayette city, Louisiana",Lafayette,South,Louisiana,73541,4846,0.87,0.33,0.75,0.45
+1600000US2250115,2250115,"Metairie CDP, Louisiana",Metairie,South,Louisiana,85094,15541,0.91,0.34,0.71,0.36
+1600000US2255000,2255000,"New Orleans city, Louisiana",New Orleans,South,Louisiana,228912,19334,0.86,0.34,0.71,0.5
+1600000US2270000,2270000,"Shreveport city, Louisiana",Shreveport,South,Louisiana,125161,4532,0.86,0.25,0.74,0.53
+1600000US2419125,2419125,"Columbia CDP, Maryland",Columbia,South,Maryland,52367,16356,0.97,0.64,0.87,0.68
+1600000US2432025,2432025,"Germantown CDP, Maryland",Germantown,South,Maryland,28311,28422,0.96,0.49,0.88,0.53
+1600000US2472450,2472450,"Silver Spring CDP, Maryland",Silver Spring,South,Maryland,27695,23812,0.98,0.73,0.68,0.43
+1600000US2509000,2509000,"Brockton city, Massachusetts",Brockton,Northeast,Massachusetts,37881,20636,0.89,0.19,0.67,0.26
+1600000US2511000,2511000,"Cambridge city, Massachusetts",Cambridge,Northeast,Massachusetts,46955,23761,0.97,0.78,0.88,0.79
+1600000US2523000,2523000,"Fall River city, Massachusetts",Fall River,Northeast,Massachusetts,43938,15815,0.8,0.17,0.45,0.15
+1600000US2534550,2534550,"Lawrence city, Massachusetts",Lawrence,Northeast,Massachusetts,15415,23859,0.85,0.19,0.61,0.17
+1600000US2537000,2537000,"Lowell city, Massachusetts",Lowell,Northeast,Massachusetts,41795,23596,0.87,0.25,0.67,0.26
+1600000US2537490,2537490,"Lynn city, Massachusetts",Lynn,Northeast,Massachusetts,33108,23752,0.91,0.23,0.66,0.22
+1600000US2545000,2545000,"New Bedford city, Massachusetts",New Bedford,Northeast,Massachusetts,44069,16786,0.82,0.18,0.47,0.19
+1600000US2545560,2545560,"Newton city, Massachusetts",Newton,Northeast,Massachusetts,40472,15531,0.98,0.77,0.95,0.76
+1600000US2555745,2555745,"Quincy city, Massachusetts",Quincy,Northeast,Massachusetts,44186,24117,0.94,0.43,0.76,0.47
+1600000US2562535,2562535,"Somerville city, Massachusetts",Somerville,Northeast,Massachusetts,38355,16294,0.95,0.62,0.74,0.54
+1600000US2567000,2567000,"Springfield city, Massachusetts",Springfield,Northeast,Massachusetts,60433,13617,0.84,0.21,0.66,0.28
+1600000US2582000,2582000,"Worcester city, Massachusetts",Worcester,Northeast,Massachusetts,76385,31688,0.89,0.34,0.79,0.34
+1600000US2603000,2603000,"Ann Arbor city, Michigan",Ann Arbor,Midwest,Michigan,50108,14275,0.97,0.69,0.95,0.83
+1600000US2621000,2621000,"Dearborn city, Michigan",Dearborn,Midwest,Michigan,36376,20804,0.92,0.34,0.62,0.33
+1600000US2627440,2627440,"Farmington Hills city, Michigan",Farmington Hills,Midwest,Michigan,45163,12744,0.96,0.51,0.88,0.68
+1600000US2629000,2629000,"Flint city, Michigan",Flint,Midwest,Michigan,61922,864,0.83,0.11,0.7,0.46
+1600000US2634000,2634000,"Grand Rapids city, Michigan",Grand Rapids,Midwest,Michigan,101500,14154,0.89,0.32,0.51,0.36
+1600000US2642160,2642160,"Kalamazoo city, Michigan",Kalamazoo,Midwest,Michigan,35333,3083,0.9,0.32,0.8,0.52
+1600000US2646000,2646000,"Lansing city, Michigan",Lansing,Midwest,Michigan,64889,6668,0.88,0.24,0.74,0.47
+1600000US2649000,2649000,"Livonia city, Michigan",Livonia,Midwest,Michigan,62909,6097,0.95,0.36,0.81,0.45
+1600000US2676460,2676460,"Sterling Heights city, Michigan",Sterling Heights,Midwest,Michigan,63596,27859,0.93,0.27,0.71,0.36
+1600000US2680700,2680700,"Troy city, Michigan",Troy,Midwest,Michigan,37444,19295,0.96,0.54,0.88,0.73
+1600000US2684000,2684000,"Warren city, Michigan",Warren,Midwest,Michigan,77760,12319,0.87,0.16,0.65,0.37
+1600000US2686000,2686000,"Westland city, Michigan",Westland,Midwest,Michigan,52291,4801,0.88,0.16,0.79,0.52
+1600000US2706616,2706616,"Bloomington city, Minnesota",Bloomington,Midwest,Minnesota,53815,8557,0.96,0.42,0.75,0.38
+1600000US2707966,2707966,"Brooklyn Park city, Minnesota",Brooklyn Park,Midwest,Minnesota,34084,13160,0.95,0.33,0.76,0.28
+1600000US2717000,2717000,"Duluth city, Minnesota",Duluth,Midwest,Minnesota,51049,1685,0.93,0.32,0.84,0.51
+1600000US2743000,2743000,"Minneapolis city, Minnesota",Minneapolis,Midwest,Minnesota,211072,45620,0.94,0.51,0.64,0.43
+1600000US2751730,2751730,"Plymouth city, Minnesota",Plymouth,Midwest,Minnesota,44032,7194,0.98,0.55,0.93,0.73
+1600000US2754880,2754880,"Rochester city, Minnesota",Rochester,Midwest,Minnesota,61663,11314,0.96,0.42,0.8,0.55
+1600000US2758000,2758000,"St. Paul city, Minnesota",St. Paul,Midwest,Minnesota,140155,37648,0.94,0.44,0.6,0.33
+1600000US2836000,2836000,"Jackson city, Mississippi",Jackson,South,Mississippi,102200,2266,0.84,0.26,0.68,0.47
+1600000US2915670,2915670,"Columbia city, Missouri",Columbia,Midwest,Missouri,54055,6162,0.94,0.55,0.9,0.75
+1600000US2935000,2935000,"Independence city, Missouri",Independence,Midwest,Missouri,75949,4264,0.89,0.18,0.6,0.25
+1600000US2938000,2938000,"Kansas City city, Missouri",Kansas City,Midwest,Missouri,278528,28365,0.9,0.32,0.67,0.34
+1600000US2941348,2941348,"Lee's Summit city, Missouri",Lee's Summit,Midwest,Missouri,56879,2887,0.97,0.43,0.9,0.41
+1600000US2954074,2954074,"O'Fallon city, Missouri",O'Fallon,Midwest,Missouri,48777,2628,0.95,0.36,0.92,0.65
+1600000US2964550,2964550,"St. Joseph city, Missouri",St. Joseph,Midwest,Missouri,47471,2584,0.86,0.2,0.76,0.15
+1600000US2965000,2965000,"St. Louis city, Missouri",St. Louis,Midwest,Missouri,198508,17140,0.84,0.3,0.71,0.47
+1600000US2970000,2970000,"Springfield city, Missouri",Springfield,Midwest,Missouri,96155,4475,0.89,0.26,0.71,0.41
+1600000US3006550,3006550,"Billings city, Montana",Billings,West,Montana,70157,1637,0.93,0.31,0.86,0.26
+1600000US3128000,3128000,"Lincoln city, Nebraska",Lincoln,Midwest,Nebraska,146152,15744,0.96,0.37,0.69,0.41
+1600000US3137000,3137000,"Omaha city, Nebraska",Omaha,Midwest,Nebraska,244709,33261,0.93,0.35,0.51,0.41
+1600000US3223770,3223770,"Enterprise CDP, Nevada",Enterprise,West,Nevada,53212,27682,0.94,0.32,0.84,0.38
+1600000US3231900,3231900,"Henderson city, Nevada",Henderson,West,Nevada,154636,29526,0.94,0.3,0.85,0.43
+1600000US3251800,3251800,"North Las Vegas city, Nevada",North Las Vegas,West,Nevada,87454,41880,0.89,0.17,0.55,0.21
+1600000US3254600,3254600,"Paradise CDP, Nevada",Paradise,West,Nevada,101430,48484,0.91,0.23,0.7,0.23
+1600000US3260600,3260600,"Reno city, Nevada",Reno,West,Nevada,115915,32536,0.93,0.31,0.62,0.35
+1600000US3268400,3268400,"Sparks city, Nevada",Sparks,West,Nevada,47170,13762,0.93,0.24,0.57,0.25
+1600000US3268585,3268585,"Spring Valley CDP, Nevada",Spring Valley,West,Nevada,77473,49547,0.93,0.24,0.79,0.28
+1600000US3271400,3271400,"Sunrise Manor CDP, Nevada",Sunrise Manor,West,Nevada,66675,44130,0.83,0.11,0.53,0.16
+1600000US3345140,3345140,"Manchester city, New Hampshire",Manchester,Northeast,New Hampshire,63245,11663,0.9,0.28,0.7,0.3
+1600000US3350260,3350260,"Nashua city, New Hampshire",Nashua,Northeast,New Hampshire,48262,10385,0.91,0.34,0.77,0.54
+1600000US3410000,3410000,"Camden city, New Jersey",Camden,Northeast,New Jersey,27231,8294,0.75,0.1,0.63,0.14
+1600000US3413690,3413690,"Clifton city, New Jersey",Clifton,Northeast,New Jersey,28885,26610,0.93,0.33,0.84,0.33
+1600000US3421000,3421000,"Elizabeth city, New Jersey",Elizabeth,Northeast,New Jersey,23894,50813,0.86,0.17,0.68,0.15
+1600000US3436000,3436000,"Jersey City city, New Jersey",Jersey City,Northeast,New Jersey,80245,88282,0.89,0.38,0.84,0.59
+1600000US3451000,3451000,"Newark city, New Jersey",Newark,Northeast,New Jersey,94232,66573,0.8,0.13,0.63,0.23
+1600000US3457000,3457000,"Paterson city, New Jersey",Paterson,Northeast,New Jersey,35905,40472,0.82,0.11,0.7,0.16
+1600000US3473110,3473110,"Toms River CDP, New Jersey",Toms River,Northeast,New Jersey,55005,7709,0.93,0.29,0.78,0.43
+1600000US3474000,3474000,"Trenton city, New Jersey",Trenton,Northeast,New Jersey,34044,15913,0.81,0.12,0.53,0.19
+1600000US3539380,3539380,"Las Cruces city, New Mexico",Las Cruces,West,New Mexico,50921,8899,0.9,0.35,0.58,0.45
+1600000US3563460,3563460,"Rio Rancho city, New Mexico",Rio Rancho,West,New Mexico,52934,4425,0.95,0.28,0.75,0.41
+1600000US3601000,3601000,"Albany city, New York",Albany,Northeast,New York,50401,7990,0.91,0.37,0.78,0.45
+1600000US3611000,3611000,"Buffalo city, New York",Buffalo,Northeast,New York,143742,15408,0.85,0.25,0.68,0.4
+1600000US3650617,3650617,"New Rochelle city, New York",New Rochelle,Northeast,New York,32259,19525,0.93,0.49,0.69,0.4
+1600000US3663000,3663000,"Rochester city, New York",Rochester,Northeast,New York,107983,14897,0.83,0.26,0.7,0.37
+1600000US3673000,3673000,"Syracuse city, New York",Syracuse,Northeast,New York,70392,11621,0.83,0.25,0.66,0.51
+1600000US3684000,3684000,"Yonkers city, New York",Yonkers,Northeast,New York,74120,55435,0.92,0.36,0.72,0.36
+1600000US3702140,3702140,"Asheville city, North Carolina",Asheville,South,North Carolina,55507,4821,0.92,0.46,0.85,0.39
+1600000US3710740,3710740,"Cary town, North Carolina",Cary,South,North Carolina,71253,24557,0.98,0.62,0.87,0.72
+1600000US3714100,3714100,"Concord city, North Carolina",Concord,South,North Carolina,45155,6841,0.9,0.3,0.68,0.42
+1600000US3719000,3719000,"Durham city, North Carolina",Durham,South,North Carolina,126867,27784,0.92,0.49,0.64,0.58
+1600000US3722920,3722920,"Fayetteville city, North Carolina",Fayetteville,South,North Carolina,106790,10866,0.92,0.25,0.82,0.31
+1600000US3728000,3728000,"Greensboro city, North Carolina",Greensboro,South,North Carolina,152390,23517,0.92,0.38,0.68,0.36
+1600000US3728080,3728080,"Greenville city, North Carolina",Greenville,South,North Carolina,41851,3749,0.92,0.37,0.82,0.56
+1600000US3731400,3731400,"High Point city, North Carolina",High Point,South,North Carolina,58199,9810,0.89,0.3,0.65,0.41
+1600000US3755000,3755000,"Raleigh city, North Carolina",Raleigh,South,North Carolina,221698,44155,0.95,0.51,0.7,0.45
+1600000US3774440,3774440,"Wilmington city, North Carolina",Wilmington,South,North Carolina,65126,5547,0.92,0.41,0.6,0.43
+1600000US3775000,3775000,"Winston-Salem city, North Carolina",Winston-Salem,South,North Carolina,126952,20347,0.9,0.35,0.5,0.43
+1600000US3825700,3825700,"Fargo city, North Dakota",Fargo,Midwest,North Dakota,61577,5188,0.96,0.38,0.83,0.55
+1600000US3901000,3901000,"Akron city, Ohio",Akron,Midwest,Ohio,121354,6805,0.87,0.2,0.63,0.4
+1600000US3915000,3915000,"Cincinnati city, Ohio",Cincinnati,Midwest,Ohio,176418,11996,0.86,0.31,0.79,0.56
+1600000US3916000,3916000,"Cleveland city, Ohio",Cleveland,Midwest,Ohio,230221,15267,0.79,0.15,0.69,0.41
+1600000US3921000,3921000,"Dayton city, Ohio",Dayton,Midwest,Ohio,83919,3797,0.82,0.16,0.63,0.37
+1600000US3961000,3961000,"Parma city, Ohio",Parma,Midwest,Ohio,49051,7067,0.92,0.2,0.78,0.21
+1600000US3977000,3977000,"Toledo city, Ohio",Toledo,Midwest,Ohio,173814,7946,0.86,0.17,0.75,0.41
+1600000US4009050,4009050,"Broken Arrow city, Oklahoma",Broken Arrow,South,Oklahoma,60236,4893,0.95,0.32,0.79,0.38
+1600000US4023200,4023200,"Edmond city, Oklahoma",Edmond,South,Oklahoma,48730,4015,0.97,0.52,0.88,0.62
+1600000US4041850,4041850,"Lawton city, Oklahoma",Lawton,South,Oklahoma,51268,5084,0.89,0.19,0.77,0.26
+1600000US4052500,4052500,"Norman city, Oklahoma",Norman,South,Oklahoma,61134,5197,0.94,0.42,0.84,0.67
+1600000US4075000,4075000,"Tulsa city, Oklahoma",Tulsa,South,Oklahoma,223687,30991,0.91,0.32,0.57,0.31
+1600000US4105350,4105350,"Beaverton city, Oregon",Beaverton,West,Oregon,46385,15843,0.95,0.44,0.79,0.53
+1600000US4105800,4105800,"Bend city, Oregon",Bend,West,Oregon,51609,3000,0.96,0.39,0.75,0.43
+1600000US4123850,4123850,"Eugene city, Oregon",Eugene,West,Oregon,88907,8745,0.95,0.4,0.76,0.51
+1600000US4131250,4131250,"Gresham city, Oregon",Gresham,West,Oregon,54563,15084,0.91,0.2,0.59,0.21
+1600000US4134100,4134100,"Hillsboro city, Oregon",Hillsboro,West,Oregon,44631,16069,0.94,0.34,0.65,0.48
+1600000US4147000,4147000,"Medford city, Oregon",Medford,West,Oregon,46413,4155,0.91,0.25,0.51,0.29
+1600000US4164900,4164900,"Salem city, Oregon",Salem,West,Oregon,85887,15152,0.92,0.29,0.54,0.25
+1600000US4202000,4202000,"Allentown city, Pennsylvania",Allentown,Northeast,Pennsylvania,48437,14882,0.85,0.18,0.66,0.25
+1600000US4206088,4206088,"Bethlehem city, Pennsylvania",Bethlehem,Northeast,Pennsylvania,38968,4835,0.9,0.27,0.75,0.46
+1600000US4224000,4224000,"Erie city, Pennsylvania",Erie,Northeast,Pennsylvania,58286,4548,0.89,0.22,0.65,0.32
+1600000US4261000,4261000,"Pittsburgh city, Pennsylvania",Pittsburgh,Northeast,Pennsylvania,183494,17102,0.91,0.35,0.89,0.72
+1600000US4263624,4263624,"Reading city, Pennsylvania",Reading,Northeast,Pennsylvania,28594,12615,0.78,0.09,0.44,0.19
+1600000US4269000,4269000,"Scranton city, Pennsylvania",Scranton,Northeast,Pennsylvania,42951,5048,0.88,0.21,0.72,0.37
+1600000US4419180,4419180,"Cranston city, Rhode Island",Cranston,Northeast,Rhode Island,46969,9306,0.9,0.31,0.74,0.31
+1600000US4459000,4459000,"Providence city, Rhode Island",Providence,Northeast,Rhode Island,55032,42208,0.85,0.4,0.59,0.28
+1600000US4474300,4474300,"Warwick city, Rhode Island",Warwick,Northeast,Rhode Island,55506,4985,0.91,0.3,0.81,0.39
+1600000US4513330,4513330,"Charleston city, South Carolina",Charleston,South,South Carolina,78071,4159,0.93,0.49,0.92,0.61
+1600000US4516000,4516000,"Columbia city, South Carolina",Columbia,South,South Carolina,68557,4918,0.87,0.39,0.79,0.64
+1600000US4548535,4548535,"Mount Pleasant town, South Carolina",Mount Pleasant,South,South Carolina,46899,2907,0.98,0.59,0.93,0.59
+1600000US4550875,4550875,"North Charleston city, South Carolina",North Charleston,South,South Carolina,55267,7352,0.84,0.2,0.54,0.29
+1600000US4659020,4659020,"Sioux Falls city, South Dakota",Sioux Falls,Midwest,South Dakota,96366,8142,0.93,0.34,0.63,0.32
+1600000US4714000,4714000,"Chattanooga city, Tennessee",Chattanooga,South,Tennessee,107492,7435,0.86,0.26,0.67,0.49
+1600000US4715160,4715160,"Clarksville city, Tennessee",Clarksville,South,Tennessee,71111,7626,0.93,0.24,0.82,0.24
+1600000US4740000,4740000,"Knoxville city, Tennessee",Knoxville,South,Tennessee,108285,7392,0.88,0.3,0.66,0.44
+1600000US4751560,4751560,"Murfreesboro city, Tennessee",Murfreesboro,South,Tennessee,61439,5681,0.93,0.37,0.74,0.43
+1600000US4801000,4801000,"Abilene city, Texas",Abilene,South,Texas,67212,5516,0.85,0.23,0.58,0.26
+1600000US4801924,4801924,"Allen city, Texas",Allen,South,Texas,41747,13127,0.98,0.52,0.88,0.63
+1600000US4803000,4803000,"Amarillo city, Texas",Amarillo,South,Texas,105376,16615,0.89,0.24,0.47,0.24
+1600000US4804000,4804000,"Arlington city, Texas",Arlington,South,Texas,167400,60487,0.93,0.32,0.62,0.33
+1600000US4806128,4806128,"Baytown city, Texas",Baytown,South,Texas,32884,11379,0.86,0.16,0.43,0.16
+1600000US4807000,4807000,"Beaumont city, Texas",Beaumont,South,Texas,65174,9374,0.88,0.22,0.58,0.4
+1600000US4810768,4810768,"Brownsville city, Texas",Brownsville,South,Texas,52601,46263,0.78,0.21,0.47,0.29
+1600000US4810912,4810912,"Bryan city, Texas",Bryan,South,Texas,36426,9454,0.85,0.28,0.46,0.37
+1600000US4813024,4813024,"Carrollton city, Texas",Carrollton,South,Texas,53724,27979,0.96,0.42,0.65,0.39
+1600000US4815976,4815976,"College Station city, Texas",College Station,South,Texas,29866,8369,0.96,0.52,0.91,0.75
+1600000US4817000,4817000,"Corpus Christi city, Texas",Corpus Christi,South,Texas,176123,21739,0.84,0.21,0.58,0.37
+1600000US4819972,4819972,"Denton city, Texas",Denton,South,Texas,55212,12812,0.94,0.39,0.66,0.53
+1600000US4822660,4822660,"Edinburg city, Texas",Edinburg,South,Texas,29973,12650,0.86,0.29,0.57,0.45
+1600000US4827684,4827684,"Frisco city, Texas",Frisco,South,Texas,61186,17991,0.98,0.59,0.89,0.64
+1600000US4829000,4829000,"Garland city, Texas",Garland,South,Texas,87865,53728,0.9,0.25,0.54,0.29
+1600000US4830464,4830464,"Grand Prairie city, Texas",Grand Prairie,South,Texas,73898,32682,0.89,0.26,0.6,0.27
+1600000US4837000,4837000,"Irving city, Texas",Irving,South,Texas,77421,63829,0.91,0.33,0.67,0.51
+1600000US4839148,4839148,"Killeen city, Texas",Killeen,South,Texas,59591,10174,0.93,0.17,0.76,0.21
+1600000US4841464,4841464,"Laredo city, Texas",Laredo,South,Texas,74252,57003,0.79,0.2,0.48,0.3
+1600000US4841980,4841980,"League City city, Texas",League City,South,Texas,49160,7536,0.96,0.4,0.84,0.57
+1600000US4842508,4842508,"Lewisville city, Texas",Lewisville,South,Texas,47482,16176,0.94,0.32,0.65,0.4
+1600000US4843888,4843888,"Longview city, Texas",Longview,South,Texas,45462,6486,0.88,0.22,0.49,0.25
+1600000US4845000,4845000,"Lubbock city, Texas",Lubbock,South,Texas,124006,10834,0.87,0.29,0.71,0.55
+1600000US4845384,4845384,"McAllen city, Texas",McAllen,South,Texas,48042,32994,0.85,0.31,0.57,0.41
+1600000US4845744,4845744,"McKinney city, Texas",McKinney,South,Texas,72078,14880,0.96,0.48,0.75,0.45
+1600000US4847892,4847892,"Mesquite city, Texas",Mesquite,South,Texas,65518,19521,0.88,0.19,0.58,0.27
+1600000US4848072,4848072,"Midland city, Texas",Midland,South,Texas,63235,10275,0.88,0.28,0.5,0.21
+1600000US4848768,4848768,"Mission city, Texas",Mission,South,Texas,26012,18877,0.84,0.25,0.56,0.39
+1600000US4848804,4848804,"Missouri City city, Texas",Missouri City,South,Texas,31253,13655,0.95,0.41,0.85,0.57
+1600000US4853388,4853388,"Odessa city, Texas",Odessa,South,Texas,51192,12063,0.84,0.18,0.44,0.33
+1600000US4856000,4856000,"Pasadena city, Texas",Pasadena,South,Texas,57046,31872,0.83,0.17,0.5,0.18
+1600000US4856348,4856348,"Pearland city, Texas",Pearland,South,Texas,46477,14377,0.95,0.44,0.85,0.61
+1600000US4857200,4857200,"Pharr city, Texas",Pharr,South,Texas,20536,19598,0.76,0.16,0.47,0.23
+1600000US4858016,4858016,"Plano city, Texas",Plano,South,Texas,123970,56258,0.97,0.53,0.85,0.68
+1600000US4861796,4861796,"Richardson city, Texas",Richardson,South,Texas,49193,19631,0.97,0.53,0.79,0.58
+1600000US4863500,4863500,"Round Rock city, Texas",Round Rock,South,Texas,51715,12278,0.95,0.39,0.73,0.44
+1600000US4864472,4864472,"San Angelo city, Texas",San Angelo,South,Texas,53014,5588,0.86,0.23,0.48,0.23
+1600000US4870808,4870808,"Sugar Land city, Texas",Sugar Land,South,Texas,30493,24741,0.96,0.51,0.89,0.66
+1600000US4872656,4872656,"The Woodlands CDP, Texas",The Woodlands,South,Texas,53610,12014,0.98,0.59,0.93,0.72
+1600000US4874144,4874144,"Tyler city, Texas",Tyler,South,Texas,52064,9772,0.92,0.32,0.45,0.33
+1600000US4876000,4876000,"Waco city, Texas",Waco,South,Texas,58919,11262,0.85,0.23,0.4,0.3
+1600000US4879000,4879000,"Wichita Falls city, Texas",Wichita Falls,South,Texas,57510,6311,0.87,0.22,0.68,0.32
+1600000US4955980,4955980,"Ogden city, Utah",Ogden,West,Utah,41315,8592,0.89,0.2,0.48,0.2
+1600000US4957300,4957300,"Orem city, Utah",Orem,West,Utah,39103,7423,0.96,0.38,0.75,0.32
+1600000US4962470,4962470,"Provo city, Utah",Provo,West,Utah,38412,8645,0.95,0.43,0.72,0.35
+1600000US4965330,4965330,"St. George city, Utah",St. George,West,Utah,41057,5163,0.94,0.29,0.65,0.27
+1600000US4967000,4967000,"Salt Lake City city, Utah",Salt Lake City,West,Utah,94601,25618,0.93,0.46,0.61,0.45
+1600000US4967440,4967440,"Sandy city, Utah",Sandy,West,Utah,50071,5284,0.96,0.39,0.87,0.43
+1600000US4982950,4982950,"West Jordan city, Utah",West Jordan,West,Utah,51740,8593,0.93,0.24,0.72,0.29
+1600000US4983470,4983470,"West Valley City city, Utah",West Valley City,West,Utah,50863,24638,0.88,0.14,0.56,0.16
+1600000US5101000,5101000,"Alexandria city, Virginia",Alexandria,South,Virginia,75712,33297,0.96,0.71,0.8,0.5
+1600000US5103000,5103000,"Arlington CDP, Virginia",Arlington,South,Virginia,118361,43180,0.98,0.8,0.8,0.6
+1600000US5114440,5114440,"Centreville CDP, Virginia",Centreville,South,Virginia,26130,20464,0.99,0.61,0.88,0.55
+1600000US5116000,5116000,"Chesapeake city, Virginia",Chesapeake,South,Virginia,137352,9505,0.91,0.28,0.87,0.46
+1600000US5135000,5135000,"Hampton city, Virginia",Hampton,South,Virginia,81707,5848,0.9,0.23,0.85,0.39
+1600000US5147672,5147672,"Lynchburg city, Virginia",Lynchburg,South,Virginia,40758,2631,0.87,0.31,0.88,0.6
+1600000US5156000,5156000,"Newport News city, Virginia",Newport News,South,Virginia,99035,11606,0.9,0.24,0.73,0.32
+1600000US5157000,5157000,"Norfolk city, Virginia",Norfolk,South,Virginia,131428,13221,0.87,0.24,0.85,0.43
+1600000US5164000,5164000,"Portsmouth city, Virginia",Portsmouth,South,Virginia,60515,2252,0.83,0.19,0.8,0.38
+1600000US5167000,5167000,"Richmond city, Virginia",Richmond,South,Virginia,126405,11347,0.84,0.36,0.63,0.45
+1600000US5168000,5168000,"Roanoke city, Virginia",Roanoke,South,Virginia,62348,5194,0.86,0.24,0.55,0.35
+1600000US5176432,5176432,"Suffolk city, Virginia",Suffolk,South,Virginia,53076,2512,0.87,0.25,0.88,0.46
+1600000US5182000,5182000,"Virginia Beach city, Virginia",Virginia Beach,South,Virginia,252504,34662,0.94,0.34,0.89,0.37
+1600000US5303180,5303180,"Auburn city, Washington",Auburn,West,Washington,35954,10442,0.92,0.24,0.71,0.27
+1600000US5305210,5305210,"Bellevue city, Washington",Bellevue,West,Washington,54199,39569,0.98,0.58,0.92,0.73
+1600000US5305280,5305280,"Bellingham city, Washington",Bellingham,West,Washington,41741,6705,0.96,0.43,0.7,0.38
+1600000US5322640,5322640,"Everett city, Washington",Everett,West,Washington,52848,16067,0.91,0.21,0.73,0.26
+1600000US5323515,5323515,"Federal Way city, Washington",Federal Way,West,Washington,40538,17745,0.94,0.27,0.79,0.29
+1600000US5335275,5335275,"Kennewick city, Washington",Kennewick,West,Washington,39567,7071,0.92,0.24,0.55,0.25
+1600000US5335415,5335415,"Kent city, Washington",Kent,West,Washington,49854,26211,0.92,0.26,0.7,0.29
+1600000US5335940,5335940,"Kirkland city, Washington",Kirkland,West,Washington,44560,14856,0.98,0.54,0.92,0.65
+1600000US5357745,5357745,"Renton city, Washington",Renton,West,Washington,42211,22963,0.94,0.32,0.78,0.4
+1600000US5367000,5367000,"Spokane city, Washington",Spokane,West,Washington,125700,11339,0.92,0.29,0.81,0.27
+1600000US5367167,5367167,"Spokane Valley city, Washington",Spokane Valley,West,Washington,57552,3551,0.92,0.21,0.85,0.26
+1600000US5370000,5370000,"Tacoma city, Washington",Tacoma,West,Washington,108389,22619,0.91,0.27,0.69,0.25
+1600000US5374060,5374060,"Vancouver city, Washington",Vancouver,West,Washington,91630,18186,0.92,0.26,0.75,0.3
+1600000US5380010,5380010,"Yakima city, Washington",Yakima,West,Washington,44100,13173,0.85,0.21,0.34,0.12
+1600000US5531000,5531000,"Green Bay city, Wisconsin",Green Bay,Midwest,Wisconsin,60044,6588,0.92,0.25,0.44,0.23
+1600000US5539225,5539225,"Kenosha city, Wisconsin",Kenosha,Midwest,Wisconsin,55740,6526,0.91,0.24,0.7,0.28
+1600000US5548000,5548000,"Madison city, Wisconsin",Madison,Midwest,Wisconsin,127719,18940,0.97,0.55,0.84,0.69
+1600000US5566000,5566000,"Racine city, Wisconsin",Racine,Midwest,Wisconsin,42881,5313,0.85,0.18,0.48,0.21
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,Statewide,,Alabama,,,0.89,0.35,0.77,0.52
+,,,Statewide,,Alaska,,,0.95,0.34,0.77,0.33
+,,,Statewide,,Arizona,,,0.93,0.31,0.71,0.35
+,,,Statewide,,Arkansas,,,0.9,0.33,0.59,0.37
+,,,Statewide,,California,,,0.91,0.31,0.67,0.37
+,,,Statewide,,Colorado,,,0.94,0.41,0.72,0.42
+,,,Statewide,,Connecticut,,,0.89,0.33,0.72,0.34
+,,,Statewide,,Florida,,,0.91,0.3,0.8,0.33
+,,,Statewide,,Georgia,,,0.9,0.41,0.79,0.51
+,,,Statewide,,Hawaii,,,0.95,0.4,0.76,0.34
+,,,Statewide,,Idaho,,,0.93,0.31,0.68,0.32
+,,,Statewide,,Illinois,,,0.91,0.37,0.73,0.47
+,,,Statewide,,Indiana,,,0.91,0.37,0.75,0.53
+,,,Statewide,,Iowa,,,0.92,0.27,0.63,0.33
+,,,Statewide,,Kansas,,,0.93,0.39,0.7,0.46
+,,,Statewide,,Kentucky,,,0.91,0.4,0.73,0.55
+,,,Statewide,,Louisiana,,,0.87,0.32,0.74,0.49
+,,,Statewide,,Maryland,,,0.97,0.62,0.81,0.55
+,,,Statewide,,Massachusetts,,,0.89,0.36,0.69,0.37
+,,,Statewide,,Michigan,,,0.91,0.34,0.75,0.51
+,,,Statewide,,Minnesota,,,0.95,0.43,0.76,0.46
+,,,Statewide,,Mississippi,,,0.84,0.26,0.68,0.47
+,,,Statewide,,Missouri,,,0.91,0.33,0.77,0.43
+,,,Statewide,,Montana,,,0.93,0.31,0.86,0.26
+,,,Statewide,,Nebraska,,,0.95,0.36,0.6,0.41
+,,,Statewide,,Nevada,,,0.91,0.24,0.68,0.29
+,,,Statewide,,New Hampshire,,,0.91,0.31,0.74,0.42
+,,,Statewide,,New Jersey,,,0.85,0.2,0.7,0.28
+,,,Statewide,,New Mexico,,,0.93,0.32,0.67,0.43
+,,,Statewide,,New York,,,0.88,0.33,0.71,0.42
+,,,Statewide,,North Carolina,,,0.92,0.4,0.71,0.46
+,,,Statewide,,North Dakota,,,0.96,0.38,0.83,0.55
+,,,Statewide,,Ohio,,,0.85,0.2,0.71,0.39
+,,,Statewide,,Oklahoma,,,0.93,0.35,0.77,0.45
+,,,Statewide,,Oregon,,,0.93,0.33,0.66,0.39
+,,,Statewide,,Pennsylvania,,,0.87,0.22,0.69,0.39
+,,,Statewide,,Rhode Island,,,0.89,0.34,0.71,0.33
+,,,Statewide,,South Carolina,,,0.91,0.42,0.8,0.53
+,,,Statewide,,South Dakota,,,0.93,0.34,0.63,0.32
+,,,Statewide,,Tennessee,,,0.9,0.29,0.72,0.4
+,,,Statewide,,Texas,,,0.9,0.32,0.64,0.41
+,,,Statewide,,Utah,,,0.93,0.32,0.67,0.31
+,,,Statewide,,Virginia,,,0.9,0.37,0.8,0.45
+,,,Statewide,,Washington,,,0.93,0.31,0.73,0.34
+,,,Statewide,,Wisconsin,,,0.91,0.31,0.62,0.35
