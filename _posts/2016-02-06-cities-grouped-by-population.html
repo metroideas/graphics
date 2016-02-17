@@ -12,6 +12,6 @@ description: Interactive bar chart shows number of midsize cities grouped by pop
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
 <script>
-  var url       = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
-  var barchart  = new pym.Parent("barchart", url, {});
+  var url      = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var barchart = new pym.Parent("barchart", url, {});
 </script>
