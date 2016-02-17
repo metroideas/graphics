@@ -2,7 +2,7 @@ body {
   font-size: 14px;
 }
 
-@media (min-width: 512px) {
+@media (min-width: 320px) {
   .span-6 {
     float: left;
     display: block;
@@ -55,8 +55,6 @@ body {
 
 .label {
   font-size: 12px;
-  font-weight: 300;
-  stroke: #b1b3b5;
 }
 
 .tick {

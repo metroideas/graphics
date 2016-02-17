@@ -5,6 +5,8 @@
   ;
 
   function drawGraphic(containerWidth) {
+    container.innerHTML = "";
+
     var
     x,
     y,
@@ -15,7 +17,7 @@
     hs,
     college,
     points,
-    svg            = undefined, // Resets svg on resize
+    svg,
     margin         = { top: 48, right: 24, bottom: 48, left: 48 },
     width          = calculateWidth(),
     mobile         = (width <= 512) ? true : false,
