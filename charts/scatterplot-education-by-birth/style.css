@@ -4,29 +4,36 @@ body {
 
 #graphic {
   max-width: 100%;
-  width: 768px;
+  width: 640px;
   margin: auto;
 }
 
-.tooltip {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-
-  border-radius: 3px;
-  border: 1px solid #dcddde;
+.legend .hs,
+.legend .college {
+  font-size: 12px;
 }
 
-.hidden {
-  display: none;
+.legend .key {
+  margin: 1px 6px 0 0;
+  float: left;
+  width: 12px;
+  height: 12px;
+}
+
+.hs .key {
+  background-color: #ff7f0e;
+}
+
+.college .key {
+  background-color: #2ca02c;
 }
 
 .college {
-  fill: #0961ae;
+  fill: #2ca02c;
 }
 
-.high-school {
-  fill: #bcbec0;
+.hs {
+  fill: #ff7f0e;
 }
 
 .axis line,
@@ -38,6 +45,12 @@ body {
 
 .axis path {
   display: none;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 300;
+  stroke: #b1b3b5;
 }
 
 .tick {

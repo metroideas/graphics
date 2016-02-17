@@ -11,9 +11,10 @@
     xAxis,
     yAxis,
     select,
-    circles,
+    legend,
+    hs,
     college,
-    highSchool,
+    points,
     svg            = undefined, // Resets svg on resize
     margin         = { top: 48, right: 24, bottom: 48, left: 48 },
     width          = calculateWidth(),
@@ -21,7 +22,6 @@
     height         = calculateHeight(),
     radius         = (mobile) ? 2 : 3
     ;
-
 
 
     // Helper functions
@@ -69,6 +69,43 @@
       .attr("selected", true)
       .html("State averages");
 
+    // Legend
+    // -------------------------------------------------
+    legend = d3.select("#graphic").append("div")
+      .attr("class", "legend")
+      .style({
+        "margin-top": margin.top / 2 + "px",
+        "margin-left": (mobile)
+                      ? margin.left / 2 + "px"
+                      : margin.left + "px"
+      });
+      
+      legend.append("h3").attr("class", "name").html("&nbsp;");
+      
+      hs      = legend.append("div").attr("class", "hs span-6");
+      college = legend.append("div").attr("class", "college span-6");
+
+      hs.append("div").attr("class", "key");
+
+      hs.append("span").html("High school graduates");
+
+      var list = hs.append("ul").attr("class", "list-unstyled");
+      list.append("li").html("Foreign born: ")
+        .append("span").attr("class", "foreign-data");
+      list.append("li").html("Native born: ")
+        .append("span").attr("class", "natural-data");
+
+      college.append("div").attr("class", "key");
+
+      college.append("span").html("College graduates");
+
+      var list = college.append("ul").attr("class", "list-unstyled");
+      list.append("li").html("Foreign born: ")
+        .append("span").attr("class", "foreign-data");
+      list.append("li").html("Native born: ")
+        .append("span").attr("class", "natural-data");
+
+
     // Scales, axes
     // -------------------------------------------------
     x = d3.scale.linear()
@@ -105,7 +142,7 @@
         .attr("width", width + marginWidth())
         .attr("height", height + marginHeight())
       .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        .attr("transform", "translate(" + margin.left + "," + margin.top / 4 + ")");
 
     svg.append("g")
         .attr("class", "x axis")
@@ -119,60 +156,86 @@
         .attr("class", "label");
 
     svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .text("Foreign born")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left * 0.75 + 2)
+        .attr("text-anchor", "middle")
+        .attr("class", "label");
 
-    college = svg.selectAll("circle.college")
+    points = svg.selectAll("g.point")
         .data(data)
-      .enter().append("circle")
-        .attr("class", "college")
-          .attr("cx", function(d) { return x(d.natural.college); })
-          .attr("cy", function(d) { return y(d.foreign.college); })
-          .attr("r", radius);
-          
-    highSchool = svg.selectAll("circle.high-school")
-        .data(data)
-      .enter().append("circle")
-        .attr("class", "high-school")
-          .attr("cx", function(d) { return x(d.natural.hs); })
-          .attr("cy", function(d) { return y(d.foreign.hs); })
-          .attr("r", radius);
+      .enter().append("g")
+        .attr("class", "point");
+
+    scatterplot(points);
+
+    function scatterplot(group, selector) {
+      addPoint("college");
+      addPoint("hs");
+
+      function addPoint(selector) {
+        var g = group.append("circle")
+          .attr("class", selector)
+          .attr("cx", function(d) { return x(d.natural[selector]); })
+          .attr("cy", function(d) { return y(d.foreign[selector]); })
+          .attr("r", radius)
+          .on("mouseover", onHover)
+          .on("mouseout", offHover);
+      }
+
+      function onHover(d) {
+        function pctFmt(decimal) { return Math.round(decimal * 100) + "%" }
+
+        d3.selectAll(this.parentNode.children).attr("r", radius * 2);
+        d3.select(".legend .name").html(function() {
+          return (d.state) ? d.id + ", " + d.state : d.id;
+        });
+
+        d3.select(".legend .hs .foreign-data").html(pctFmt(d.foreign.hs));
+        d3.select(".legend .hs .natural-data").html(pctFmt(d.natural.hs));
+        d3.select(".legend .college .foreign-data").html(pctFmt(d.foreign.college));
+        d3.select(".legend .college .natural-data").html(pctFmt(d.natural.college));
+      }
+
+      function offHover() {
+        d3.selectAll(this.parentNode.children).attr("r", radius);
+        d3.select(".legend .name").html("&nbsp;")
+        d3.selectAll(".legend .foreign-data").html("&nbsp;")
+        d3.selectAll(".legend .natural-data").html("&nbsp;")
+      }
+    } // End of scatterplot()
+
 
     // Menu selection
     // -------------------------------------------------
     select.on("change", function() {
       var
       cities,
-      selection = this.value;
+      option = this.value;
       
-      if (selection == "all") {
+      if (option == "all") {
         cities = data
       } else {
         data.forEach(function(state) {
-          if (state.id == selection) { cities = state.cities; }
+          if (state.id == option) {
+            cities = state.cities;
+          }
         });  
       }
       
-      if (cities) {
-        college.remove();
-        highSchool.remove();  
-      }
-
-      college = svg.selectAll("circle.college")
+      // Clear and bind data selection
+      points.remove();
+      
+      points = svg.selectAll("g.point")
           .data(cities)
-        .enter().append("circle")
-          .attr("class", "college")
-          .attr("cx", function(d) { return x(d.natural.college); })
-          .attr("cy", function(d) { return y(d.foreign.college); })
-          .attr("r", radius);
+        .enter().append("g")
+          .attr("class", "point");
 
-      highSchool = svg.selectAll("circle.high-school")
-          .data(cities)
-        .enter().append("circle")
-          .attr("class", "high-school")
-          .attr("cx", function(d) { return x(d.natural.hs); })
-          .attr("cy", function(d) { return y(d.foreign.hs); })
-          .attr("r", radius);
+      scatterplot(points);
     });
   } // End of drawGraphic()
   
@@ -182,29 +245,28 @@
   d3.csv("data.csv", type, function(error, csv) {
     if (error) throw error;
 
-    // Create parent (state) nodes
-    data = csv.filter(function(row) {
-        return row.city == "Statewide";
-      }).map(function(row) {
+    // Create parent nodes
+    data = csv.filter(function(parent) { return parent.city == "Statewide";
+      }).map(function(parent) {
         return {
-          id: row.state,
-          foreign: { hs: +row["foreign_hs"], college: +row["foreign_college"] },
-          natural: { hs: +row["natural_hs"], college: +row["natural_college"] },
+          id: parent.state,
+          foreign: { hs: parent["foreign_hs"], college: parent["foreign_college"] },
+          natural: { hs: parent["natural_hs"], college: parent["natural_college"] },
           cities: []
         };
       });
 
-    // Add child (city) nodes
-    csv.forEach(function(city) {
-      if (city.city != "Statewide") {
-        data.forEach(function(state) {
-          if (city.state == state.id) {
+    // Add child nodes
+    csv.forEach(function(child) {
+      if (child.city != "Statewide") {
+        data.forEach(function(parent) {
+          if (child.state == parent.id) {
             
-            state.cities.push({
-              id: city.city,
-              state: city.state,
-              foreign: { hs: +city["foreign_hs"], college: +city["foreign_college"] },
-              natural: { hs: +city["natural_hs"], college: +city["natural_college"] }
+            parent.cities.push({
+              id: child.city,
+              state: child.state,
+              foreign: { hs: child["foreign_hs"], college: child["foreign_college"] },
+              natural: { hs: child["natural_hs"], college: child["natural_college"] }
             });
           }
         })
@@ -224,5 +286,4 @@
     d["natural_college"] = +d["natural_college"]
     return d;
   }
-
 })();
