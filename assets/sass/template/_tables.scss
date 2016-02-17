@@ -1,0 +1,31 @@
+/* ======================================
+/* Tables
+/* =================================== */
+
+table {
+  border-collapse: collapse;
+  margin: 8px 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid $subtle-gray;
+  @include text-strong;
+  padding: 8px 0;
+  text-align: left;
+}
+
+td {
+  padding: 8px 4px;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: $subtle-gray;
+}
