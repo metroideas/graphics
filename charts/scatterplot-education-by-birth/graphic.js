@@ -46,29 +46,6 @@
       return Math.ceil(containerWidth - marginWidth());
     }
 
-    // Dropdown selector
-    // -------------------------------------------------
-    select = d3.select("#graphic").append("select")
-      .style({
-        "margin-top": (mobile)
-                      ? margin.top / 2 + "px"
-                      : margin.top + "px",
-        "margin-left": (mobile)
-                      ? margin.left / 2 + "px"
-                      : margin.left + "px"
-      });
-
-    select.selectAll("option")
-        .data(data)
-      .enter().append("option")
-        .attr("value", function(d) { return d.id; })
-        .html(function(d) { return d.id; });
-
-    select.insert("option", ":first-child")
-      .attr("value", "all")
-      .attr("selected", true)
-      .html("State averages");
-
     // Legend
     // -------------------------------------------------
     legend = d3.select("#graphic").append("div")
@@ -105,6 +82,30 @@
       list.append("li").html("Native born: ")
         .append("span").attr("class", "natural-data");
 
+    // Dropdown selector
+    // -------------------------------------------------
+    select = d3.select("#graphic").append("select")
+      .style({
+        "margin-right": "8px",
+        "margin-left": (mobile)
+                      ? margin.left / 2 + "px"
+                      : margin.left + "px"
+
+      });
+
+    select.selectAll("option")
+        .data(data)
+      .enter().append("option")
+        .attr("value", function(d) { return d.id; })
+        .html(function(d) { return d.id; });
+
+    select.insert("option", ":first-child")
+      .attr("value", "all")
+      .attr("selected", true)
+      .html("State averages");
+
+    d3.select("#graphic").append("label")
+      .html("Choose a state");
 
     // Scales, axes
     // -------------------------------------------------

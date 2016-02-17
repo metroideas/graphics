@@ -2,10 +2,16 @@ body {
   font-size: 14px;
 }
 
-#graphic {
-  max-width: 100%;
-  width: 640px;
-  margin: auto;
+@media (min-width: 512px) {
+  .span-6 {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+  }
+  .span-6:last-child {
+    margin-right: 0;
+  }
 }
 
 .legend .hs,
