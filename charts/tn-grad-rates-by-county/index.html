@@ -1,35 +1,56 @@
 ---
-layout: d3
+layout: null
 ---
 
-<div class="legend">
-  <h2 class="county-name-data">&nbsp;</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
   
-  <div class="row" style="">
-    <div class="span-6" style="margin-bottom:0;">
-      <p style="margin:0;">
-        Graduation rate: <span class="graduation-rate-data"></span>
-        <br>
-        Spending per student: <span class="cost-per-student-data"></span>
-      </p>
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">    
+      
+    <div class="legend">
+      <h2 class="county-name-data">&nbsp;</h2>
+      
+      <div class="row" style="">
+        <div class="span-6" style="margin-bottom:0;">
+          <p style="margin:0;">
+            Graduation rate: <span class="graduation-rate-data"></span>
+            <br>
+            Spending per student: <span class="cost-per-student-data"></span>
+          </p>
+        </div>
+        <div class="span-6">
+          <p style="margin:0;">
+            Economically disadvantaged: <span class="econ-disadvantage-data"></span>
+            <br>
+            Minority students: <span class="minority-data"></span>
+          </p>
+        </div>
+      </div>
+
+      <label for="x-axis-selector">Choose</label><br>
+      <select name="x-axis-selector" id="dropdown-menu"></select>
+      
+
     </div>
-    <div class="span-6">
-      <p style="margin:0;">
-        Economically disadvantaged: <span class="econ-disadvantage-data"></span>
-        <br>
-        Minority students: <span class="minority-data"></span>
-      </p>
+
+    <div class="chart">
+      <img src="fallback.png" alt="" class="responsive">
+    </div>
+
+    <div class="source text-xsmall">
+      <p>Data compiled from the state of Tennessee and the U.S. Census Bureau. <a href="https://github.com/metroideas/graphics/tree/gh-pages{{ page.url }}data.csv">Download the CSV.</a></p>
     </div>
   </div>
 
-  <label for="x-axis-selector">Choose</label><br>
-  <select name="x-axis-selector" id="dropdown-menu"></select>
-  
+  <script src="graphic.js"></script>
+</body>
+</html>
 
-</div>
-
-<div class="chart"></div>
-
-<div class="source text-xsmall">
-  <p>Data compiled from the state of Tennessee and the U.S. Census Bureau. <a href="https://github.com/metroideas/graphics/tree/gh-pages{{ page.url }}data.csv">Download the CSV.</a></p>
-</div>

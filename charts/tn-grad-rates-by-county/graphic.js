@@ -10,7 +10,7 @@
   
   function drawGraphic(containerWidth) {
     document.querySelector(".chart").innerHTML = ""; // Removes existing svg on resize
-    document.querySelector("#graphic img").remove(); // Removes fallback.png
+    //document.querySelector("#graphic img").remove(); // Removes fallback.png
 
     var
     svg,
