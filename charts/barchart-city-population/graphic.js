@@ -4,7 +4,7 @@
   pymChild,
   container    = document.querySelector("#graphic"),
   url          = "data.csv",
-  aspect_ratio = { width: 1, height: 1 }
+  aspect_ratio = { width: 3, height: 2 }
   ;
 
   function drawGraphic(container_width) {
@@ -22,15 +22,18 @@
     yAxis,
     svg,
     bars,
+    height,
     margin = { top: 32, right: 32, bottom: 48, left: 48 },
-    width  = container_width - margin.left - margin.right,
-    height = Math.ceil(width * aspect_ratio.height / aspect_ratio.width) - margin.top - margin.bottom
+    width  = container_width - margin.left - margin.right
     ;
 
     // Use smallScreen boolean for layout changes
     if (width <= 512) {
       var smallScreen = true;
+      aspect_ratio = { width: 1, height: 1 };
     }
+
+    height = Math.ceil(width * aspect_ratio.height / aspect_ratio.width) - margin.top - margin.bottom;
 
     x = d3.scale.ordinal()
       .domain(data.map(function(d) { return d.name; }))
@@ -117,6 +120,9 @@
 
         d3.select(".tooltip .west")
           .text("West: " + d.west);
+
+        d3.select(".tooltip .total")
+          .text("Total: " + d.value);
 
         d3.select(".tooltip").classed("hidden", false);
       });

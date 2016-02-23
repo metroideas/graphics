@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
-  <style>
-    header { margin: 2em 0; }
-  </style>
 </head>
 <body>
+  {% include navbar.html %}
+
   <div class="grid-small">
     <header>
       <h1 class="headline">{{ page.title }}</h1>
@@ -20,7 +21,8 @@
 
     <p>
       <small>
-        {% if page.related %}<a href="{{ page.related }}">Related article</a> | {% endif %}
+        <a href="https://github.com/metroideas/graphics/tree/gh-pages{{ page.embed_source }}">Source</a>
+        {% if page.related %}| <a href="{{ page.related }}">Related article</a>{% endif %}
       </small>
     </p>
 

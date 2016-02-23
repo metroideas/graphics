@@ -1,0 +1,24 @@
+body {
+  font-size: 14px;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.tick,
+.legend {
+  font-size: 12px;
+}
+
+.key rect {
+  width: 12px;
+  height: 12px;
+}

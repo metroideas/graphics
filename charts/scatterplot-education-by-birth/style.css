@@ -1,0 +1,62 @@
+body {
+  font-size: 14px;
+}
+
+@media (min-width: 320px) {
+  .span-6 {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+  }
+  .span-6:last-child {
+    margin-right: 0;
+  }
+}
+
+.legend .hs,
+.legend .college {
+  font-size: 12px;
+}
+
+.legend .key {
+  margin: 1px 6px 0 0;
+  float: left;
+  width: 12px;
+  height: 12px;
+}
+
+.hs .key {
+  background-color: #ff7f0e;
+}
+
+.college .key {
+  background-color: #2ca02c;
+}
+
+.college {
+  fill: #2ca02c;
+}
+
+.hs {
+  fill: #ff7f0e;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.label {
+  font-size: 12px;
+}
+
+.tick {
+  font-size: 12px; 
+}

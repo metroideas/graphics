@@ -1,0 +1,17 @@
+---
+title: "Scatterplot: Education attainment by native- and foreign-born residents"
+date: 2016-02-17 08:15:00 -0500
+layout: post
+related:
+embed_source: "/charts/scatterplot-education-by-birth/"
+description: Scatterplot shows education attainment by native- and foreign-born residents in U.S. midsize cities.
+---
+
+<div id="scatterplot"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url         = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var scatterplot = new pym.Parent("scatterplot", url, {});
+</script>

@@ -1,0 +1,487 @@
+city,state,natural_hs,natural_college,foreign_hs,foreign_college
+Birmingham,Alabama,0.84,0.22,0.76,0.49
+Hoover,Alabama,0.97,0.57,0.73,0.59
+Huntsville,Alabama,0.91,0.39,0.73,0.51
+Mobile,Alabama,0.87,0.26,0.85,0.47
+Montgomery,Alabama,0.86,0.31,0.73,0.52
+Tuscaloosa,Alabama,0.88,0.33,0.82,0.52
+Anchorage,Alaska,0.95,0.34,0.77,0.33
+Avondale,Arizona,0.85,0.21,0.57,0.19
+Chandler,Arizona,0.95,0.39,0.77,0.55
+Gilbert,Arizona,0.97,0.4,0.86,0.48
+Glendale,Arizona,0.9,0.23,0.6,0.26
+Goodyear,Arizona,0.94,0.28,0.78,0.28
+Mesa,Arizona,0.93,0.26,0.6,0.25
+Peoria,Arizona,0.94,0.28,0.74,0.33
+San Tan Valley,Arizona,0.93,0.21,0.73,0.35
+Scottsdale,Arizona,0.98,0.54,0.86,0.56
+Surprise,Arizona,0.95,0.3,0.75,0.24
+Tempe,Arizona,0.94,0.42,0.71,0.53
+Yuma,Arizona,0.88,0.17,0.56,0.22
+Fayetteville,Arkansas,0.94,0.46,0.73,0.6
+Fort Smith,Arkansas,0.87,0.23,0.46,0.23
+Little Rock,Arkansas,0.91,0.38,0.8,0.5
+Springdale,Arkansas,0.87,0.25,0.37,0.15
+Alameda,California,0.96,0.54,0.81,0.5
+Alhambra,California,0.92,0.36,0.74,0.41
+Anaheim,California,0.92,0.29,0.61,0.34
+Antioch,California,0.92,0.18,0.75,0.34
+Arden-Arcade,California,0.93,0.37,0.75,0.38
+Bakersfield,California,0.89,0.22,0.56,0.32
+Baldwin Park,California,0.79,0.11,0.51,0.22
+Bellflower,California,0.87,0.15,0.65,0.25
+Berkeley,California,0.97,0.72,0.89,0.73
+Buena Park,California,0.89,0.21,0.78,0.47
+Burbank,California,0.95,0.42,0.78,0.43
+Carlsbad,California,0.98,0.55,0.87,0.59
+Carson,California,0.89,0.23,0.71,0.36
+Chico,California,0.94,0.36,0.68,0.36
+Chino,California,0.85,0.19,0.65,0.42
+Chino Hills,California,0.96,0.38,0.88,0.58
+Chula Vista,California,0.92,0.3,0.69,0.35
+Citrus Heights,California,0.93,0.19,0.72,0.23
+Clovis,California,0.92,0.29,0.75,0.42
+Compton,California,0.81,0.1,0.37,0.07
+Concord,California,0.95,0.32,0.71,0.4
+Corona,California,0.93,0.26,0.71,0.38
+Costa Mesa,California,0.96,0.42,0.63,0.38
+Daly City,California,0.94,0.33,0.81,0.41
+Downey,California,0.91,0.25,0.64,0.28
+East Los Angeles,California,0.75,0.1,0.3,0.11
+El Cajon,California,0.9,0.21,0.6,0.22
+Elk Grove,California,0.95,0.34,0.81,0.45
+El Monte,California,0.81,0.14,0.47,0.22
+Escondido,California,0.91,0.28,0.42,0.27
+Fairfield,California,0.92,0.24,0.7,0.32
+Folsom,California,0.92,0.41,0.91,0.69
+Fontana,California,0.87,0.18,0.56,0.25
+Fremont,California,0.94,0.37,0.9,0.69
+Fullerton,California,0.94,0.37,0.76,0.49
+Garden Grove,California,0.91,0.22,0.63,0.27
+Glendale,California,0.95,0.48,0.79,0.42
+Hawthorne,California,0.91,0.22,0.58,0.28
+Hayward,California,0.9,0.25,0.7,0.34
+Hemet,California,0.87,0.13,0.53,0.18
+Hesperia,California,0.84,0.1,0.52,0.16
+Huntington Beach,California,0.96,0.42,0.79,0.48
+Indio,California,0.87,0.2,0.5,0.21
+Inglewood,California,0.9,0.24,0.45,0.19
+Irvine,California,0.99,0.63,0.93,0.73
+Jurupa Valley,California,0.84,0.12,0.44,0.16
+Lake Forest,California,0.97,0.45,0.8,0.52
+Lakewood,California,0.92,0.26,0.75,0.41
+Lancaster,California,0.85,0.15,0.61,0.26
+Livermore,California,0.96,0.4,0.75,0.48
+Long Beach,California,0.92,0.35,0.58,0.32
+Menifee,California,0.91,0.17,0.62,0.26
+Merced,California,0.89,0.19,0.43,0.26
+Mission Viejo,California,0.97,0.46,0.86,0.51
+Modesto,California,0.88,0.19,0.6,0.26
+Moreno Valley,California,0.88,0.16,0.54,0.24
+Mountain View,California,0.97,0.64,0.88,0.74
+Murrieta,California,0.95,0.27,0.82,0.42
+Napa,California,0.94,0.35,0.46,0.26
+Newport Beach,California,0.98,0.65,0.95,0.65
+Norwalk,California,0.85,0.14,0.62,0.26
+Oakland,California,0.93,0.47,0.57,0.4
+Oceanside,California,0.95,0.29,0.58,0.3
+Ontario,California,0.86,0.15,0.49,0.22
+Orange,California,0.94,0.37,0.64,0.45
+Oxnard,California,0.88,0.23,0.44,0.22
+Palmdale,California,0.86,0.18,0.57,0.2
+Pasadena,California,0.95,0.56,0.72,0.52
+Pleasanton,California,0.97,0.53,0.9,0.75
+Pomona,California,0.84,0.2,0.52,0.26
+Rancho Cucamonga,California,0.94,0.29,0.84,0.45
+Redding,California,0.91,0.23,0.77,0.34
+Redwood City,California,0.95,0.49,0.71,0.43
+Rialto,California,0.82,0.12,0.49,0.16
+Richmond,California,0.89,0.3,0.6,0.33
+Riverside,California,0.9,0.25,0.55,0.29
+Roseville,California,0.96,0.36,0.87,0.43
+Sacramento,California,0.91,0.33,0.64,0.31
+Salinas,California,0.86,0.19,0.41,0.19
+San Bernardino,California,0.8,0.13,0.46,0.19
+San Buenaventura (Ventura),California,0.94,0.35,0.7,0.37
+San Leandro,California,0.92,0.31,0.71,0.33
+San Marcos,California,0.95,0.33,0.53,0.42
+San Mateo,California,0.97,0.52,0.78,0.47
+San Ramon,California,0.99,0.58,0.96,0.77
+Santa Ana,California,0.85,0.23,0.41,0.17
+Santa Barbara,California,0.95,0.53,0.58,0.34
+Santa Clara,California,0.95,0.44,0.89,0.7
+Santa Clarita,California,0.95,0.32,0.74,0.41
+Santa Maria,California,0.85,0.19,0.3,0.21
+Santa Monica,California,0.98,0.69,0.87,0.62
+Santa Rosa,California,0.93,0.34,0.6,0.3
+Simi Valley,California,0.95,0.31,0.79,0.46
+South Gate,California,0.82,0.13,0.38,0.11
+Stockton,California,0.86,0.19,0.57,0.25
+Sunnyvale,California,0.95,0.51,0.89,0.74
+Temecula,California,0.96,0.31,0.79,0.37
+Thousand Oaks,California,0.97,0.49,0.79,0.6
+Torrance,California,0.96,0.43,0.89,0.55
+Tracy,California,0.92,0.2,0.7,0.36
+Tustin,California,0.95,0.44,0.7,0.48
+Upland,California,0.94,0.3,0.76,0.39
+Vacaville,California,0.92,0.22,0.69,0.33
+Vallejo,California,0.92,0.21,0.79,0.36
+Victorville,California,0.86,0.12,0.57,0.13
+Visalia,California,0.89,0.23,0.55,0.3
+Vista,California,0.93,0.23,0.44,0.25
+West Covina,California,0.9,0.22,0.75,0.42
+Westminster,California,0.91,0.25,0.65,0.29
+Whittier,California,0.9,0.27,0.63,0.26
+Arvada,Colorado,0.95,0.37,0.8,0.42
+Aurora,Colorado,0.94,0.3,0.64,0.27
+Boulder,Colorado,0.98,0.73,0.8,0.73
+Centennial,Colorado,0.98,0.54,0.92,0.56
+Colorado Springs,Colorado,0.95,0.38,0.75,0.34
+Fort Collins,Colorado,0.97,0.51,0.84,0.63
+Greeley,Colorado,0.91,0.29,0.47,0.17
+Highlands Ranch,Colorado,0.99,0.62,0.95,0.68
+Lakewood,Colorado,0.94,0.37,0.68,0.39
+Longmont,Colorado,0.94,0.4,0.58,0.4
+Pueblo,Colorado,0.87,0.2,0.58,0.19
+Thornton,Colorado,0.91,0.28,0.65,0.27
+Westminster,Colorado,0.94,0.36,0.66,0.37
+Bridgeport,Connecticut,0.85,0.2,0.67,0.23
+Danbury,Connecticut,0.94,0.39,0.66,0.28
+Hartford,Connecticut,0.8,0.18,0.7,0.25
+New Haven,Connecticut,0.87,0.34,0.76,0.58
+Norwalk,Connecticut,0.95,0.46,0.77,0.41
+Stamford,Connecticut,0.95,0.55,0.77,0.45
+Waterbury,Connecticut,0.86,0.18,0.7,0.18
+Alafaya,Florida,0.98,0.48,0.87,0.39
+Boca Raton,Florida,0.98,0.54,0.89,0.51
+Brandon,Florida,0.93,0.27,0.88,0.36
+Cape Coral,Florida,0.93,0.21,0.8,0.24
+Clearwater,Florida,0.91,0.29,0.77,0.31
+Coral Springs,Florida,0.95,0.37,0.87,0.37
+Davie,Florida,0.94,0.34,0.86,0.37
+Deerfield Beach,Florida,0.91,0.27,0.77,0.24
+Deltona,Florida,0.9,0.15,0.76,0.21
+Fort Lauderdale,Florida,0.89,0.37,0.74,0.35
+Gainesville,Florida,0.91,0.39,0.92,0.66
+Hialeah,Florida,0.86,0.17,0.69,0.19
+Hollywood,Florida,0.91,0.3,0.82,0.29
+Kendall,Florida,0.97,0.51,0.84,0.47
+Lakeland,Florida,0.9,0.25,0.75,0.36
+Largo,Florida,0.9,0.2,0.79,0.26
+Lehigh Acres,Florida,0.85,0.13,0.67,0.18
+Melbourne,Florida,0.9,0.24,0.8,0.3
+Miami,Florida,0.86,0.35,0.67,0.29
+Miami Beach,Florida,0.95,0.6,0.8,0.42
+Miami Gardens,Florida,0.85,0.16,0.75,0.17
+Miramar,Florida,0.95,0.35,0.87,0.34
+Orlando,Florida,0.92,0.36,0.83,0.35
+Palm Bay,Florida,0.9,0.18,0.76,0.2
+Palm Coast,Florida,0.92,0.21,0.82,0.3
+Pembroke Pines,Florida,0.94,0.33,0.88,0.36
+Pine Hills,Florida,0.84,0.14,0.66,0.14
+Plantation,Florida,0.97,0.44,0.88,0.39
+Pompano Beach,Florida,0.88,0.25,0.72,0.27
+Port St. Lucie,Florida,0.92,0.19,0.78,0.23
+Riverview,Florida,0.93,0.27,0.85,0.38
+St. Petersburg,Florida,0.9,0.3,0.81,0.34
+Spring Hill,Florida,0.89,0.14,0.75,0.21
+Sunrise,Florida,0.92,0.25,0.84,0.32
+Tallahassee,Florida,0.93,0.46,0.91,0.65
+Tampa,Florida,0.9,0.36,0.75,0.39
+Town 'n' Country,Florida,0.91,0.29,0.78,0.25
+West Palm Beach,Florida,0.91,0.36,0.73,0.32
+Athens-Clarke County,Georgia,0.89,0.4,0.65,0.52
+Atlanta,Georgia,0.89,0.46,0.84,0.64
+Augusta-Richmond County,Georgia,0.84,0.2,0.84,0.4
+Columbus,Georgia,0.86,0.23,0.73,0.4
+Johns Creek,Georgia,0.99,0.63,0.91,0.73
+Macon-Bibb County,Georgia,0.83,0.23,0.78,0.5
+Roswell,Georgia,0.97,0.61,0.8,0.47
+Sandy Springs,Georgia,0.98,0.63,0.84,0.5
+Savannah,Georgia,0.87,0.26,0.71,0.47
+Urban Honolulu,Hawaii,0.95,0.4,0.76,0.34
+Boise City,Idaho,0.95,0.4,0.76,0.46
+Meridian,Idaho,0.96,0.34,0.82,0.31
+Nampa,Idaho,0.88,0.19,0.47,0.18
+Aurora,Illinois,0.92,0.37,0.51,0.41
+Bloomington,Illinois,0.95,0.43,0.91,0.71
+Champaign,Illinois,0.95,0.47,0.91,0.71
+Cicero,Illinois,0.8,0.13,0.52,0.09
+Elgin,Illinois,0.91,0.29,0.57,0.28
+Evanston,Illinois,0.96,0.69,0.85,0.67
+Joliet,Illinois,0.91,0.27,0.56,0.22
+Naperville,Illinois,0.98,0.65,0.93,0.74
+Peoria,Illinois,0.89,0.3,0.84,0.67
+Rockford,Illinois,0.86,0.21,0.65,0.26
+Schaumburg,Illinois,0.96,0.4,0.9,0.61
+Springfield,Illinois,0.92,0.34,0.87,0.54
+Waukegan,Illinois,0.87,0.24,0.51,0.24
+Bloomington,Indiana,0.93,0.53,0.91,0.84
+Carmel,Indiana,0.99,0.68,0.95,0.78
+Evansville,Indiana,0.88,0.18,0.74,0.41
+Fishers,Indiana,0.98,0.6,0.92,0.75
+Fort Wayne,Indiana,0.91,0.26,0.6,0.36
+Hammond,Indiana,0.84,0.14,0.52,0.18
+South Bend,Indiana,0.87,0.23,0.64,0.41
+Cedar Rapids,Iowa,0.94,0.3,0.84,0.54
+Davenport,Iowa,0.92,0.27,0.71,0.42
+Des Moines,Iowa,0.92,0.26,0.59,0.25
+Sioux City,Iowa,0.91,0.23,0.37,0.09
+Kansas City,Kansas,0.86,0.17,0.44,0.18
+Lawrence,Kansas,0.96,0.52,0.87,0.74
+Olathe,Kansas,0.97,0.47,0.77,0.43
+Overland Park,Kansas,0.98,0.57,0.87,0.67
+Topeka,Kansas,0.9,0.28,0.64,0.39
+Wichita,Kansas,0.91,0.3,0.6,0.34
+Lexington-Fayette,Kentucky,0.91,0.4,0.73,0.55
+Baton Rouge,Louisiana,0.86,0.32,0.79,0.59
+Lafayette,Louisiana,0.87,0.33,0.75,0.45
+Metairie,Louisiana,0.91,0.34,0.71,0.36
+New Orleans,Louisiana,0.86,0.34,0.71,0.5
+Shreveport,Louisiana,0.86,0.25,0.74,0.53
+Columbia,Maryland,0.97,0.64,0.87,0.68
+Germantown,Maryland,0.96,0.49,0.88,0.53
+Silver Spring,Maryland,0.98,0.73,0.68,0.43
+Brockton,Massachusetts,0.89,0.19,0.67,0.26
+Cambridge,Massachusetts,0.97,0.78,0.88,0.79
+Fall River,Massachusetts,0.8,0.17,0.45,0.15
+Lawrence,Massachusetts,0.85,0.19,0.61,0.17
+Lowell,Massachusetts,0.87,0.25,0.67,0.26
+Lynn,Massachusetts,0.91,0.23,0.66,0.22
+New Bedford,Massachusetts,0.82,0.18,0.47,0.19
+Newton,Massachusetts,0.98,0.77,0.95,0.76
+Quincy,Massachusetts,0.94,0.43,0.76,0.47
+Somerville,Massachusetts,0.95,0.62,0.74,0.54
+Springfield,Massachusetts,0.84,0.21,0.66,0.28
+Worcester,Massachusetts,0.89,0.34,0.79,0.34
+Ann Arbor,Michigan,0.97,0.69,0.95,0.83
+Dearborn,Michigan,0.92,0.34,0.62,0.33
+Farmington Hills,Michigan,0.96,0.51,0.88,0.68
+Flint,Michigan,0.83,0.11,0.7,0.46
+Grand Rapids,Michigan,0.89,0.32,0.51,0.36
+Kalamazoo,Michigan,0.9,0.32,0.8,0.52
+Lansing,Michigan,0.88,0.24,0.74,0.47
+Livonia,Michigan,0.95,0.36,0.81,0.45
+Sterling Heights,Michigan,0.93,0.27,0.71,0.36
+Troy,Michigan,0.96,0.54,0.88,0.73
+Warren,Michigan,0.87,0.16,0.65,0.37
+Westland,Michigan,0.88,0.16,0.79,0.52
+Bloomington,Minnesota,0.96,0.42,0.75,0.38
+Brooklyn Park,Minnesota,0.95,0.33,0.76,0.28
+Duluth,Minnesota,0.93,0.32,0.84,0.51
+Minneapolis,Minnesota,0.94,0.51,0.64,0.43
+Plymouth,Minnesota,0.98,0.55,0.93,0.73
+Rochester,Minnesota,0.96,0.42,0.8,0.55
+St. Paul,Minnesota,0.94,0.44,0.6,0.33
+Jackson,Mississippi,0.84,0.26,0.68,0.47
+Columbia,Missouri,0.94,0.55,0.9,0.75
+Independence,Missouri,0.89,0.18,0.6,0.25
+Kansas City,Missouri,0.9,0.32,0.67,0.34
+Lee's Summit,Missouri,0.97,0.43,0.9,0.41
+O'Fallon,Missouri,0.95,0.36,0.92,0.65
+St. Joseph,Missouri,0.86,0.2,0.76,0.15
+St. Louis,Missouri,0.84,0.3,0.71,0.47
+Springfield,Missouri,0.89,0.26,0.71,0.41
+Billings,Montana,0.93,0.31,0.86,0.26
+Lincoln,Nebraska,0.96,0.37,0.69,0.41
+Omaha,Nebraska,0.93,0.35,0.51,0.41
+Enterprise,Nevada,0.94,0.32,0.84,0.38
+Henderson,Nevada,0.94,0.3,0.85,0.43
+North Las Vegas,Nevada,0.89,0.17,0.55,0.21
+Paradise,Nevada,0.91,0.23,0.7,0.23
+Reno,Nevada,0.93,0.31,0.62,0.35
+Sparks,Nevada,0.93,0.24,0.57,0.25
+Spring Valley,Nevada,0.93,0.24,0.79,0.28
+Sunrise Manor,Nevada,0.83,0.11,0.53,0.16
+Manchester,New Hampshire,0.9,0.28,0.7,0.3
+Nashua,New Hampshire,0.91,0.34,0.77,0.54
+Camden,New Jersey,0.75,0.1,0.63,0.14
+Clifton,New Jersey,0.93,0.33,0.84,0.33
+Elizabeth,New Jersey,0.86,0.17,0.68,0.15
+Jersey City,New Jersey,0.89,0.38,0.84,0.59
+Newark,New Jersey,0.8,0.13,0.63,0.23
+Paterson,New Jersey,0.82,0.11,0.7,0.16
+Toms River,New Jersey,0.93,0.29,0.78,0.43
+Trenton,New Jersey,0.81,0.12,0.53,0.19
+Las Cruces,New Mexico,0.9,0.35,0.58,0.45
+Rio Rancho,New Mexico,0.95,0.28,0.75,0.41
+Albany,New York,0.91,0.37,0.78,0.45
+Buffalo,New York,0.85,0.25,0.68,0.4
+New Rochelle,New York,0.93,0.49,0.69,0.4
+Rochester,New York,0.83,0.26,0.7,0.37
+Syracuse,New York,0.83,0.25,0.66,0.51
+Yonkers,New York,0.92,0.36,0.72,0.36
+Asheville,North Carolina,0.92,0.46,0.85,0.39
+Cary,North Carolina,0.98,0.62,0.87,0.72
+Concord,North Carolina,0.9,0.3,0.68,0.42
+Durham,North Carolina,0.92,0.49,0.64,0.58
+Fayetteville,North Carolina,0.92,0.25,0.82,0.31
+Greensboro,North Carolina,0.92,0.38,0.68,0.36
+Greenville,North Carolina,0.92,0.37,0.82,0.56
+High Point,North Carolina,0.89,0.3,0.65,0.41
+Raleigh,North Carolina,0.95,0.51,0.7,0.45
+Wilmington,North Carolina,0.92,0.41,0.6,0.43
+Winston-Salem,North Carolina,0.9,0.35,0.5,0.43
+Fargo,North Dakota,0.96,0.38,0.83,0.55
+Akron,Ohio,0.87,0.2,0.63,0.4
+Cincinnati,Ohio,0.86,0.31,0.79,0.56
+Cleveland,Ohio,0.79,0.15,0.69,0.41
+Dayton,Ohio,0.82,0.16,0.63,0.37
+Parma,Ohio,0.92,0.2,0.78,0.21
+Toledo,Ohio,0.86,0.17,0.75,0.41
+Broken Arrow,Oklahoma,0.95,0.32,0.79,0.38
+Edmond,Oklahoma,0.97,0.52,0.88,0.62
+Lawton,Oklahoma,0.89,0.19,0.77,0.26
+Norman,Oklahoma,0.94,0.42,0.84,0.67
+Tulsa,Oklahoma,0.91,0.32,0.57,0.31
+Beaverton,Oregon,0.95,0.44,0.79,0.53
+Bend,Oregon,0.96,0.39,0.75,0.43
+Eugene,Oregon,0.95,0.4,0.76,0.51
+Gresham,Oregon,0.91,0.2,0.59,0.21
+Hillsboro,Oregon,0.94,0.34,0.65,0.48
+Medford,Oregon,0.91,0.25,0.51,0.29
+Salem,Oregon,0.92,0.29,0.54,0.25
+Allentown,Pennsylvania,0.85,0.18,0.66,0.25
+Bethlehem,Pennsylvania,0.9,0.27,0.75,0.46
+Erie,Pennsylvania,0.89,0.22,0.65,0.32
+Pittsburgh,Pennsylvania,0.91,0.35,0.89,0.72
+Reading,Pennsylvania,0.78,0.09,0.44,0.19
+Scranton,Pennsylvania,0.88,0.21,0.72,0.37
+Cranston,Rhode Island,0.9,0.31,0.74,0.31
+Providence,Rhode Island,0.85,0.4,0.59,0.28
+Warwick,Rhode Island,0.91,0.3,0.81,0.39
+Charleston,South Carolina,0.93,0.49,0.92,0.61
+Columbia,South Carolina,0.87,0.39,0.79,0.64
+Mount Pleasant,South Carolina,0.98,0.59,0.93,0.59
+North Charleston,South Carolina,0.84,0.2,0.54,0.29
+Sioux Falls,South Dakota,0.93,0.34,0.63,0.32
+Chattanooga,Tennessee,0.86,0.26,0.67,0.49
+Clarksville,Tennessee,0.93,0.24,0.82,0.24
+Knoxville,Tennessee,0.88,0.3,0.66,0.44
+Murfreesboro,Tennessee,0.93,0.37,0.74,0.43
+Abilene,Texas,0.85,0.23,0.58,0.26
+Allen,Texas,0.98,0.52,0.88,0.63
+Amarillo,Texas,0.89,0.24,0.47,0.24
+Arlington,Texas,0.93,0.32,0.62,0.33
+Baytown,Texas,0.86,0.16,0.43,0.16
+Beaumont,Texas,0.88,0.22,0.58,0.4
+Brownsville,Texas,0.78,0.21,0.47,0.29
+Bryan,Texas,0.85,0.28,0.46,0.37
+Carrollton,Texas,0.96,0.42,0.65,0.39
+College Station,Texas,0.96,0.52,0.91,0.75
+Corpus Christi,Texas,0.84,0.21,0.58,0.37
+Denton,Texas,0.94,0.39,0.66,0.53
+Edinburg,Texas,0.86,0.29,0.57,0.45
+Frisco,Texas,0.98,0.59,0.89,0.64
+Garland,Texas,0.9,0.25,0.54,0.29
+Grand Prairie,Texas,0.89,0.26,0.6,0.27
+Irving,Texas,0.91,0.33,0.67,0.51
+Killeen,Texas,0.93,0.17,0.76,0.21
+Laredo,Texas,0.79,0.2,0.48,0.3
+League City,Texas,0.96,0.4,0.84,0.57
+Lewisville,Texas,0.94,0.32,0.65,0.4
+Longview,Texas,0.88,0.22,0.49,0.25
+Lubbock,Texas,0.87,0.29,0.71,0.55
+McAllen,Texas,0.85,0.31,0.57,0.41
+McKinney,Texas,0.96,0.48,0.75,0.45
+Mesquite,Texas,0.88,0.19,0.58,0.27
+Midland,Texas,0.88,0.28,0.5,0.21
+Mission,Texas,0.84,0.25,0.56,0.39
+Missouri City,Texas,0.95,0.41,0.85,0.57
+Odessa,Texas,0.84,0.18,0.44,0.33
+Pasadena,Texas,0.83,0.17,0.5,0.18
+Pearland,Texas,0.95,0.44,0.85,0.61
+Pharr,Texas,0.76,0.16,0.47,0.23
+Plano,Texas,0.97,0.53,0.85,0.68
+Richardson,Texas,0.97,0.53,0.79,0.58
+Round Rock,Texas,0.95,0.39,0.73,0.44
+San Angelo,Texas,0.86,0.23,0.48,0.23
+Sugar Land,Texas,0.96,0.51,0.89,0.66
+The Woodlands,Texas,0.98,0.59,0.93,0.72
+Tyler,Texas,0.92,0.32,0.45,0.33
+Waco,Texas,0.85,0.23,0.4,0.3
+Wichita Falls,Texas,0.87,0.22,0.68,0.32
+Ogden,Utah,0.89,0.2,0.48,0.2
+Orem,Utah,0.96,0.38,0.75,0.32
+Provo,Utah,0.95,0.43,0.72,0.35
+St. George,Utah,0.94,0.29,0.65,0.27
+Salt Lake City,Utah,0.93,0.46,0.61,0.45
+Sandy,Utah,0.96,0.39,0.87,0.43
+West Jordan,Utah,0.93,0.24,0.72,0.29
+West Valley City,Utah,0.88,0.14,0.56,0.16
+Alexandria,Virginia,0.96,0.71,0.8,0.5
+Arlington,Virginia,0.98,0.8,0.8,0.6
+Centreville,Virginia,0.99,0.61,0.88,0.55
+Chesapeake,Virginia,0.91,0.28,0.87,0.46
+Hampton,Virginia,0.9,0.23,0.85,0.39
+Lynchburg,Virginia,0.87,0.31,0.88,0.6
+Newport News,Virginia,0.9,0.24,0.73,0.32
+Norfolk,Virginia,0.87,0.24,0.85,0.43
+Portsmouth,Virginia,0.83,0.19,0.8,0.38
+Richmond,Virginia,0.84,0.36,0.63,0.45
+Roanoke,Virginia,0.86,0.24,0.55,0.35
+Suffolk,Virginia,0.87,0.25,0.88,0.46
+Virginia Beach,Virginia,0.94,0.34,0.89,0.37
+Auburn,Washington,0.92,0.24,0.71,0.27
+Bellevue,Washington,0.98,0.58,0.92,0.73
+Bellingham,Washington,0.96,0.43,0.7,0.38
+Everett,Washington,0.91,0.21,0.73,0.26
+Federal Way,Washington,0.94,0.27,0.79,0.29
+Kennewick,Washington,0.92,0.24,0.55,0.25
+Kent,Washington,0.92,0.26,0.7,0.29
+Kirkland,Washington,0.98,0.54,0.92,0.65
+Renton,Washington,0.94,0.32,0.78,0.4
+Spokane,Washington,0.92,0.29,0.81,0.27
+Spokane Valley,Washington,0.92,0.21,0.85,0.26
+Tacoma,Washington,0.91,0.27,0.69,0.25
+Vancouver,Washington,0.92,0.26,0.75,0.3
+Yakima,Washington,0.85,0.21,0.34,0.12
+Green Bay,Wisconsin,0.92,0.25,0.44,0.23
+Kenosha,Wisconsin,0.91,0.24,0.7,0.28
+Madison,Wisconsin,0.97,0.55,0.84,0.69
+Racine,Wisconsin,0.85,0.18,0.48,0.21
+Statewide,Alabama,0.89,0.35,0.77,0.52
+Statewide,Alaska,0.95,0.34,0.77,0.33
+Statewide,Arizona,0.93,0.31,0.71,0.35
+Statewide,Arkansas,0.9,0.33,0.59,0.37
+Statewide,California,0.91,0.31,0.67,0.37
+Statewide,Colorado,0.94,0.41,0.72,0.42
+Statewide,Connecticut,0.89,0.33,0.72,0.34
+Statewide,Florida,0.91,0.3,0.8,0.33
+Statewide,Georgia,0.9,0.41,0.79,0.51
+Statewide,Hawaii,0.95,0.4,0.76,0.34
+Statewide,Idaho,0.93,0.31,0.68,0.32
+Statewide,Illinois,0.91,0.37,0.73,0.47
+Statewide,Indiana,0.91,0.37,0.75,0.53
+Statewide,Iowa,0.92,0.27,0.63,0.33
+Statewide,Kansas,0.93,0.39,0.7,0.46
+Statewide,Kentucky,0.91,0.4,0.73,0.55
+Statewide,Louisiana,0.87,0.32,0.74,0.49
+Statewide,Maryland,0.97,0.62,0.81,0.55
+Statewide,Massachusetts,0.89,0.36,0.69,0.37
+Statewide,Michigan,0.91,0.34,0.75,0.51
+Statewide,Minnesota,0.95,0.43,0.76,0.46
+Statewide,Mississippi,0.84,0.26,0.68,0.47
+Statewide,Missouri,0.91,0.33,0.77,0.43
+Statewide,Montana,0.93,0.31,0.86,0.26
+Statewide,Nebraska,0.95,0.36,0.6,0.41
+Statewide,Nevada,0.91,0.24,0.68,0.29
+Statewide,New Hampshire,0.91,0.31,0.74,0.42
+Statewide,New Jersey,0.85,0.2,0.7,0.28
+Statewide,New Mexico,0.93,0.32,0.67,0.43
+Statewide,New York,0.88,0.33,0.71,0.42
+Statewide,North Carolina,0.92,0.4,0.71,0.46
+Statewide,North Dakota,0.96,0.38,0.83,0.55
+Statewide,Ohio,0.85,0.2,0.71,0.39
+Statewide,Oklahoma,0.93,0.35,0.77,0.45
+Statewide,Oregon,0.93,0.33,0.66,0.39
+Statewide,Pennsylvania,0.87,0.22,0.69,0.39
+Statewide,Rhode Island,0.89,0.34,0.71,0.33
+Statewide,South Carolina,0.91,0.42,0.8,0.53
+Statewide,South Dakota,0.93,0.34,0.63,0.32
+Statewide,Tennessee,0.9,0.29,0.72,0.4
+Statewide,Texas,0.9,0.32,0.64,0.41
+Statewide,Utah,0.93,0.32,0.67,0.31
+Statewide,Virginia,0.9,0.37,0.8,0.45
+Statewide,Washington,0.93,0.31,0.73,0.34
+Statewide,Wisconsin,0.91,0.31,0.62,0.35

@@ -1,7 +1,3 @@
----
-layout: null
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,22 +10,12 @@ layout: null
 </head>
 <body>
   <div id="graphic">
+    {{ content }}  
     <img src="fallback.png" alt="" class="responsive">
+    
   </div>
-  
-  <div class="tooltip hidden">
-    <p style="margin-top:0;">Cities by region</p>
-    <ul>
-      <li class="northeast"></li>
-      <li class="south"></li>
-      <li class="midwest"></li>
-      <li class="west"></li>
-      <li class="total"></li>
-    </ul>
-  </div> 
+
   <script src="graphic.js"></script>
 </body>
 </html>
-  
-
 

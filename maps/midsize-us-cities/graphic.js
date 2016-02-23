@@ -34,7 +34,8 @@
 
   function drawMap() {
     // Set zoom level for device width
-    var defaultZoom = (window.innerWidth > 640) ? 4 : 3;
+    var defaultZoom  = (window.innerWidth > 640) ? 4 : 3;
+    var zoomControls = (window.innerWidth > 640) ? true : false;
     
     L.mapbox.accessToken = publicKey;
 
@@ -44,6 +45,11 @@
       minZoom: 3,
       maxZoom: 5
     }).setView([39.833333333333336,-98.58333333333333], defaultZoom);
+
+    // What a hack, this one ... 
+    if (!zoomControls) {
+      document.querySelector(".leaflet-control-container").style.display = 'none';
+    }
   }
 
   function addDataToMap(data) {

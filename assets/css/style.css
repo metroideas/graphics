@@ -928,6 +928,38 @@ label {
 }
 
 /* ======================================
+/* Tables
+/* =================================== */
+table {
+  border-collapse: collapse;
+  margin: 8px 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+th {
+  border-bottom: 1px solid #f2f3f3;
+  font-family: "Avenir Next", "Avenir Next LT W01 Bold", sans-serif;
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: left;
+}
+
+td {
+  padding: 8px 4px;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f3f3;
+}
+
+/* ======================================
 /* Layouts
 /* =================================== */
 .grid-small {
@@ -1935,49 +1967,26 @@ pre {
   padding: 1em 0.5em;
 }
 
-.swatch,
-.swatch-small {
-  padding-left: 1em;
-  font-size: 14px;
-  color: #ffffff;
-  text-align: middle;
+header {
+  margin: 2em 0;
 }
 
-.swatch {
-  height: 80px;
-  line-height: 80px;
+@media (min-width: 640px) {
+  .grid-small {
+    margin-top: 80px;
+  }
 }
 
-.swatch-small {
-  height: 20px;
-  line-height: 20px;
-}
-
-.white.swatch,
-.white.swatch-small {
-  color: #252525;
-}
-
-.sample {
-  position: relative;
-  min-height: 80px;
-  padding: 1em;
-  border-radius: 3px 3px 0 0;
-  border: 1px solid #6d6e70;
-  *zoom: 1;
-}
-
-.sample:before, .sample:after {
-  content: " ";
-  display: table;
-}
-
-.sample:after {
-  clear: both;
-}
-
-.sample + pre.sample {
-  margin-top: 0;
-  border-top-width: 0;
-  border-radius: 0 0 3px 3px;
+@media (min-width: 640px) {
+  article {
+    margin-bottom: 3em;
+  }
+  article:after {
+    display: block;
+    content: "";
+    margin-left: 213px;
+    margin-right: 213px;
+    padding-top: 2em;
+    border-bottom: 1px solid #4689c2;
+  }
 }

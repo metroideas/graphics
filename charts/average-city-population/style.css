@@ -1,0 +1,26 @@
+body {
+  font-size: 18px; 
+}
+
+#graphic {
+  max-width: 100%;
+  width: 768px;
+  margin-top: 2em;
+}
+
+circle {
+  fill: #4689c2;
+  fill-opacity: .5;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+  /*display: none;*/
+}

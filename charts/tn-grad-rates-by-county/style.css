@@ -1,0 +1,57 @@
+body {
+  font-size: 14px;
+}
+
+select {
+  margin-right: 0.5em;
+}
+
+@media (min-width: 512px) {
+  .span-6 {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+  }
+  .span-6:last-child {
+    margin-right: 0;
+  }
+}
+
+.chart {
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+circle {
+  fill: #bcbec0;
+  fill-opacity: 0.8;
+}
+
+circle.tennessee {
+  fill: #6d6e70;
+}
+
+circle.hamilton {
+  fill: #df2027;
+}
+
+circle.shelby,
+circle.davidson,
+circle.knox,
+circle.montgomery,
+circle.rutherford,
+circle.williamson,
+circle.sumner {
+  fill: #8dbd45;
+}
