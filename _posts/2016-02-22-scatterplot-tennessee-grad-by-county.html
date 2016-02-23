@@ -1,0 +1,17 @@
+---
+title: "Scatterplot: Tennessee graduates by county"
+date: 2016-02-22 16:30:00 -0500
+layout: post
+related:
+embed_source: "/charts/tn-grad-rates-by-county/"
+description: Interactive scatterplot compares Tennessee school district graduation rates to income, race, public funding and other factors. 
+---
+
+<div id="scatterplot"></div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url         = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var scatterplot = new pym.Parent("scatterplot", url, {});
+</script>

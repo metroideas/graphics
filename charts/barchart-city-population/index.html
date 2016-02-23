@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 layout: d3
 ---
   
@@ -12,4 +13,39 @@ layout: d3
     <li class="total"></li>
   </ul>
 </div> 
+=======
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">
+    <img src="fallback.png" alt="" class="responsive">
+  </div>
+  
+  <div class="tooltip hidden">
+    <p style="margin-top:0;">Cities by region</p>
+    <ul>
+      <li class="northeast"></li>
+      <li class="south"></li>
+      <li class="midwest"></li>
+      <li class="west"></li>
+      <li class="total"></li>
+    </ul>
+  </div> 
+  <script src="graphic.js"></script>
+</body>
+</html>
+  
+
+>>>>>>> master
 
