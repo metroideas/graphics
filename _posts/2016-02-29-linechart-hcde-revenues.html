@@ -1,0 +1,18 @@
+---
+title: "Linechart: HCDE revenue"
+date: 2016-02-29 11:15:00 -0500
+layout: post
+related:
+embed_source: "/charts/linechart-hcde-cafr/"
+description: Data compiled from Comprehensive Annual Financial Reports by Hamilton County's auditor.
+---
+
+  <div id="linechart"></div>  
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url       = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var linechart = new pym.Parent("linechart", url, {});
+</script>
