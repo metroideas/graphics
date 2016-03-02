@@ -2,6 +2,7 @@
   var
   data,
   keys,
+  students,
   chart = document.querySelector(".chart")
   ;
 
@@ -18,8 +19,9 @@
     yAxis,
     line,
     legend,
-    svg,
-    margin = { top: 16, right: 32, bottom: 48 , left: 64 },
+    revenue,
+    enrollment,
+    margin = { top: 16, right: 16, bottom: 32 , left: 64 },
     width  = calculateWidth(),
     mobile = (width <= 320),
     ratio  = (mobile) ? { width: 1, height: 2 } : { width: 3, height: 2 },
@@ -97,6 +99,11 @@
         })
       ]);
 
+    // y scale by enrollment
+    adm = d3.scale.linear()
+      .range([height / 2, 0])
+      .domain(d3.extent(students, function(d) { return d.enrollment; }));
+
     // lines excluding enrollment
     color = d3.scale.ordinal()
       .domain(keys)
@@ -116,44 +123,59 @@
       .tickSize(-width, 0, 0)
       .orient("left");
 
+    aAxis = d3.svg.axis()
+      .scale(adm)
+      .orient("left")
+      .tickSize(-width, 0, 0)
+      .ticks(4);
+
     // svg setup
     // ---------------------------------------------------------------------------
-    svg = d3.select(chart).append("svg")
+    revenue = d3.select(chart).append("svg")
         .attr("width", width + marginWidth())
         .attr("height", height + marginHeight())
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    svg.append("g")
+    revenue.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
-    svg.append("g")
+    revenue.append("g")
       .attr("class", "y axis")
       .call(yAxis);
 
     d3.select(".y.axis .tick").remove(); // Removes first tick mark
 
-    if (!mobile) {
-      // Show axis labels on desktop only
-      d3.select(".y.axis")
-        .append("text")
-        .attr("class", "label")
-        .attr("transform", "rotate(-90)")
-        .attr("text-anchor", "middle")
-        .attr("x", -height / 2)
-        .attr("y", -margin.left * .8)
-        .text("Revenue");
+    enrollment = d3.select(chart).append("svg")
+        .attr("width", width + marginWidth())
+        .attr("height", height / 2 + marginHeight())
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      d3.select(".x.axis")
-        .append("text")
-        .attr("class", "label")
-        .attr("text-anchor", "middle")
-        .attr("x", width / 2)
-        .attr("y", margin.bottom * .75)
-        .text("School year");
-    }
+    enrollment.append("g")
+      .attr("class", "a axis")
+      .call(aAxis);
+
+    // y axis labels
+    d3.select(".y.axis")
+      .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("text-anchor", "middle")
+      .attr("x", -height / 2)
+      .attr("y", -margin.left * .8)
+      .text("Revenue");
+
+    d3.select(".a.axis")
+      .append("text")
+      .attr("class", "label")
+      .attr("transform", "rotate(-90)")
+      .attr("text-anchor", "middle")
+      .attr("x", -height / 4)
+      .attr("y", -margin.left * .8)
+      .text("Enrollment");
 
     // Revenue line graphs
     // ---------------------------------------------------------------------------
@@ -161,7 +183,7 @@
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.unadjusted); });
 
-    svg.selectAll("g.revenue-source")
+    revenue.selectAll("g.revenue-source")
         .data(data)
       .enter().append("g")
         .attr("class", "revenue-source");
@@ -192,12 +214,21 @@
         button.innerHTML = "Reset to nominal";
       }
      
-      d3.selectAll(".line")
+      d3.selectAll(".revenue-source .line")
         .transition()
           .delay(100)
           .duration(500)
         .attr("d", function(d) { return line(d.revenue); });
     });
+
+    // Enrollment line graph
+    // ---------------------------------------------------------------------------
+    enrollment.append("path")
+      .datum(students)
+      .attr("class", "line")
+      .attr("d", d3.svg.line()
+        .x(function(d) { return x(d.date); })
+        .y(function(d) { return adm(d.enrollment); }));
 
   } //  End of drawGraphic()
 
@@ -238,6 +269,15 @@
         })
       };
     });
+
+    students = csv.map(function(row) {
+      return {
+        date: d3.time.format("%Y%m%d").parse(row.year + "0630"),
+        enrollment: +row.adm
+      };
+    });
+
+    console.log(students);
 
     new pym.Child({ renderCallback: drawGraphic });
   });
