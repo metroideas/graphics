@@ -1,0 +1,42 @@
+body {
+  font-size: 12px;
+}
+
+.legend {
+  margin-bottom: 0;
+}
+
+.span-4 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%;
+}
+.span-4:last-child {
+  margin-right: 0;
+}
+
+/*#graphic {
+  max-width: 100%;
+  width: 640px;
+  margin: auto;
+}*/
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.y.axis line {
+  display: none;
+}
+
+.district rect {
+  fill-opacity: 0.75;
+}
