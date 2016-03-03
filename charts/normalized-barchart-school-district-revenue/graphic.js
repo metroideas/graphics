@@ -54,7 +54,7 @@
     xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom")
-      .ticks(4, "%")
+      .ticks(null, "%")
       .tickValues((mobile) ? [ 0, 0.5, 1 ]: [ 0, 0.25, 0.5, 0.75, 1 ])
       .tickSize(-height,0,0);
 
@@ -103,7 +103,7 @@
         .attr("height", y.rangeBand())
         .attr("fill", function(d) { return color(d.key); });
 
-    // Tooltip on hover
+    // Hovering on bar shows % values
     // ---------------------------------------------------------------------------
     if (!mobile) {
       svg.selectAll("g.district")
@@ -114,8 +114,6 @@
             .attr("id", "tooltip")
             .attr("fill", "white")
             .attr("fill-opacity", 0.8)
-            .attr("x", 0)
-            .attr("y", 0)
             .attr("width", width)
             .attr("height", y.rangeBand())
             .attr("pointer-events", "none");
@@ -146,17 +144,12 @@
                   }
                 }
 
-                function value(decimal) {
-                  var pct = Math.round(decimal * 100);
-                  return (pct == 0) ? "~0" : pct;
-                }
-
-                return label(d.key) + ": " + value(d.width) + "%";
+                return label(d.key) + ": " + d3.format(",.1%")(d.width);
               });
 
-          d3.select(".label:last-child").attr("dx", 0);
+          d3.select(".label:last-child").attr("dx", -7);
         })
-        // Remove tooltip and associated text labels
+        // Remove #tooltip and associated text labels
         .on("mouseout", function() {
           d3.select("rect#tooltip").remove();
           d3.selectAll(".label").remove();
