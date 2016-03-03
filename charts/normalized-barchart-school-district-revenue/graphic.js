@@ -153,6 +153,8 @@
 
                 return label(d.key) + ": " + value(d.width) + "%";
               });
+
+          d3.select(".label:last-child").attr("dx", 0);
         })
         // Remove tooltip and associated text labels
         .on("mouseout", function() {
@@ -160,8 +162,7 @@
           d3.selectAll(".label").remove();
           d3.select(this).classed("hover", false);
         });
-    }
-    
+    }    
   } // End of drawGraphic()
 
   d3.csv("data.csv", type, function(error, csv) {
@@ -180,14 +181,11 @@
           return {
             key:   key,
             width: d[key],
-            x:     x - d[key],
-            value: d[key.toString() + "-dollar"]
+            x:     x - d[key]
           };
         })
       };
     });
-
-    console.log(data);
 
     new pym.Child({ renderCallback: drawGraphic });
   });
