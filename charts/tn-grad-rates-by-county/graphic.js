@@ -2,15 +2,12 @@
   var
   data,
   container = document.querySelector("#graphic"),
-  legend    = d3.select(container).select(".legend"),
-  chart     = d3.select(container).select(".chart"),
-  source    = d3.select(container).select(".source")
+  chart     = document.querySelector(".chart")
   ;
 
   
   function drawGraphic(containerWidth) {
-    document.querySelector(".chart").innerHTML = ""; // Removes existing svg on resize
-    //document.querySelector("#graphic img").remove(); // Removes fallback.png
+    chart.innerHTML = ""; // Removes existing svg on resize
 
     var
     svg,
@@ -21,8 +18,9 @@
     xLabel,
     ticks,
     tickValues,
+    legend     = d3.select(".legend"),
     dropdown   = d3.select("#dropdown-menu"),
-    margin     = { top: 32, right: 48, bottom: 48, left: 48 },
+    margin     = { top: 8, right: 48, bottom: 48, left: 48 },
     width      = calculateWidth(),
     mobile     = (width <= 320) ? true : false,
     ratio      = (mobile) ? { width: 1, height: 2 } : { width: 1, height: 1 }, // Aspect ratio
@@ -57,7 +55,8 @@
     // ---------------------------------------------------------------------------
     legend.style({
       "margin-left": (mobile) ? "16px" : margin.left + "px",
-      "margin-right": (mobile) ? "16px" : margin.right + "px"
+      "margin-right": (mobile) ? "16px" : margin.right + "px",
+      "margin-bottom": "16px"
     });
 
     dropdown.selectAll("option")
@@ -69,7 +68,7 @@
 
     // Data source
     // ---------------------------------------------------------------------------
-    source.style({
+    d3.select(".data-source").style({
       "margin-left": (mobile) ? "16px" : margin.left + "px",
       "margin-right": (mobile) ? "16px" : margin.right + "px"
     });
@@ -77,7 +76,6 @@
     // SVG
     // ---------------------------------------------------------------------------
     x = d3.scale.linear()
-      // .domain([7000,12000])
       .range([0, width]);
 
     y = d3.scale.linear()
@@ -105,7 +103,7 @@
       .ticks(null, "%")
       .tickValues(tickValues);
 
-    svg = chart.append("svg")
+    svg = d3.select(chart).append("svg")
         .attr("width", width + marginWidth())
         .attr("height", height + marginHeight())
       .append("g")
@@ -162,7 +160,9 @@
           .attr("alignment-baseline", "central")
           .text(function(d) { if (d.attendance > 25000) return d.id; }); 
     }
-     
+
+    // Updates
+    // --------------------------------------------------------------------------- 
 
     function updateGraphic(selection) {
       var

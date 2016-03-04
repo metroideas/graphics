@@ -42,15 +42,24 @@
       return Math.ceil(width * ratio.height / ratio.width) - marginHeight();
     }
 
-    // Header container: Title, description, legend and adjustment button
+    // Data source and header container (Title, description, legend and adjustment button)
     // ---------------------------------------------------------------------------
     if (mobile) {
       d3.select(".header").style({
         "margin-left": margin.left * .25 + "px",
         "margin-right": margin.right * .25 + "px"
-      })
+      });
+      d3.select(".data-source").style({
+        "margin-left": margin.left * .25 + "px",
+        "margin-right": margin.right * .25 + "px"
+      });
+
     } else {
       d3.select(".header").style({
+        "margin-left": margin.left + "px",
+        "margin-right": margin.right + "px"
+      });
+      d3.select(".data-source").style({
         "margin-left": margin.left + "px",
         "margin-right": margin.right + "px"
       });

@@ -18,7 +18,7 @@ layout: null
     <div class="legend">
       <h2 class="county-name-data">&nbsp;</h2>
       
-      <div class="row" style="">
+      <div class="row">
         <div class="span-6" style="margin-bottom:0;">
           <p style="margin:0;">
             Graduation rate: <span class="graduation-rate-data"></span>
@@ -36,17 +36,20 @@ layout: null
       </div>
 
       <label for="x-axis-selector">Choose</label><br>
-      <select name="x-axis-selector" id="dropdown-menu"></select>
-      
-
+      <select name="x-axis-selector" id="dropdown-menu">
+        
+      </select>
     </div>
 
     <div class="chart">
-      <img src="fallback.png" alt="" class="responsive">
+      <!-- <img src="fallback.png" alt="" class="responsive"> -->
     </div>
 
-    <div class="source text-xsmall">
-      <p>Data compiled from the state of Tennessee and the U.S. Census Bureau. <a href="https://github.com/metroideas/graphics/tree/gh-pages{{ page.url }}data.csv">Download the CSV.</a></p>
+    <div class="data-source">
+      <p>Sources: <em>Tennessee Department of Education district-level profile and attendance and graduation data for 2015; U.S. Census Bureau 2014 American Community Survey 1-Year Estimate, table S1903.</em>
+        <br>
+        &nbsp;
+      </p>
     </div>
   </div>
 

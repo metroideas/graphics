@@ -37,9 +37,10 @@
       return Math.ceil(width * ratio.height / ratio.width) - marginHeight();
     }
 
-    // Legend
+    // Legend, data source
     // ---------------------------------------------------------------------------
     d3.select(".legend").style("margin-left", (mobile) ? "7px" : margin.left + "px");
+    d3.select(".data-source").style("margin-left", (mobile) ? "7px" : margin.left + "px");
 
     // Scales and axis
     // ---------------------------------------------------------------------------
