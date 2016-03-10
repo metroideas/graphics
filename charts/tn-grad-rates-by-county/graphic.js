@@ -13,6 +13,7 @@
     svg,
     x,
     y,
+    r,
     xScale,
     yScale,
     xLabel,
@@ -27,6 +28,7 @@
     height     = calculateHeight(),
     keys       = [
       { name: "Per pupil expenditure", key: "perStudentCost" },
+      { name: "Attendance", key: "attendance" },
       { name: "Median income", key: "medianIncome" },
       { name: "Economically disadvantaged", key: "econDisadvantage" },
       { name: "Black students", key: "black" },
@@ -81,6 +83,12 @@
     y = d3.scale.linear()
       .domain([0.65, 1.0])
       .range([height, 0]);
+
+    r = d3.scale.linear()
+      .range([1, 20])
+      .domain(d3.extent(data, function(d) { return d.attendance; }));
+
+    console.log(r.domain());
 
     // x axis
     ticks = (mobile) ? 4 : null
@@ -140,25 +148,17 @@
       .enter().append("circle")
         .attr("class", function(d) { return d.id.toLowerCase(); })
         .attr("cy", function(d) { return y(d.graduationRate); })
-        .attr("r", function(d) {
-          if (d.id == "Tennessee") {
-            return 15;
-          } else if (d.attendance > 25000) {
-            return 8;
-          } else {
-            return 3;
-          }
-        });
+        .attr("r", function(d) { return r(d.attendance); });
 
     // Point labels for large districts
     if (!mobile) {
       svg.selectAll("text.district-label")
-          .data(data.filter(function(d) { return d.attendance >= 25000; }))
+          .data(data.filter(function(d) { return d.id == "Tennessee" || d.attendance >= 25000; }))
         .enter().append("text")
           .attr("class", "district-label")
           .attr("y", function(d) { return y(d.graduationRate); })
           .attr("alignment-baseline", "central")
-          .text(function(d) { if (d.attendance > 25000) return d.id; }); 
+          .text(function(d) { return d.id; }); 
     }
 
     // Updates
@@ -175,10 +175,22 @@
       // x scale
       x.domain(d3.extent(data, function(d) { return d[option]; }));
       
+      function tickSymbol(option) {
+        switch (option) {
+          case "medianIncome":
+          case "perStudentCost":
+            return "$";
+          case "attendance":
+            return ;
+          default:
+            return "%";
+        }
+      }
+
       // x axis
       xAxis.scale(x).ticks(
         (mobile) ? 4 : 6,
-        (option == "medianIncome" || option == "perStudentCost") ? "$" : "%"
+        tickSymbol(option)
       );
 
       d3.select(".x.axis")
@@ -225,7 +237,24 @@
         .attr("x", function(d) { return x(d[option]); })
         .attr("text-anchor", function(d) { return labelShift(d) ? "end" : "start"; })
         .attr("dx", function(d) {
-          var dx = (d.id == "Tennessee") ? 16 : 9
+          var dx;
+          switch (d.id) {
+            case "Tennessee":
+              dx = 5;
+              break;
+            case "Davidson":
+              dx = 16;
+              break;
+            case "Shelby":
+              dx = 22;
+              break;
+            case "Knox":
+              dx = 12;
+              break;
+            default:
+              dx = 9;
+              break;
+          }
           return labelShift(d) ? -dx : dx;
         });
       }
