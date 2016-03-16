@@ -9,14 +9,19 @@ body {
 }
 
 .axis path,
-.axis line {
-  display: none;
-}
-
+.axis line,
 line.axis {
   fill: none;
   stroke: #dcddde;
   shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.x.axis line {
+  stroke-dasharray: 0.9;
 }
 
 line.average {
@@ -24,7 +29,6 @@ line.average {
   stroke-dasharray: 0.9;
 }
 
-line.difference {
-  stroke: #0961ae;
-  stroke-width: 2px;
+circle.plot {
+  fill-opacity: 0.5;
 }

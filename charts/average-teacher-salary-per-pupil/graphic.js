@@ -9,11 +9,12 @@
     var
     x,
     y,
-    l,
+    x2008,
+    x2016,
     axis,
-    margin = { top: 24, right: 12, bottom: 12, left: 180 },
+    margin = { top: 24, right: 12, bottom: 12, left: 12 },
     width  = calculateWidth(),
-    height = data.length * 48 - margin.top - margin.bottom,
+    height = data.length * 24 - margin.top - margin.bottom,
     mobile = (width <= 414),
     svg
     ;
@@ -25,19 +26,24 @@
     // ---------------------------------------------------------------------------
     x = d3.scale.ordinal()
       .rangeRoundBands([0, width])
-      .domain(["2008", "2016", "Change"]);
+      .domain(["2008", "School", "2016"]);
 
     y = d3.scale.ordinal()
-      .rangeRoundBands([0, height], 0.1)
+      .rangeRoundBands([0, height])
       .domain(data.map(function(d) { return d.name; }));
 
-    l = d3.scale.linear()
-      .range([y.rangeBand(), 0])
-      .domain([-0.9, 0.9]);
+    x2008 = d3.scale.linear()
+      .domain([-1, 1])
+      .range([x("2016"), x("2008")]);
+
+    x2016 = d3.scale.linear()
+      .domain([-1, 1])
+      .range([x("2016"), width]);
 
     axis = d3.svg.axis()
       .scale(x)
-      .orient("top");
+      .orient("top")
+      .tickSize(-height, 0, 0);
 
     svg = d3.select(chart).append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -47,9 +53,32 @@
 
     svg.append("g")
       .attr("class", "x axis")
-      .call(axis);
+      .call(axis)
+      .attr("transform", "translate(0," + margin.top / 2 + ")")
+      ;
 
-    // Add school group
+    // Lines
+    svg.append("path")
+      .datum(data)
+      .attr("d", function(d) { return line("2008")(d); })
+      .attr("fill", "none")
+      .attr("stroke", "steelblue");
+
+    svg.append("path")
+      .datum(data)
+      .attr("d", function(d) { return line("2016")(d); })
+      .attr("fill", "none")
+      .attr("stroke", "steelblue");
+
+    // Fill area
+    svg.append("path")
+      .datum(data)
+      .attr("class", "area")
+      .attr("d", function(d) { return area()(d); })
+      .attr("fill", "steelblue")
+      .attr("fill-opacity", 0.5);
+
+    // School group
     svg.selectAll("g.school")
         .data(data)
       .enter().append("g")
@@ -60,98 +89,55 @@
 
     // School labels
     svg.selectAll("g.school").append("text")
+      .attr("x", x("School") * 1.5)
       .attr("y", y.rangeBand() / 2)
-      .style("text-anchor", "end")
+      .style("text-anchor", "middle")
       .style("alignment-baseline", "middle")
       .text(function(d) { return d.name; });
 
-    // Guide lines for each group
-    svg.selectAll("g.school").append("line")
-      .attr("class", "y axis")
-      .attr({ x1: 0, x2: width, y1: y.rangeBand(),  y2: y.rangeBand() });
-
-    // Guide line above first group
-    svg.select("g.school").append("line")
-      .attr("class", "y axis")
-      .attr({ x1: 0, x2: width, y1: 0,  y2: 0 });
-
-    // Average line
+    // Guide lines separating g.school
     svg.selectAll("g.school").append("line")
       .attr("class", "average")
-      .attr({
-        x1: x.rangeBand() / 4,
-        x2: width - x.rangeBand() * 1.25,
-        y1: y.rangeBand() / 2,
-        y2: y.rangeBand() / 2
-      });
+      .attr({ x1: 0, x2: width, y1: y.rangeBand(),  y2: y.rangeBand() })
+      ;
 
-    if (!mobile) {
-      svg.select("g.school").append("text")
-        .attr("x", width - x.rangeBand() * 1.25)
-        .attr("y", y.rangeBand() * .2)
-        .attr("dx", 5)
-        .style("font-size", "10px")
-        .style("text-anchor", "start")
-        .style("alignment-baseline", "middle")
-        .text("+");
+    // // Plot differences from 2008/2016 averages
+    svg.selectAll("g.school").append("circle")
+      .attr("class", "plot")
+      .attr("cy", y.rangeBand() / 2)
+      .attr("cx", function(d) { return plot(d, "2008"); })
+      .attr("r", 2);
 
-      svg.select("g.school").append("text")
-        .attr("x", width - x.rangeBand() * 1.25)
-        .attr("y", y.rangeBand() / 2)
-        .attr("dx", 5)
-        .style("font-size", "10px")
-        .style("text-anchor", "start")
-        .style("alignment-baseline", "middle")
-        .text("Average");
+    svg.selectAll("g.school").append("circle")
+      .attr("class", "plot")
+      .attr("cy", y.rangeBand() / 2)
+      .attr("cx", function(d) { return plot(d, "2016"); })
+      .attr("r", 2);
 
-      svg.select("g.school").append("text")
-        .attr("x", width - x.rangeBand() * 1.25)
-        .attr("y", y.rangeBand() * .8)
-        .attr("dx", 6)
-        .style("font-size", "10px")
-        .style("text-anchor", "start")
-        .style("alignment-baseline", "middle")
-        .text("–");
+    function plot(d, year) {
+      var value = d.years.filter(function(y) {
+        return y.year == year;
+      })[0].value;
+
+      return (year == "2008") ? x2008(value) : x2016(value);
     }
 
-    svg.selectAll("g.school").append("line")
-      .attr("class", "difference")
-      .attr({
-        x1: x.rangeBand() / 4,
-        x2: width - x.rangeBand() * 1.25,
-        y1: function(d) { return lineY(d, "2008"); },
-        y2: function(d) { return lineY(d, "2016"); }
-      });
+    function line(year) {
+      return d3.svg.line()
+        .x(function(d) { return plot(d, year); })
+        .y(function(d) { return y(d.name) + y.rangeBand() / 2; })
+        .interpolate("basis");
+    }
 
-      function lineY(d, year) {
-        var value = d.years.filter(function(y) {
-          return y.year == year;
-        })[0].value;
+    function area() {
+      return d3.svg.area()
+        .x0(function(d) { return plot(d, "2008"); })
+        .x1(function(d) { return plot(d, "2016"); })
+        .y(function(d)  { return y(d.name) + y.rangeBand() / 2; })
+        .interpolate("basis");
+    }
 
-        return l(value);
-      }
 
-    // Text difference for change
-    svg.selectAll("g.school")
-      .append("text").attr("class", "change")
-        .attr({ x: x("Change") + x.rangeBand() / 2, y: y.rangeBand() / 2 })
-        .style({
-          "text-anchor": "middle",
-          "alignment-baseline": "middle"
-        })
-        .text(function(d) {
-          var start, end;
-          
-          d.years.forEach(function(year) {
-            if (year.year == "2008") {
-              start = year.value;
-            } else {
-              end = year.value;
-            }
-          });
-
-          return d3.format("+.01%")((end - start));
-        });
 
 
     // Helper functions
