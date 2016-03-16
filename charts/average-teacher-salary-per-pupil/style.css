@@ -1,0 +1,30 @@
+body {
+  font-size: 12px;
+}
+
+#graphic {
+  max-width: 100%;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.axis path,
+.axis line {
+  display: none;
+}
+
+line.axis {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+line.average {
+  stroke: #b1b3b5;
+  stroke-dasharray: 0.9;
+}
+
+line.difference {
+  stroke: #0961ae;
+  stroke-width: 2px;
+}

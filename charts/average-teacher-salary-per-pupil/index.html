@@ -1,0 +1,36 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">    
+      
+    <div id="legend">
+      <header>
+        <h1 class="headline">Pay per pupil</h1>
+        <p class="lead">Changes in Hamilton County school salaries from 2008 to 2016</p>
+      </header>
+    </div>
+
+    <div id="chart">
+      <!-- <img src="fallback.png" alt="" class="responsive"> -->
+    </div>
+
+    <div id="data-source">
+      
+    </div>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>
