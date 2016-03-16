@@ -8,27 +8,13 @@ body {
   margin: 0 auto;
 }
 
-.axis path,
-.axis line,
-line.axis {
-  fill: none;
-  stroke: #dcddde;
-  shape-rendering: crispEdges;
+.average {
+  stroke: #b1b3b5;
+  stroke-width: 1px;
 }
 
-.x.axis path {
-  display: none;
-}
-
-.x.axis line {
-  stroke-dasharray: 0.9;
-}
-
-line.average {
+.school .guide-line {
   stroke: #b1b3b5;
   stroke-dasharray: 0.9;
 }
 
-circle.plot {
-  fill-opacity: 0.5;
-}
