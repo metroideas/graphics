@@ -1,0 +1,40 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">
+    <header>
+      <h1 class="headline">Per-pupil average: Teacher salaries and benefits</h1>
+      <p class="lead">How each Hamilton County school compares to the $5,633 countywide average</p>
+    </header>
+
+    <div class="legend">
+      <div class="span-6">
+        <div class="sample" style="background-color:#df2027">&nbsp;</div>
+        <div>Title I school</div>
+      </div>
+      <div class="span-6">
+        <div class="sample" style="background-color:#4689c2">&nbsp;</div>
+        <div>Non-Title I school</div>
+      </div>
+    </div>
+
+    <div id="chart">
+      <!-- fallback.png -->
+    </div>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>
