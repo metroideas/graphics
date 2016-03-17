@@ -1,0 +1,14 @@
+body {
+  font-size: 12px;
+}
+
+.average {
+  stroke: #b1b3b5;
+  stroke-width: 1px;
+}
+
+.school .guide-line {
+  stroke: #b1b3b5;
+  stroke-dasharray: 0.9;
+}
+
