@@ -2,12 +2,6 @@ body {
   font-size: 12px;
 }
 
-#graphic {
-  max-width: 100%;
-  width: 640px;
-  margin: 0 auto;
-}
-
 .average {
   stroke: #b1b3b5;
   stroke-width: 1px;
