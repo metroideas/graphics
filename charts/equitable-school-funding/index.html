@@ -1,0 +1,35 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">    
+    <header>
+      <h1 class="headline">Equitable school funding</h1>
+      <p class="lead">Changes in Hamilton County school personnel salaries from 2008 to 2016</p>
+    </header>
+    
+
+    <div id="chart">
+      <!-- <img src="fallback.png" alt="" class="responsive"> -->
+    </div>
+
+    <p class="text-meta" id="data-source">
+      Source: Hamilton County Department of Education, U.S. Department of Education.
+    </p>
+    <p>&nbsp;</p>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>
