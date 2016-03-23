@@ -1,0 +1,16 @@
+---
+title: "Hamilton County schools' per-student salaries"
+date: 2016-03-23 16:00:00 -0400
+layout: post
+related:
+embed_source: "/charts/hcde-salaries-2008-2016/"
+description: Changes in average per-student expenditure between 2008 and 2016.
+---
+
+<div class="wider" id="chart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var chart = new pym.Parent("chart", url, {});
+</script>

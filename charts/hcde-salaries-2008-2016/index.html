@@ -1,0 +1,49 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">    
+    <div class="description">
+      <h1 class="headline">Hamilton County school salaries</h1>
+      <p class="lead">Differences in average per-student expenditure on salaries between 2008 and 2016</p>
+    </div>
+
+    <div class="legend">
+      <ul class="list-inline">
+        <li class="title-i">Title I school (2015–16)</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#0961ae;float:left">&nbsp;</div>2008</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#c2d7eb;float:left">&nbsp;</div>2016</li>
+      </ul>
+    </div>
+
+    <div id="chart">
+      <div class="row">
+        <div class="q1 span-6"></div>
+        <div class="q2 span-6"></div>
+      </div>
+      <div class="row">
+        <div class="q3 span-6"></div>
+        <div class="q4 span-6"></div>
+      </div>
+    </div>
+
+    <p class="text-meta" id="data-source">
+      Source: <em>Hamilton County Department of Education; U.S. Department of Education.</em>
+    </p>
+    <p>&nbsp;</p>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>
