@@ -116,9 +116,25 @@
       schools.selectAll("text.label")
         .attr("x", 0)
         .attr("y", bars.rangeBand() * .5)
-        .attr("dx", -2)
-        .attr("text-anchor", "end");
+        .attr("dx", -4)
+        .attr("text-anchor", "end")
+        .attr("fill", function(d) { return (d.title) ? "#df2027" : ""});
+
+      // Show Title I description on larger displays
+      d3.select(".legend .title-i").classed("hidden", false);
     }
+
+    // TVAAS score labels
+    schools.append("text")
+      .attr("class", "label tvaas")
+      .attr("x", function(d) { return test(d.test); })
+      .attr("y", bars(bars.domain()[1]))
+      .attr("dx", -2)
+      .attr("dy", 2)
+      .attr("font-size", "10px")
+      .attr("text-anchor", "end")
+      .attr("dominant-baseline", "hanging")
+      .text(function(d) { return d.test; });
 
     // Helper functions
     // ---------------------------------------------------------------------------
@@ -138,9 +154,10 @@
     data = csv.sort(function(a, b) { return b.bpi - a.bpi; })
       .map(function(row) {
         return {
-          name: row.name,
-          bpi:  row.bpi,
-          test: row.composite
+          name:  row.name,
+          bpi:   row.bpi,
+          test:  row.composite,
+          title: row.title_i
         }
       });
     
