@@ -2,12 +2,6 @@ body {
   font-size: 12px;
 }
 
-#graphic {
-  max-width: 100%;
-  width: 912px;
-  margin: 0 auto;
-}
-
 .axis path,
 .axis line {
   fill: none;
@@ -15,6 +9,11 @@ body {
   shape-rendering: crispEdges;
 }
 
-.y.axis path {
+.axis path {
   display: none;
 }
+
+.axis text {
+  font-size: 10px;
+}
+
