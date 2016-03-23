@@ -13,29 +13,28 @@ layout: null
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
 </head>
 <body>
-  <div id="graphic">    
-    <header>
-      <h1 class="headline">Hamilton County schools brainpower index</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-    </header>
-
-    <div class="legend">
-      <!--
-      Legend indicates which schools are Title I. 
-      Top right corner of chart on desktop 
-      Static position on mobile
-      <svg>
-        <rect></rect>
-        <text>Title I school</text>  
-      </svg>
-      -->
+  <div id="graphic">
+    <div class="copy">
+      <h1 class="headline">Teacher experience and student improvement</h1>
     </div>
-
-    <div class="chart">
-      <!-- <img src="fallback.png" alt="" class="responsive"> -->
+    <div class="legend">
+      <ul class="list-inline">
+        <li class="title-i hidden">Title I school</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#0961ae;float:left">&nbsp;</div>Brainpower index</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#c2d7eb;float:left">&nbsp;</div>TVAAS composite (1–5)</li>
+      </ul>
+    </div>
+    <div id="chart">
+    </div>
+    <div id="data-source">
+      <p class="text-small">
+        Source: <em>UnifiEd courtesy of Hamilton County Department of Education; Tennessee Department of Education.</em>
+      </p>
+      <p>&nbsp;</p>
     </div>
   </div>
-
+  
   <script src="graphic.js"></script>
 </body>
 </html>
+

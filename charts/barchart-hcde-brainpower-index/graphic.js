@@ -2,208 +2,166 @@
   var
   data,
   container = document.querySelector("#graphic"),
-  chart     = document.querySelector("#graphic .chart") 
+  chart     = document.querySelector("#chart")
   ;
 
-  function drawGraphic(containerWidth) {
+  function graphic(containerWidth) {
     // Clear chart contents on page load and window resize
     chart.innerHTML = "";
 
     var
-    x,
     y,
-    xAxis,
-    yAxis,
-    legend,
+    bpi,
+    test,
+    colors,
+    axis,
+    mobile  = (+container.offsetWidth < 512),
+    margin  = (mobile)
+              ? { top: 32, right: 4, bottom: 16, left: 4 }
+              : { top: 32, right: 4, bottom: 16, left: 180 },
+    width   = calculateWidth(),
+    height  = (data.length * 32 - margin.top - margin.bottom),
     svg,
-    margin,
-    width,
-    height,
-    schools = data.map(function(d) { return d.name; })
+    schools 
     ;
 
-    if (!containerWidth) {
-      var containerWidth = +container.offsetWidth;
-    }
+    // Scales
+    // --------------------------------------------------------------------------- 
+    y = d3.scale.ordinal()
+      .domain(data.map(function(d) { return d.name; }))
+      .rangeRoundBands([0, height], 0.1);
 
-    // Set dimensions, scales and axes for vertical or horizontal bar chart
-    // (containerWidth < 768) ? verticalBarChart() : horizontalBarChart();
-    verticalBarChart();
-    
-    // Header adjustments
-    // ---------------------------------------------------------------------------
-    d3.select(container).select("header").style({
-      "margin-left": margin.left + "px",
-      "margin-right": margin.right + "px"
-    });
+    bars = d3.scale.ordinal()
+      .domain(["bpi", "test"])
+      .rangeRoundBands([0, y.rangeBand()]);
 
-    function verticalBarChart() {
-      margin = { top: 32, right: 16, bottom: 16, left: 16 };
-      width  = calculateWidth(margin.left + margin.right);
-      height = (data.length * 26 - margin.top - margin.bottom);
+    colors = d3.scale.ordinal()
+      .domain(bars.domain())
+      .range(["#0961ae", "#c2d7eb"]);
 
-      x = d3.scale.linear()
-        .domain([0, 0.4])
-        .range([0, width]);
+    bpi = d3.scale.linear()
+      .domain([0, d3.max(data, function(d) { return d.bpi; })])
+      .range([0, width])
+      .nice();
 
-      y = d3.scale.ordinal()
-        .domain(schools)
-        .rangeRoundBands([0, height], 0.1);
+    test = d3.scale.linear()
+      .domain([0, d3.max(data, function(d) { return d.test; })])
+      .range([0, width]);
 
-      xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("top")
-        .tickValues([ 0, 0.1, 0.2, 0.3, 0.4, 0.5 ])
-        .tickSize(-height, 0, 0);
+    axis = d3.svg.axis()
+      .scale(test)
+      .orient("top")
+      .tickValues([0,2.5,5])
+      .tickSize(-height, 0, 0)
+      .tickFormat(d3.format("d"));
 
-      yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
-
-      svg = d3.select(chart).append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-      svg.append("g")
-        .attr("class", "x axis")
-        .call(xAxis);
-
-      svg.selectAll("g.vertical")
-          .data(data)
-        .enter().append("g")
-          .attr("class", "vertical")
-          .attr("transform", function(d) {
-            return "translate(0," + y(d.name) + ")";
-          });
-
-      svg.selectAll("g.vertical").append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", function(d) { return x(d.bpi); })
-        .attr("height", y.rangeBand())
-        .attr("fill", "steelblue")
-        .style("fill-opacity", 0.8);
-
-      svg.selectAll("g.vertical").append("rect")
-        .attr("x", 0)
-        .attr("y", y.rangeBand() * .33)
-        .attr("height", y.rangeBand() * .33)
-        .attr("width", function(d) {
-          x.domain([0,1]);
-          return x(d.econ_disadvantaged);
-        })
-        .attr("fill", "red")
-        .style("fill-opacity", 0.5);
-
-      // Reset x domain
-      x.domain([0, 0.4]);
-
-      svg.selectAll("g.vertical").append("text")
-        .attr("x", 2)
-        .attr("y", y.rangeBand() / 2)
-        .attr("dx", function(d) {
-          return (d.bpi < 0.19) ? x(d.bpi) : 0;
-        })
-        .attr("fill", function(d) {
-          return (d.bpi < 0.19) ? "black" : "white";
-        })
-        .style("alignment-baseline", "middle")
-        .text(function(d) { return d.name; });
-    }
-
-    function horizontalBarChart() {
-      margin = { top: 16, right: 48, bottom: 196, left: 48 };
-      ratio  = { width: 8, height: 5 };
-      width  = calculateWidth(margin.left + margin.right);
-      height = calculateHeight(width, ratio.height / ratio.width, margin.top + margin.bottom);
-
-      x = d3.scale.ordinal()
-        .domain(schools)
-        .rangeRoundBands([0, width], 0.3, 0);
-
-      console.log(x.rangeBand());
-
-      y = d3.scale.linear()
-        .domain([0, 0.5])
-        .range([height, 0]);
-
-      xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
-
-      yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
-        .tickSize(-width, 0, 0);
-
-      svg = d3.select(chart).append("svg")
+    // Bars
+    // --------------------------------------------------------------------------- 
+    svg = d3.select(chart).append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      svg.selectAll("rect")
-          .data(data)
-        .enter().append("rect")
-          .attr("x", function(d) { return x(d.name); })
-          .attr("y", function(d) { return y(d.bpi); })
-          .attr("width", x.rangeBand())
-          .attr("height", function(d) { return height - y(d.bpi); })
-          .attr("fill", "steelblue");
+    svg.append("g")
+      .attr("class", "axis")
+      .call(axis);
 
-      svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+    d3.select("g.axis").selectAll(".tick:last-of-type text")
+      .style("font-size", "14px")
+      .text("+");
 
-      d3.selectAll(".x.axis text")
-        .attr("transform", "rotate(-90)")
-        .attr("dx", -8)
-        .attr("dy", 0)
-        .attr("y", 0)
-        .style("alignment-baseline", "middle")
-        .style("text-anchor", "end");
+    schools = svg.selectAll("g.school")
+        .data(data)
+      .enter().append("g")
+        .attr("class", "school")
+        .attr("transform", function(d) {
+          return "translate(0," + y(d.name) + ")";
+        });
 
-      svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
-          .append("text")
-          .attr("transform", "rotate(-90)")
-          .attr("dy", -32)
-          .attr("x", -height / 2)
-          .style("text-anchor", "middle")
-          .text("Brainpower index");
+    bars.domain().forEach(function(k) {
+      schools.append("rect")
+        .attr("class", k)
+        .attr("fill-opacity", 0.85)
+        .attr("fill", colors(k))
+        .attr("x", 0)
+        .attr("y", bars(k))
+        .attr("height", bars.rangeBand())
+        .attr("width", function(d) {
+          return (k == "bpi") ? bpi(d.bpi) : test(d.test);
+        });
+    });
+
+    // Labels
+    // ---------------------------------------------------------------------------
+    schools.append("text")
+      .attr("class", "label")
+      .attr("dominant-baseline", "hanging")
+      .text(function(d) { return d.name; });
+
+    if (mobile) {
+      schools.selectAll("text.label")
+        .attr("x", function(d) {
+          if (bpi(d.bpi) < 141 )
+            return bpi(d.bpi);
+          else {
+            return 0;
+          }
+        })
+        .attr("y", bars(bars.domain()[0]))
+        .attr("dx", 2)
+        .attr("dy", 2)
+        .style("fill", function(d) { return (bpi(d.bpi) < 141) ? "" : "white"; });
+    } else {
+      schools.selectAll("text.label")
+        .attr("x", 0)
+        .attr("y", bars.rangeBand() * .5)
+        .attr("dx", -4)
+        .attr("text-anchor", "end")
+        .attr("fill", function(d) { return (d.title) ? "#df2027" : ""});
+
+      // Show Title I description on larger displays
+      d3.select(".legend .title-i").classed("hidden", false);
     }
 
-    // Helper functions for chart dimensions
-    // ---------------------------------------------------------------------------
-      function calculateWidth(margin) {
-        if (!containerWidth) {
-          var containerWidth = +container.offsetWidth;
-        }
+    // TVAAS score labels
+    schools.append("text")
+      .attr("class", "label tvaas")
+      .attr("x", function(d) { return test(d.test); })
+      .attr("y", bars(bars.domain()[1]))
+      .attr("dx", -2)
+      .attr("dy", 2)
+      .attr("font-size", "10px")
+      .attr("text-anchor", "end")
+      .attr("dominant-baseline", "hanging")
+      .text(function(d) { return d.test; });
 
-        return Math.ceil(containerWidth - margin);
-      }
-      
-      function calculateHeight(width, ratio, margin) {
-        return Math.ceil(width * ratio - margin);
-      }
+    // Helper functions
     // ---------------------------------------------------------------------------
-  } // End of drawGraphic()
-
+    function calculateWidth() {
+      if (!containerWidth) {
+        var containerWidth = +container.offsetWidth;
+      }
+      return containerWidth - margin.left - margin.right;
+    }
+  } // End of graphic()
 
   // Load and map data
   // ---------------------------------------------------------------------------
   d3.csv("data.csv", cast, function(error, csv) {
     if (error) throw error;
 
-    data = csv.filter(function(d) { return d.econ_disadvantaged != 0; })
-      .sort(function(a, b) { return b.bpi - a.bpi; });
+    data = csv.sort(function(a, b) { return b.bpi - a.bpi; })
+      .map(function(row) {
+        return {
+          name:  row.name,
+          bpi:   row.bpi,
+          test:  row.composite,
+          title: row.title_i
+        }
+      });
     
-
-    new pym.Child({ renderCallback: drawGraphic });
+    new pym.Child({ renderCallback: graphic });
   });
 
   function cast(d) {
