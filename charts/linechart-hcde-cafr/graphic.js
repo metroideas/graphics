@@ -200,7 +200,9 @@
       })
       .style("stroke", function(d) { return color(d.name); });
 
-    function cpiAdjust() {
+    function cpiAdjust(e) {
+      e.preventDefault();
+      
       var button = this;
       
       if (button.innerHTML == "Reset to nominal") {
@@ -219,7 +221,7 @@
     }
 
     document.querySelector("#adjustment").addEventListener("click", cpiAdjust);
-    document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust);
+    document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust, false);
 
     // Enrollment line graph
     // ---------------------------------------------------------------------------
