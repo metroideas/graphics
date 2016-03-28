@@ -221,7 +221,8 @@
     }
 
     document.querySelector("#adjustment").addEventListener("click", cpiAdjust);
-    document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust, false);
+    document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust);
+    
 
     // Enrollment line graph
     // ---------------------------------------------------------------------------
