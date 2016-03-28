@@ -8,6 +8,15 @@
   // Draw chart
   // ---------------------------------------------------------------------------
   function draw(containerWidth) {
+    // Generic variables:
+    var
+    x,
+    y,
+    svg //,
+    // ...
+    ;
+
+    // Chart dimensions: 
     // Width breakpoint
     var mobile = (+container.offsetWidth <= 414);
 
@@ -22,7 +31,7 @@
     };
     
     // Aspect ratio
-    var ratio  = { width: 8, height: 5 };
+    var ratio  = (mobile) ? { width: 1, height: 1 } : { width: 8, height: 5 };
     
     // Container width minus left/right margin
     var width  = function() {
@@ -39,15 +48,19 @@
 
       return Math.round(width * f - margin.height());
     }();
-
-    // Chart
-    // ---------------------------------------------------------------------------
+    
     // Clear existing contents
     chart.innerHTML = "";
 
-    // ...
+    // Scales and svg setup
+    svg = d3.select(chart).append("svg")
+        .attr("width", width + margin.width())
+        .attr("height", height + margin.height())
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  } // End of draw(config)
+    
+  } // End of draw(containerWidth)
 
   // Load and map data
   // --------------------------------------------------------------------------- 

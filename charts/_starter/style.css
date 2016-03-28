@@ -1,0 +1,28 @@
+body {
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+
+/* Remove once graphic is embeddable */
+#container {
+  max-width: 100%;
+  /* .grid desktop width */
+  /* width: 1024px; */
+  
+  /* .wider desktop width */ 
+  /* width: 905px; */
+
+  /* .grid-small desktop width */
+   width: 608px;  
+
+  margin: 16px auto;
+}
+
+
