@@ -200,8 +200,29 @@
       })
       .style("stroke", function(d) { return color(d.name); });
 
-    function cpiAdjust(e) {
-      e.preventDefault();
+    // function cpiAdjust(e) {
+      // console.log(e);
+      // console.log(this);
+      // e.preventDefault();
+      
+      // var button = this;
+      
+      // if (button.innerHTML == "Reset to nominal") {
+      //   line.y(function(d) { return y(d.unadjusted); });
+      //   button.innerHTML = "Adjust for inflation";
+      // } else {
+      //   line.y(function(d) { return y(d.adjusted); });
+      //   button.innerHTML = "Reset to nominal";
+      // }
+     
+      // d3.selectAll(".revenue-source .line")
+      //   .transition()
+      //     .delay(100)
+      //     .duration(500)
+      //   .attr("d", function(d) { return line(d.revenue); });
+    // }
+
+    d3.select("#adjustment").on("click", function() {
       
       var button = this;
       
@@ -218,10 +239,10 @@
           .delay(100)
           .duration(500)
         .attr("d", function(d) { return line(d.revenue); });
-    }
+    });
 
-    document.querySelector("#adjustment").addEventListener("click", cpiAdjust);
-    document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust);
+    // document.querySelector("#adjustment").addEventListener("click", cpiAdjust);
+    // document.querySelector("#adjustment").addEventListener("touchend", cpiAdjust);
     
 
     // Enrollment line graph
