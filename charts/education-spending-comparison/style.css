@@ -1,0 +1,33 @@
+body {
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.x line,
+.x path {
+  display: none;
+}
+
+.y.axis path {
+  display: none;
+}
+
+#legend .span-4 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 31.7615656014%;
+}
+
+#legend .span-4:last-child {
+  margin-right: 0;
+}
+
+
+
