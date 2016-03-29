@@ -109,8 +109,9 @@
       });
       
       // Position
-      tooltip.style("left", left + 15 + "px");
-      tooltip.style("top", top + -15 + "px");
+      // tooltip.style("left", left + 15 + "px");
+      tooltip.style("left", (left > w / 2) ? left - 165 + "px" : left + 15 + "px");
+      tooltip.style("top", (top > h / 2) ? top - 50 + "px": top - 15 + "px");
     })
     .on("mouseout", function() {
       d3.select("#tooltip").classed("hidden", true);
