@@ -16,15 +16,16 @@
     svg,
     states,
     // Legend variables
-    legend,
-    m,
-    w,
-    h,
-    x,
-    y
+    legend, // svg parent
+    axis,   // y axis 
+    m,      // margins
+    w,      // width
+    h,      // height
+    x,      // horizontal linear scale
+    y       // vertical ordinal scale
     ;
 
-    // Dimensions
+    // Map dimensions
     // ---------------------------------------------------------------------------
     var mobile = (+container.offsetWidth <= 414);
 
@@ -80,8 +81,7 @@
         .attr("class", "state");
 
     // Color encode spending per student
-    states.attr("stroke", "white")
-      .attr("fill", function(d) { return color(d.properties.average); });
+    states.attr("fill", function(d) { return color(d.properties.average); });
 
     // Tooltip on hover
     states.on("mouseover", function(d) {
@@ -91,10 +91,11 @@
       top     = d3.event.pageY
       ;
 
-      // Values
+      // Tooltip values
       tooltip.select("[data-item=name]").html(d.properties.name);
       tooltip.select("[data-item=average]").html(d3.format("$,")(d.properties.average));
       tooltip.select("[data-item=rank]").html(function() {
+        // ordinal suffix
         function suffix(n) {
           if (n > 3 && n < 21) return "th";
           switch (n % 10) {
@@ -109,7 +110,6 @@
       });
       
       // Position
-      // tooltip.style("left", left + 15 + "px");
       tooltip.style("left", (left > w / 2) ? left - 165 + "px" : left + 15 + "px");
       tooltip.style("top", (top > h / 2) ? top - 50 + "px": top - 15 + "px");
     })
@@ -121,8 +121,9 @@
     // ---------------------------------------------------------------------------
     // Clear legend
     document.querySelector("#legend").innerHTML = "";
+    
     // Legend dimensions
-    // Margins
+    // Margin
     m = { top: 0, right: 0, bottom: 16, left: 72 };
 
     m.width  = function() { return this.left + this.right; };
@@ -132,11 +133,11 @@
     w = (mobile) ? width - m.width() : width * .75 - m.width();
     h = color.range().length * 20 - m.height();
 
-    // Data generated from path(s) fill
+    // Legend/bar chart data appended to data object
     data.count = color.range().map(function(rgb) {
       var s = "path.state[fill='" + rgb + "']";
       
-      // Number of states with a particular color
+      // Number of states with a particular fill
       var value = svg.selectAll(s)[0].length;
 
       // Range of values to a string
@@ -150,7 +151,7 @@
       return { color: rgb, value: value, description: description };
     });
 
-    // x and y scales
+    // Legend x and y scales
     x = d3.scale.linear()
       .domain([0, d3.max(data.count, function(d) { return d.value; })])
       .range([0, w]);
@@ -159,22 +160,22 @@
       .domain(data.count.map(function(d) { return d.description; }))
       .rangeRoundBands([0, h], 0.1);
 
-    // Axes
-    var yAxis = d3.svg.axis()
+    axis = d3.svg.axis()
       .scale(y)
       .orient("left");
 
+    // Intro text with a <br> on containers larger than 600px wide
     d3.select("#legend").append("p")
       .attr("class", "lead")
       .style("margin", "1em 0")
-    // ---------------------------------------------------------------------------
       .html(function() {
         var str = "Many states, including Tennessee, spend between $7,500 and $11,000 per student.";
-        str += (+container.offsetWidth < 568) ? " " : "<br>";
+        str += (+container.offsetWidth < 600) ? " " : "<br>";
         str += "Rankings of elementary and secondary school expenditure include the District of Columbia."
         return str;
       });
 
+    // svg appended to #legend
     legend = d3.select("#legend").append("svg")
         .attr("width", w + m.width())
         .attr("height", h + m.height())
@@ -183,8 +184,9 @@
 
     legend.append("g")
       .attr("class", "y axis")
-      .call(yAxis);
+      .call(axis);
 
+    // Count bars
     legend.selectAll("g.bar")
         .data(data.count)
       .enter().append("g")
@@ -200,6 +202,7 @@
       .attr("height", y.rangeBand())
       .attr("fill", function(d) { return d.color; });
 
+    // State count labels
     legend.selectAll("g.bar").append("text")
       .attr("class", "tick")
       .attr("x", function(d) { return x(d.value); })
@@ -211,7 +214,9 @@
       .attr("fill", function(d) { return (d.value < 5) ? "white" : ""; })
       .text(function(d) { return d.value; });
 
+    // Add " states" to first bar label"
     legend.select("g.bar text").text(function(d) { return d.value + " states"; });
+  
   } // End of draw(containerWidth)
 
   // Load and map data
@@ -219,28 +224,21 @@
   d3.csv("us-education-spending-by-state.csv", type, function(error, csv) {
     if (error) throw error;
 
-    d3.json("us-states.json", function(error, json) {
+    d3.json("us-states.json", function(error, geojson) {
       if (error) throw error;
 
-      // Merge csv to geojson
-      for (var i = 0; i < csv.length; i++) {
-        var csvName              = csv[i].state;
-        var total                = csv[i].total;
-        var averagePerEnrollment = csv[i].adm;
-        var rank                 = csv[i].rank;
+      // Add csv data to geojson.properties
+      geojson.features.forEach(function(json) {
+        var properties = json.properties;
+        var state = csv.filter(function(row) { return row.state == properties.name; })[0];
 
-        for (var j = 0; j < json.features.length; j++) {
-          var jsonName = json.features[j].properties.name;
-
-          if (csvName == jsonName) {
-            json.features[j].properties.total = total;
-            json.features[j].properties.average = averagePerEnrollment;
-            json.features[j].properties.rank = rank;
-          }
+        if (state) {
+          properties.average = state.adm;
+          properties.rank    = state.rank;
         }
-      }
+      });
 
-      data = json;
+      data = geojson;
 
       new pym.Child({ renderCallback: draw });
     });
