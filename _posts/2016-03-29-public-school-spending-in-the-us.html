@@ -1,0 +1,16 @@
+---
+title: "Public school spending in the U.S."
+date: 2016-03-29 14:45:00 -0400
+layout: post
+related:
+embed_source: "/maps/us-education-spending-per-student/"
+description: Map ranking states by per-student expenditure.
+---
+
+<div id="map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  new pym.Parent("map", url, {});
+</script>

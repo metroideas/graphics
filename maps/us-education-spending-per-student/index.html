@@ -1,0 +1,42 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="copy small-center">
+      <h1 class="headline">Average public school spending per student</h1>
+      <div id="legend"><!-- Legend stuff --></div>
+    </div>
+    
+    <div id="chart"><!-- <img src="fallback.png" alt="Fallback image" class="responsive"> --></div>
+    <div class="hidden" id="tooltip">
+      <h2 class="headline" data-item="name"></h2>
+      <p class="text-meta" style="margin-top:0">Rank: <span data-item="rank"></span></p>
+      <ul class="list-unstyled">
+        <li>Average spending: <span data-item="average"></span> per student</li>
+      </ul>
+    </div>
+
+    <div id="data-source">
+      <p class="text-small">
+        Graphic: <a href="http://metroideas.org">Metro Ideas Project</a><br>
+        Source: <em>National Education Association Rankings and Estimates 2014–15</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  
+  <script src="graphic.js"></script>
+</body>
+</html>
