@@ -1,0 +1,64 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="copy small-center">
+      <h1 class="headline">Funding and accountability</h1>
+      <p class="lead">Does school funding affect outcomes?</p>
+
+      <div class="legend" id="legend">
+        <ul class="list-inline">
+          <li class="grade-select">
+            <label for="grade-level">Grades</label>
+            <select class="grade-level-select" name="grade-level" id="grade-level-select">
+              <option value="all" selected>All</option>
+              <option value="elementary">Elementary</option>
+              <option value="middle">Middle</option>
+              <option value="high">High</option>
+            </select>
+          </li>
+
+          <li class="buttons">
+            <button class="primary" id="english">English</button>
+            <button id="math">Math</button>
+            <button id="title">Title I</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div id="chart"><!-- <img src="fallback.png" alt="Fallback image" class="responsive"> --></div>
+
+    <div class="hidden" id="tooltip">
+      <p class="lead" data-item="name"></p>
+      <ul class="list-unstyled">
+        <li>Spending: <span data-item="average"></span> per student</li>
+        <li>English proficiency: <span data-item="english"></span></li>
+        <li>Math proficiency: <span data-item="math"></span></li>
+      </ul>
+    </div>
+
+    <div id="data-source">
+      <p class="text-small">
+        Graphic: <a href="http://metroideas.org">Metro Ideas Project</a><br>
+        Sources: <em>Data sources</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  
+  <script src="graphic.js"></script>
+</body>
+</html>
