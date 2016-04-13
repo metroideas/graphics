@@ -58,7 +58,7 @@ circle.school {
   margin: 2em 0 1.5em;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 414px) {
   .legend .grade-select {
     display: block;
     margin-bottom: 8px;

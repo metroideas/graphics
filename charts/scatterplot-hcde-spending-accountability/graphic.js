@@ -29,7 +29,7 @@
       height: function() { return this.top + this.bottom; }
     };
     
-    var ratio  = (mobile) ? { width: 1, height: 1 } : { width: 1, height: 0.8 };
+    var ratio  = (mobile) ? { width: 1, height: 1 } : { width: 1, height: 1 };
     
     var width  = function() {
       if (!containerWidth) {
