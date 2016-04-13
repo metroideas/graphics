@@ -2,12 +2,28 @@ body {
   font-size: 12px;
 }
 
+@media (min-width:414px) {
+  .quadrant-label {
+   font-size: 14px;
+  }
+
+  .small-center {
+    text-align: center;
+  }
+}
+
 .axis path,
 .axis line,
-line.axis {
+line.axis,
+.box {
   fill: none;
   stroke: #dcddde;
   shape-rendering: crispEdges;
+}
+
+.axis text,
+text.axis {
+  fill: #6d6e70;
 }
 
 .axis path {
@@ -51,21 +67,6 @@ circle.school {
 
 .grade-select label {
   padding-right: 8px;
-}
-
-/* Remove once graphic is embeddable */
-#container {
-  max-width: 100%;
-  /* .grid desktop width */
-  /* width: 1024px; */
-  
-  /* .wider desktop width */ 
-   width: 905px;
-
-  /* .grid-small desktop width */
-   width: 608px;  
-
-  margin: 16px auto;
 }
 
 
