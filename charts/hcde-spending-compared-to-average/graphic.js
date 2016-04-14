@@ -70,11 +70,23 @@
       .domain(keys)
       .range(['#ccece6','#99d8c9','#66c2a4','#2ca25f','#006d2c']);
 
+    axis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom")
+      .tickSize(-height, 0, 0)
+      .tickValues([.25, .5, .75, 1])
+      .ticks(null, "%");
+
     svg = d3.select(chart).append("svg")
         .attr("width", width + margin.width())
         .attr("height", height + margin.height())
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("g")
+      .attr("class", "axis")
+      .call(axis)
+      .attr("transform", "translate(0," + height + ")");
 
     // Normalized bar chart
     // ---------------------------------------------------------------------------
@@ -107,7 +119,8 @@
       .attr("x", function(d) { return x(d.x); })
       .attr("width", function(d) { return x(d.width); })
       .attr("height", y.rangeBand())
-      .attr("fill", function(d) { return color(d.range); });
+      .attr("fill", function(d) { return color(d.range); })
+      .attr("fill-opacity", 0.95);
 
     // Rect labels
     d3.selectAll("g.spending").append("text")
@@ -157,7 +170,8 @@
         .attr("x", function(d) { return legend(d); })
         .attr("width", legend.rangeBand())
         .attr("height", legend.rangeBand())
-        .attr("fill", function(d) { return color(d); });
+        .attr("fill", function(d) { return color(d); })
+        .attr("fill-opacity", 0.95);
 
     // Wrap axis labels to width.
     // https://bl.ocks.org/mbostock/7555321
