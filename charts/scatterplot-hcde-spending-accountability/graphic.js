@@ -154,7 +154,7 @@
       .attr("dy", -6)
       .attr("text-anchor", "middle")
       .attr("transform", "rotate(-90)")
-      .text("Student proficiency");
+      .text("Adjusted student proficiency");
     
     // Initial scatterplot
     // ---------------------------------------------------------------------------
