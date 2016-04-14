@@ -1,0 +1,35 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="copy small-center">
+      <h1 class="headline">Per-pupil spending compared to district average</h1>
+      <div class="legend"></div>
+    </div>
+    
+    <div id="chart"><!-- <img src="fallback.png" alt="Fallback image" class="responsive"> --></div>
+
+    <div id="data-source">
+      <p class="text-small">
+        Graphic: <a href="http://metroideas.org">Metro Ideas Project</a><br>
+        Sources: <em>Hamilton County Department of Education and Tennessee Department of Education</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  
+  <script src="graphic.js"></script>
+</body>
+</html>

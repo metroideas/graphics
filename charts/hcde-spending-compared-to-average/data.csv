@@ -1,0 +1,5 @@
+grade,Far below average (<-10%),Slightly below average,Average,Slightly above average,Far above average (>+10%)
+Elementary,0.30233,0.27907,0.06977,0.18605,0.16279
+Middle,0.10000,0.50000,0.10000,0.20000,0.10000
+High,0.05882,0.35294,0.23529,0.05882,0.29412
+All,0.22222,0.33333,0.11111,0.15278,0.18056

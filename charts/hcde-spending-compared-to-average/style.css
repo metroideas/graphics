@@ -1,0 +1,23 @@
+body {
+  font-size: 12px;
+}
+
+@media (min-width:608px) {
+  .small-center {
+    text-align: center;
+  }
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+
+
