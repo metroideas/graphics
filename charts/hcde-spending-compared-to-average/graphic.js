@@ -122,14 +122,34 @@
       .attr("fill", function(d) { return color(d.range); })
       .attr("fill-opacity", 0.95);
 
-    // Rect labels
-    d3.selectAll("g.spending").append("text")
-      .attr("x", function(d) { return x(d.x) + x(d.width) / 2; })
-      .attr("y", y.rangeBand() / 2)
-      .attr("dominant-baseline", "middle")
-      .attr("text-anchor", "middle")
-      .style("font-size", (+container.offsetWidth <= 375) ? "8px" : "12px")
-      .text(function(d) { return d3.format("%")(d.width); });
+    // Hover
+    grades
+      .on("mouseover", function(d) {
+        var hover = d3.select(this).append("g").classed("hover", true);
+
+        hover.append("rect")
+          .attr("fill", "white")
+          .attr("fill-opacity", 0.6)
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", width)
+          .attr("height", y.rangeBand())
+          .attr("pointer-events", "none");
+
+        hover.selectAll("text")
+            .data(function(d) { return d.spending; })
+          .enter().append("text")
+            .attr("x", function(d) { return x(d.x) + x(d.width) / 2; })
+            .attr("y", y.rangeBand() / 2)
+            .attr("dominant-baseline", "middle")
+            .attr("text-anchor", "middle")
+            .style("font-size", (+container.offsetWidth <= 375) ? "8px" : "12px")
+            .text(function(d) { return d3.format("%")(d.width); });
+
+      })
+      .on("mouseout", function(d) {
+        d3.select(".hover").remove();
+      });
 
     // Legend
     // ---------------------------------------------------------------------------
