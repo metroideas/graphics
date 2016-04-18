@@ -52,7 +52,7 @@
 
     // Horizontal scale for average funding
     x = d3.scale.linear()
-      .domain([3000,12000])
+      .domain([2900,12000])
       .range([0, width])
       .nice();
 
@@ -64,7 +64,7 @@
     xAxis = d3.svg.axis()
       .scale(x)
       .orient("bottom")
-      .tickValues([7400])
+      .tickValues([7200])
       .tickSize(-height, 0, 0)
       .tickFormat(d3.format("$,"));
 
