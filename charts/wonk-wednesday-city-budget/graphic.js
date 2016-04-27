@@ -106,7 +106,6 @@
 
       function update(json) {
         map(json);
-        console.log(data);
 
         g = svg.selectAll(".arc")
             .data(pie(data));
@@ -123,7 +122,7 @@
             .duration(500)
           .call(textAttr);
       }
-    }, 15000); // 1-minute interval
+    }, 30000); // 30-second interval
 
   } // End of draw(containerWidth)
 
@@ -144,7 +143,6 @@
     categories = d3.keys(json[0]).filter(function(k) { return k != "Timestamp"; });
 
     data = categories.map(function(category) {
-      // var sum = parseInt((Math.random() * 10), 10)
       var sum = 0;
 
       json.forEach(function(row) { sum += +row[category]; });
