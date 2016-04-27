@@ -78,7 +78,10 @@
     function textAttr(d) {
       this
         .attr("transform", function(d) {
-          return "translate(" + labelArc.centroid(d) + ")";
+          var center = labelArc.centroid(d);
+          var x = center[0] * 1.15;
+          var y = center[1] * 1.15;
+          return "translate(" + [x,y] + ")";
         })
         .style("font-size", "32px")
         .text(function(d) {
