@@ -21,7 +21,7 @@
     var mobile = (+container.offsetWidth <= 414);
 
     var margin = {
-      top: 0,
+      top: 8,
       right: 16,
       bottom: 32,
       left: 16,
