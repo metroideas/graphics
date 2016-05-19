@@ -55,6 +55,17 @@
     // Clear existing contents
     chart.innerHTML = "";
 
+    // Data for screen readers
+    d3.select(chart).selectAll("span.invisible")
+        .data(data.sort(function(a,b) { return a.poverty - b.poverty; }))
+      .enter().append("span")
+        .attr("class", "invisible")
+        .html(function(d) {
+          return d.school + ", Poverty: " +
+            d3.format("%")(d.poverty) + ", Discretionary funds: " + 
+            d3.format("$,")(Math.round(d.funding))
+        });
+
     // Scales and svg setup
     x = d3.scale.linear()
       .domain([0, 1])
@@ -131,7 +142,6 @@
         .attr("class", "school")
         .call(circleAttr);
 
-    // To do: Add data for screen readers
     function circleAttr() {
       return this
         .attr("cx", function(d) { return x(d.poverty); })
