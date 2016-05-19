@@ -1,0 +1,16 @@
+---
+title: "Op-ed: School discretionary funds and student poverty"
+date: 2016-05-19 13:30:00 -0400
+layout: post
+related:
+embed_source: "/charts/scatterplot-hcde-discretionary-general/"
+description: Scatterplot of school discretionary funds to accompany TFP op-ed.
+---
+
+<div id="chart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  new pym.Parent("chart", url, {});
+</script>

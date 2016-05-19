@@ -1,0 +1,81 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: rgb(0,0,0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+.tfp-gray {
+  color: rgb(102,102,102);
+}
+
+a,
+a:visited {
+  color: rgb(199,31,31);
+}
+
+.headline {
+  margin: 0;
+}
+
+.lead {
+  margin: 0;
+  color: rgb(102,102,102);
+}
+
+.text-small {
+  font-size: 10px;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  position: absolute;
+  width: 150px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid rgb(242,242,242);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: rgb(102,102,102);
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+circle.school {
+  fill: rgb(199,31,31);
+  fill-opacity: 0.8;
+}
+
+.regression {
+  font-family: sans-serif;
+  stroke-width: 2px;
+  stroke: rgb(20,133,204);
+}
+
+

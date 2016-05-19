@@ -258,7 +258,6 @@
 
         // Text values
         tooltip.select("[data-item=name]").html(d.name);
-        console.log(d.name);
         tooltip.select("[data-item=average]").html(d3.format("$,.0f")(d.average));
         tooltip.select("[data-item=english]").html(d3.format("%")(d.scores.english));
         tooltip.select("[data-item=math]").html(d3.format("%")(d.scores.math));
