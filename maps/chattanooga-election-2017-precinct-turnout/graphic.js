@@ -59,7 +59,7 @@
       .projection(projection);
 
     map = d3.select(chart).append("svg")
-        .attr("id", "map")
+        .attr("id", "city-map")
         .attr("width", width + margin.width())
         .attr("height", height + margin.height())
       .append("g")
@@ -97,8 +97,8 @@
       .tickValues(choropleth.quantiles())
       .tickFormat(function(d) { return fmtNumber(100 * d); });
 
-    // Append axis group to svg#map
-    var g = d3.select("#map").append("g")
+    // Append axis group to svg#city-map
+    var g = d3.select("#city-map").append("g")
       .attr("id", "legend")
       .call(axis);
 

@@ -1,0 +1,49 @@
+---
+title: "Map: Chattanooga 2017 election turnout by precinct"
+date: 2017-03-15 12:00:00 -0400
+related:
+embed_source: "/maps/chattanooga-election-2017-precinct-turnout/"
+description: "Choropleth showing voter turnout in Chattanooga's 2017 city election"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
+</head>
+<body>
+  {% include navbar.html %}
+
+  <div class="grid-small">
+    <header>
+      <h1 class="headline">{{ page.title }}</h1>
+      <span class="date">{{ page.date | date: '%B %d, %Y'}}</span>  
+    </header>
+    
+    <p>{{ page.description }}</p>
+    
+    <div id="map"></div>
+
+    <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+    <script>
+      var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+      new pym.Parent("map", url, {});
+    </script>
+
+    <p>
+      <small>
+        <a href="https://github.com/metroideas/graphics/tree/gh-pages{{ page.embed_source }}">Source</a>
+        {% if page.related %}| <a href="{{ page.related }}">Related article</a>{% endif %}
+      </small>
+    </p>
+
+    <hr>
+
+    <pre><code>{{ content | escape }}</code></pre>
+  </div>
+</body>
+</html>
