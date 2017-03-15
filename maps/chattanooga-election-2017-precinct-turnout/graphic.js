@@ -2,88 +2,107 @@
   "use strict";
 
   var
-  chart    = document.querySelector("#chart"),
-  margin   = { top: 20, right: 16, bottom: 0, left: 16 },
-  width    = +chart.offsetWidth - margin.left - margin.right,
-  mobile   = (width <= 500),
-  height   = function() {
-    return (mobile)
-      ? Math.floor(+chart.offsetWidth * .8) - margin.top - margin.bottom
-      : Math.floor(+chart.offsetWidth * .7) - margin.top - margin.bottom;
-  }(),
-  citywide = document.querySelector("#tooltip").innerHTML,
-  map,
-  path,
-  projection,
-  choropleth
+  data,
+  chart = document.querySelector("#chart"),
+  turnout = document.querySelector("#tooltip").innerHTML,
+  tooltip = document.querySelector("#tooltip")
   ;
 
-  chart.innerHTML = "";
+  // Map-rendering callback
+  // ---------------------------------------------------------------------------
+  function draw(containerWidth) {
+    var
+    map,
+    path,
+    projection,
+    choropleth
+    ;
 
-  choropleth = d3.scaleQuantile()
-    .range(d3.schemeBlues[7]);
-  
-  map = d3.select(chart).append("svg")
-      .attr("id", "map")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-      .attr("class", "precincts")
-      .attr("transform", function() {
-        return (mobile)
-          ? "translate(" + [margin.left, margin.top * 2] + ")"
-          : "translate(" + [margin.left, margin.top] + ")";
-      })
+    // Dimensions
+    // ---------------------------------------------------------------------------
+    var margin = {
+      top: 20, right: 16, bottom: 0, left: 16,
+      width: function() { return this.right + this.left; },
+      height: function() { return this.top + this.bottom; }
+    };
 
-  d3.json("data.topo.json", function(err, data) {
-    if (err) throw err;
+    var width = function() {
+      if (!containerWidth) {
+        var containerWidth = +container.offsetWidth;
+      }
+      return containerWidth - margin.width();
+    }();
 
-    // Topology data
-    var topology = topojson.feature(data, data.objects.precincts);
+    var mobile = (width <= 500);
 
-    choropleth.domain(d3.extent(topology.features, function(d) {
-      return +d.properties.turnout;
-    }));
+    var ratio = (mobile) ? { height: 4, width: 5 } : { height: 7, width: 10 };
+
+    var height = function() {
+      var f = ratio.height / ratio.width;
+      return Math.floor(width * f - margin.height());
+    }();
+
+    // Render map
+    // ---------------------------------------------------------------------------
+    chart.innerHTML = "";
+
+    choropleth = d3.scaleQuantile()
+      .domain(d3.extent(data.features, function(d) {
+        return +d.properties.turnout;
+      }))
+      .range(d3.schemeBlues[9]);
 
     projection = d3.geoIdentity()
-      .fitSize([width, height], topology);
+      .fitSize([width, height], data);
 
     path = d3.geoPath()
       .projection(projection);
 
+    map = d3.select(chart).append("svg")
+        .attr("id", "map")
+        .attr("width", width + margin.width())
+        .attr("height", height + margin.height())
+      .append("g")
+        .attr("class", "precincts")
+        .attr("transform", function() {
+          return (mobile)
+            ? "translate(" + [margin.left, margin.top * 2] + ")"
+            : "translate(" + [margin.left, margin.top] + ")";
+        });
+
     map.selectAll("path")
-      .data(topology.features)
+      .data(data.features)
       .enter().append("path")
         .attr("d", path)
         .attr("stroke", "white")
-        .attr("stroke-width", "0.5px")
         .attr("fill", function(d) {
-          var turnout = +d.properties.turnout || 0;
-          return choropleth(turnout);
+          return choropleth(d.properties.turnout)
         })
-        .on("mouseover", mouseover)
-        .on("mouseout", mouseout);
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout);
 
-    // Legend
-    var formatNumber = d3.format(".0f");
-
+    // Legend - Adapted from https://bl.ocks.org/mbostock/4573883
+    // ---------------------------------------------------------------------------
+    var fmtNumber = d3.format(".0f")
     var legendWidth = (mobile) ? width * .75 : width * .5;
 
+    // Define legend scale, axis
     var x = d3.scaleLinear()
-      .domain([0, choropleth.domain()[1]])
-      .range([0, legendWidth]);
+      .domain(choropleth.domain())
+      .range([0, legendWidth]); 
 
-    var xAxis = d3.axisBottom(x)
+    var axis = d3.axisBottom(x)
       .ticks(choropleth.quantiles().length)
       .tickSize(12)
       .tickValues(choropleth.quantiles())
-      .tickFormat(function(d) { return formatNumber(100 * d); });
+      .tickFormat(function(d) { return fmtNumber(100 * d); });
 
-    var g = d3.select("#map")
-      .append("g")
+    // Append axis group to svg#map
+    var g = d3.select("#map").append("g")
       .attr("id", "legend")
-      .call(xAxis);
+      .call(axis);
 
+    // Replace axis with rects
     g.selectAll("rect")
       .data(choropleth.range().map(function(color) {
         var d = choropleth.invertExtent(color);
@@ -100,24 +119,24 @@
         .attr("fill", function(d) { return choropleth(d[0]); });
 
     g.append("text")
-      .attr("fill", "#000")
+      .attr("fill", "#252525")
       .attr("text-anchor", "start")
       .attr("font-size", 16)
       .attr("font-family", "Avenir Next")
       .attr("y", -6)
       .text("Voter turnout by precinct (%)");
 
-    g.attr("transform", "translate(0," + margin.top + ")"); 
-  });
+    g.attr("transform", "translate(0," + margin.top + ")");
+  } // end of draw(containerWidth) function
 
+  // Tooltip functions
+  // ---------------------------------------------------------------------------
   function mouseout(d) {
-    var tooltip = document.querySelector('#tooltip');
-    tooltip.innerHTML = citywide;
-    return d;
+    tooltip.innerHTML = turnout;
+    return ;
   }
 
   function mouseover(d) {
-    var tooltip = document.querySelector('#tooltip');
     var fmtInt  = d3.format(",");
     var fmtPct  = d3.format(".1%");
     var props   = d.properties;
@@ -136,6 +155,16 @@
     
     tooltip.innerHTML = string;
     
-    return d;
+    return ;
   }
-})()
+
+  // Load topojson data
+  // ---------------------------------------------------------------------------
+  d3.json("data.topo.json", function(err, json) {
+    if (err) throw err;
+
+    data = topojson.feature(json, json.objects.precincts);
+
+    new pym.Child({ renderCallback: draw });
+  })
+})();
