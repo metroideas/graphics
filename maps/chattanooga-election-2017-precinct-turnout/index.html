@@ -1,0 +1,44 @@
+---
+layout: null
+---
+
+<!doctype html>
+<html class="no-js" lang="en_us">
+<head>
+{% include head.html %}
+<title>{{ site.title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  strong {
+    font-weight: 500;
+  }
+</style>
+<script src="https://pym.nprapps.org/pym.v1.min.js"></script>
+</head>
+<body>
+<div id="container">
+  <h1 class="headline">Chattanooga 2017 city election turnout</h1>
+
+  <div id="chart">
+    <img src="fallback.svg" alt="Chattanooga precinct map" class="responsive">
+  </div>
+
+  <div id="tooltip">
+    <strong>Citywide</strong>
+    <br>Registered voters: 96,333
+    <br>Ballots cast: 18,968
+    <br>19.7% turnout
+  </div>
+
+  <div id="data-source">
+    <p class="text-small">
+      Graphic: <a href="http://metroideas.org" target="_blank">Metro Ideas Project</a><br>
+      Source: Hamilton County Election Commission
+    </p>
+  </div>
+</div>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script src="d3.rollup.js"></script>
+<script src="graphic.js"></script>  
+</body>
+</html>
