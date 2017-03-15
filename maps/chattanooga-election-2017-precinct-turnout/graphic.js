@@ -60,6 +60,8 @@
 
     map = d3.select(chart).append("svg")
         .attr("id", "city-map")
+        .attr("title", "Chattanooga 2017 election map")
+        .attr("description", "Voter turnout by city precinct")
         .attr("width", width + margin.width())
         .attr("height", height + margin.height())
       .append("g")
