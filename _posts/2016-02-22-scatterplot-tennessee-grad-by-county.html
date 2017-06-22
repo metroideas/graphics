@@ -12,6 +12,6 @@ description: Interactive scatterplot compares Tennessee school district graduati
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
 <script>
-  var url         = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var url         = "{{ page.embed_source | absolute_url }}";
   var scatterplot = new pym.Parent("scatterplot", url, {});
 </script>
