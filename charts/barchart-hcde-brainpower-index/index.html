@@ -1,0 +1,41 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">
+    <div class="copy">
+      <h1 class="headline">Teacher experience and student improvement</h1>
+    </div>
+    <div class="legend">
+      <ul class="list-inline">
+        <li class="title-i hidden">Title I school</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#0961ae;float:left">&nbsp;</div>Teacher Investment Index</li>
+        <li><div style="width:12px;height:12px;margin-top:2px;margin-right:4px;background-color:#c2d7eb;float:left">&nbsp;</div>TVAAS composite (1–5)</li>
+      </ul>
+    </div>
+    <div id="chart">
+    </div>
+    <div id="data-source">
+      <p class="text-small">
+        Graphic: <a href="http://metroideas.org" target="_blank">Metro Ideas Project</a><br>
+        Sources: <em>UnifiEd courtesy of Hamilton County Department of Education; Tennessee Department of Education.</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  
+  <script src="graphic.js"></script>
+</body>
+</html>
+

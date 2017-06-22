@@ -1,5 +1,5 @@
 body {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 select {
@@ -16,10 +16,6 @@ select {
   .span-6:last-child {
     margin-right: 0;
   }
-}
-
-.chart {
-  font-size: 12px;
 }
 
 .axis path,
@@ -39,7 +35,7 @@ circle {
 }
 
 circle.tennessee {
-  fill: #6d6e70;
+  fill: #0961ae;
 }
 
 circle.hamilton {

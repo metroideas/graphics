@@ -1,0 +1,24 @@
+body {
+  font-size: 12px;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.x.axis line {
+  /*display: none;*/
+}
+
+.line {
+  fill: none;
+  stroke: #b1b3b5;
+  stroke-width: 1.5px;
+}

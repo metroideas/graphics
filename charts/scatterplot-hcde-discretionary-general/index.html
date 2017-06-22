@@ -1,0 +1,49 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  
+  <title>{{ site.title }}</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+  <!--- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.1/simple_statistics.min.js"></script> -->
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1 class="headline">School discretionary funds and student poverty</h1>
+      <p class="lead tfp-gray">Principals at higher poverty schools tend to have fewer dollars to spend at their discretion.</p>
+    </header>
+
+    <div class="hidden" id="tooltip">
+      <p class="lead" data-item="name"></p>
+      <ul class="list-unstyled">
+        <li>Funds: <span data-item="funding"></span></li>
+        <li>Poverty: <span data-item="poverty"></span></li>
+      </ul>
+    </div>
+    
+    <div id="chart"><img src="fallback.png" alt="Scatterplot of school discretionary funds and student poverty" class="responsive" style="margin:12px 0;"></div>
+
+    <div id="data-source">
+      <p class="text-small tfp-gray">
+        Graphic: <a class="" href="http://metroideas.org" target="_blank">Metro Ideas Project</a><br>
+        Sources: <em>Hamilton County Department of Education and Tennessee Department of Education</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>

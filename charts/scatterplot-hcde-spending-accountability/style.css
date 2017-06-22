@@ -1,0 +1,71 @@
+body {
+  font-size: 12px;
+}
+
+@media (min-width:414px) {
+  .quadrant-label {
+   font-size: 14px;
+  }
+
+  .small-center {
+    text-align: center;
+  }
+}
+
+.axis path,
+.axis line,
+line.axis,
+.box {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis text,
+text.axis {
+  fill: #6d6e70;
+}
+
+.axis path {
+  display: none;
+}
+
+circle.school {
+  fill: #0961ae;
+  fill-opacity: 0.7;
+}
+
+@media (max-width:640px) {
+  .hide-small {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  position: absolute;
+  width: 200px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #6d6e70;
+}
+
+.legend {
+  margin: 2em 0 1.5em;
+}
+
+@media (max-width: 414px) {
+  .legend .grade-select {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+.grade-select label {
+  padding-right: 8px;
+}
+

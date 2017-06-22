@@ -1,0 +1,16 @@
+---
+title: "Average salaries per pupil in Hamilton County, Tennessee"
+date: 2016-03-17 15:30:00 -0400
+layout: post
+related:
+embed_source: "/charts/average-teacher-salary-per-pupil/"
+description: Comparing school personnel salaries from 2008 to 2016.
+---
+
+<div id="chart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url       = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var linechart = new pym.Parent("chart", url, {});
+</script>

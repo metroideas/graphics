@@ -1,0 +1,27 @@
+body {
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis text {
+  font-size: 10px;
+}
+
+.title-i {
+  color: #df2027;
+}
+
+li.hidden {
+  display: none;
+}
+

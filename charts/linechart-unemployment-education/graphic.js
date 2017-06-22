@@ -23,7 +23,7 @@
     legend,
     key,
     keys           = d3.keys(data[0]).filter(function(k) { return k !== "year"; }), // Excludes year
-    margin         = { top: 24, right: 24, bottom: 24, left: 24 },
+    margin         = { top: 24, right: 24, bottom: 24, left: 48 },
     width          = calculateWidth(),
     mobile         = (width <= 512) ? true : false,
     columns        = (mobile) ? 2 : 3,   // legend columns (qty) for mobile and desktop 
@@ -81,8 +81,14 @@
       .attr("transform", "translate(0," + height + ")");
 
     svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .text("Unemployment")
+        .attr("y", -margin.left * .75)
+        .attr("x", -height/2)
+        .attr("text-anchor", "middle")
+        .attr("transform", "rotate(-90)");;
 
     line = d3.svg.line()
       .x(function(d) { return x(+d.year); })

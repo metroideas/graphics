@@ -1,0 +1,16 @@
+---
+title: "School spending comparison to district average"
+date: 2016-04-14 14:30:00 -0400
+layout: post
+related:
+embed_source: "/charts/hcde-spending-compared-to-average/"
+description: Comparison of school spending to the district average of $7,400 per student.
+---
+
+<div id="chart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  new pym.Parent("chart", url, {});
+</script>

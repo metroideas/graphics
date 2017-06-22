@@ -1,5 +1,5 @@
 district,average_daily_attendance,median_income_2014,per_pupil_expenses_ada,graduation_rate_pct,econ_disadvantaged_pct,black_students_pct,white_students_pct,hispanic_students_pct,asian_students_pct,limited_english_proficient_pct
-State of Tennessee,784481,44361,9374.9,0.878,0.579,0.241,0.649,0.085,0.021,0.046
+State of Tennessee,8734,44361,9374.9,0.878,0.579,0.241,0.649,0.085,0.021,0.046
 Anderson County,6089,44199,9535.7,0.97,0.585,0.028,0.949,0.011,0.005,0.002
 Bedford County,7956,40989,7756.2,0.928,0.699,0.112,0.668,0.206,0.008,0.094
 Benton County,2077,34087,9714.2,0.943,0.502,0.039,0.929,0.021,0.008,null

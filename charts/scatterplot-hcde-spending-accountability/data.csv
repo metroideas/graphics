@@ -1,0 +1,81 @@
+name,title,grade,math_difference,english_difference,math,english,average
+Allen Elementary,0,elementary,0.117,0.104,0.764,0.474,6677.08
+Alpine Crest Elementary,1,elementary,0.031,0.037,0.678,0.407,7198.87
+Apison Elementary,0,elementary,0.142,0.23,0.789,0.6,6551.3
+Barger Academy,1,elementary,-0.14,-0.221,0.507,0.149,7577.87
+Battle Academy,1,elementary,0.04,0.13,0.687,0.5,7731.19
+Bess T. Shepherd Elementary,1,elementary,-0.229,-0.195,0.418,0.175,7201.32
+Big Ridge Elementary,0,elementary,0.129,0.314,0.776,0.684,6363.35
+Brainerd High,1,high,-0.154,-0.249,0.335,0.349,9771.83
+Brown Middle,1,middle,-0.154,-0.115,0.331,0.366,6801.25
+Calvin Donaldson,1,elementary,-0.283,-0.097,0.364,0.273,8499.29
+Central High,1,high,-0.131,-0.092,0.358,0.506,7092.87
+CCA,0,middle,0.223,0.278,0.708,0.759,7273.87
+CCA,0,high,0.057,0.349,0.546,0.947,7273.87
+CSAS Upper,0,middle,0.158,0.272,0.643,0.753,6696.02
+CSAS Upper,0,high,0.13,0.253,0.619,0.851,6696.02
+CSAS Lower,0,elementary,0.099,0.17,0.746,0.54,9381.01
+CSLA,0,elementary,0.304,0.337,0.951,0.707,7889.74
+CSLA,0,middle,0.297,0.367,0.782,0.848,7889.74
+Clifton Hills Elementary,1,elementary,-0.339,-0.27,0.308,0.1,6867.36
+Daisy Elementary,1,elementary,0.099,0.081,0.746,0.451,6243.48
+Dalewood Middle,1,middle,-0.285,-0.217,0.2,0.264,8817.62
+Dupont Elementary,1,elementary,-0.116,-0.187,0.531,0.183,6545.91
+East Brainerd Elementary,1,elementary,-0.04,-0.029,0.607,0.341,7101.79
+East Hamilton Middle/High,0,middle,0.194,0.119,0.679,0.6,6712.9
+East Hamilton Middle/High,0,high,0.06,0.19,0.549,0.788,6712.9
+East Lake Academy,1,middle,-0.229,-0.206,0.256,0.275,7771.09
+East Lake Elementary,1,elementary,-0.329,-0.276,0.318,0.094,7160.84
+East Ridge Elementary,1,elementary,-0.23,-0.198,0.417,0.172,6289.45
+East Ridge High,1,high,-0.041,-0.174,0.448,0.424,7369.94
+East Ridge Middle,1,middle,-0.124,-0.063,0.361,0.418,6461.07
+East Side Elementary,1,elementary,-0.054,-0.228,0.593,0.142,7134.41
+Falling Water Elementary,1,elementary,0.042,0.112,0.689,0.482,8283.34
+Ganns Middle Valley Elementary,0,elementary,0.059,-0.003,0.706,0.367,6176.74
+Hardy Elementary,1,elementary,-0.079,-0.037,0.568,0.333,7712.34
+Harrison Elementary,1,elementary,-0.017,-0.016,0.63,0.354,6480.97
+Hillcrest Elementary,1,elementary,-0.027,-0.21,0.62,0.16,8088.44
+Hixson Elementary,1,elementary,-0.042,-0.098,0.605,0.272,9017.54
+Hixson High,1,high,0.036,-0.027,0.525,0.571,7724.48
+Hixson Middle,1,middle,0.013,0.009,0.498,0.49,6760.19
+Hunter Middle,0,middle,0.238,0.097,0.723,0.578,6323.11
+Lakeside Academy,1,elementary,0.043,-0.131,0.69,0.239,7061.35
+Loftis Middle,0,middle,0.222,0.142,0.707,0.623,7732.93
+Lookout Mountain Elementary,0,elementary,0.219,0.33,0.866,0.7,8764.21
+Lookout Valley Elementary,1,elementary,-0.031,0.073,0.616,0.443,7996.22
+Lookout Valley Middle/High,1,middle,-0.225,0.039,0.26,0.52,8963.02
+Lookout Valley Middle/High,1,high,-0.068,0.102,0.421,0.7,8963.02
+McConnell Elementary,0,elementary,0.1,0.057,0.747,0.427,6263.2
+Nolan Elementary,0,elementary,0.253,0.314,0.9,0.684,7025.64
+Normal Park,0,elementary,0.237,0.2,0.884,0.57,7807.69
+Normal Park,0,middle,0.163,0.294,0.648,0.775,7807.69
+North Hamilton Elementary,1,elementary,0.13,-0.005,0.777,0.365,6659.01
+Ooltewah Elementary,0,elementary,0.105,-0.013,0.752,0.357,5707.41
+Ooltewah High,0,high,0.085,-0.007,0.574,0.591,6231.88
+Ooltewah Middle,1,middle,-0.039,-0.008,0.446,0.473,6726.4
+Orchard Knob Elementary,1,elementary,-0.156,-0.226,0.491,0.144,6567.99
+Orchard Knob Middle,1,middle,-0.339,-0.355,0.146,0.126,7669.94
+Red Bank Elementary,1,elementary,-0.019,-0.016,0.628,0.354,6799.55
+Red Bank High,1,high,-0.212,-0.002,0.277,0.596,10847.62
+Red Bank Middle,1,middle,-0.128,-0.123,0.357,0.358,6859.68
+Rivermont Elementary,1,elementary,0.08,0.085,0.727,0.455,11873.8
+Sale Creek Middle/High,0,middle,-0.055,-0.045,0.43,0.436,7051.05
+Sale Creek Middle/High,0,high,0.2,0.156,0.689,0.754,7051.05
+Sequoyah High,1,high,-0.118,-0.283,0.371,0.315,10253.84
+Signal Mountain Middle/High,0,middle,0.207,0.289,0.692,0.77,7099.89
+Signal Mountain Middle/High,0,high,0.251,0.308,0.74,0.906,7099.89
+Snow Hill Elementary,0,elementary,0.073,0.02,0.72,0.39,6584.44
+Soddy Daisy High,0,high,0.241,0.093,0.73,0.691,6850.54
+Soddy Daisy Middle,1,middle,-0.011,-0.054,0.474,0.427,7000.33
+Soddy Elementary,1,elementary,0.065,0.054,0.712,0.424,7986.03
+Spring Creek Elementary,1,elementary,-0.109,-0.163,0.538,0.207,6957.52
+STEM School,0,high,0.078,0.235,0.567,0.833,7593.96
+Howard,1,high,-0.224,-0.341,0.265,0.257,9559.46
+Thrasher Elementary,0,elementary,0.207,0.164,0.854,0.534,6111.77
+Brown Academy,1,elementary,-0.01,-0.029,0.637,0.341,8427.49
+Tyner Academy,1,high,-0.068,-0.241,0.421,0.357,7366.87
+Tyner Middle Academy,1,middle,-0.171,-0.256,0.314,0.225,6944.71
+Wallace A. Smith Elementary,0,elementary,0.112,0.213,0.759,0.583,7141.5
+Westview Elementary,0,elementary,0.143,0.184,0.79,0.554,6463.77
+Wolftever Creek Elementary,1,elementary,-0.111,-0.096,0.536,0.274,7959.96
+Woodmore Elementary,1,elementary,-0.196,-0.095,0.451,0.275,6897.14

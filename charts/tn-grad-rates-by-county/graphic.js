@@ -2,33 +2,33 @@
   var
   data,
   container = document.querySelector("#graphic"),
-  legend    = d3.select(container).select(".legend"),
-  chart     = d3.select(container).select(".chart"),
-  source    = d3.select(container).select(".source")
+  chart     = document.querySelector(".chart")
   ;
 
   
   function drawGraphic(containerWidth) {
-    document.querySelector(".chart").innerHTML = ""; // Removes existing svg on resize
-    document.querySelector("#graphic img").remove(); // Removes fallback.png
+    chart.innerHTML = ""; // Removes existing svg on resize
 
     var
     svg,
     x,
     y,
+    r,
     xScale,
     yScale,
     xLabel,
     ticks,
     tickValues,
+    legend     = d3.select(".legend"),
     dropdown   = d3.select("#dropdown-menu"),
-    margin     = { top: 32, right: 48, bottom: 48, left: 48 },
+    margin     = { top: 8, right: 48, bottom: 48, left: 48 },
     width      = calculateWidth(),
     mobile     = (width <= 320) ? true : false,
     ratio      = (mobile) ? { width: 1, height: 2 } : { width: 1, height: 1 }, // Aspect ratio
     height     = calculateHeight(),
     keys       = [
       { name: "Per pupil expenditure", key: "perStudentCost" },
+      { name: "Attendance", key: "attendance" },
       { name: "Median income", key: "medianIncome" },
       { name: "Economically disadvantaged", key: "econDisadvantage" },
       { name: "Black students", key: "black" },
@@ -57,7 +57,8 @@
     // ---------------------------------------------------------------------------
     legend.style({
       "margin-left": (mobile) ? "16px" : margin.left + "px",
-      "margin-right": (mobile) ? "16px" : margin.right + "px"
+      "margin-right": (mobile) ? "16px" : margin.right + "px",
+      "margin-bottom": "16px"
     });
 
     dropdown.selectAll("option")
@@ -69,7 +70,7 @@
 
     // Data source
     // ---------------------------------------------------------------------------
-    source.style({
+    d3.select(".data-source").style({
       "margin-left": (mobile) ? "16px" : margin.left + "px",
       "margin-right": (mobile) ? "16px" : margin.right + "px"
     });
@@ -77,12 +78,17 @@
     // SVG
     // ---------------------------------------------------------------------------
     x = d3.scale.linear()
-      // .domain([7000,12000])
       .range([0, width]);
 
     y = d3.scale.linear()
       .domain([0.65, 1.0])
       .range([height, 0]);
+
+    r = d3.scale.linear()
+      .range([1, 20])
+      .domain(d3.extent(data, function(d) { return d.attendance; }));
+
+    console.log(r.domain());
 
     // x axis
     ticks = (mobile) ? 4 : null
@@ -105,7 +111,7 @@
       .ticks(null, "%")
       .tickValues(tickValues);
 
-    svg = chart.append("svg")
+    svg = d3.select(chart).append("svg")
         .attr("width", width + marginWidth())
         .attr("height", height + marginHeight())
       .append("g")
@@ -142,27 +148,21 @@
       .enter().append("circle")
         .attr("class", function(d) { return d.id.toLowerCase(); })
         .attr("cy", function(d) { return y(d.graduationRate); })
-        .attr("r", function(d) {
-          if (d.id == "Tennessee") {
-            return 15;
-          } else if (d.attendance > 25000) {
-            return 8;
-          } else {
-            return 3;
-          }
-        });
+        .attr("r", function(d) { return r(d.attendance); });
 
     // Point labels for large districts
     if (!mobile) {
       svg.selectAll("text.district-label")
-          .data(data.filter(function(d) { return d.attendance >= 25000; }))
+          .data(data.filter(function(d) { return d.id == "Tennessee" || d.attendance >= 25000; }))
         .enter().append("text")
           .attr("class", "district-label")
           .attr("y", function(d) { return y(d.graduationRate); })
           .attr("alignment-baseline", "central")
-          .text(function(d) { if (d.attendance > 25000) return d.id; }); 
+          .text(function(d) { return d.id; }); 
     }
-     
+
+    // Updates
+    // --------------------------------------------------------------------------- 
 
     function updateGraphic(selection) {
       var
@@ -175,10 +175,22 @@
       // x scale
       x.domain(d3.extent(data, function(d) { return d[option]; }));
       
+      function tickSymbol(option) {
+        switch (option) {
+          case "medianIncome":
+          case "perStudentCost":
+            return "$";
+          case "attendance":
+            return ;
+          default:
+            return "%";
+        }
+      }
+
       // x axis
       xAxis.scale(x).ticks(
         (mobile) ? 4 : 6,
-        (option == "medianIncome" || option == "perStudentCost") ? "$" : "%"
+        tickSymbol(option)
       );
 
       d3.select(".x.axis")
@@ -225,7 +237,24 @@
         .attr("x", function(d) { return x(d[option]); })
         .attr("text-anchor", function(d) { return labelShift(d) ? "end" : "start"; })
         .attr("dx", function(d) {
-          var dx = (d.id == "Tennessee") ? 16 : 9
+          var dx;
+          switch (d.id) {
+            case "Tennessee":
+              dx = 5;
+              break;
+            case "Davidson":
+              dx = 16;
+              break;
+            case "Shelby":
+              dx = 22;
+              break;
+            case "Knox":
+              dx = 12;
+              break;
+            default:
+              dx = 9;
+              break;
+          }
           return labelShift(d) ? -dx : dx;
         });
       }

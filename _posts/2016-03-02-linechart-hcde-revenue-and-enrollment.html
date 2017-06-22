@@ -1,0 +1,16 @@
+---
+title: "Linechart: HCDE revenue and enrollment"
+date: 2016-03-02 13:10:00 -0400
+layout: post
+related:
+embed_source: "/charts/linechart-hcde-cafr/"
+description: Historical revenue and and student enrollment (average daily membership).
+---
+
+<div id="linechart"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+<script>
+  var url       = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var linechart = new pym.Parent("linechart", url, {});
+</script>

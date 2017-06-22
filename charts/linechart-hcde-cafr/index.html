@@ -1,0 +1,62 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="graphic">
+    
+    <div class="header">
+      <h2 class="headline">Hamilton County school revenues (1998 to 2015)</h2>
+
+      <div class="legend">
+        <svg>
+          <g class="key-group">
+            <line x1="0" x2="28" y1="-5" y2="-5" stroke="#0060ae" stroke-width="1.5px" />
+            <text x="38">Local (total)</text>
+          </g>
+          <g class="key-group">
+            <line x1="0" x2="28" y1="-5" y2="-5" stroke="#0060ae" stroke-dasharray="5,5" stroke-width="1.5px" />
+            <text x="38">Property tax</text>
+          </g>
+          <g class="key-group">
+            <line x1="0" x2="28" y1="-5" y2="-5" stroke="#0060ae" stroke-dasharray="0.9" stroke-width="1.5px" />
+            <text x="38">Sales tax</text>
+          </g>
+          <g class="key-group">
+            <line x1="0" x2="28" y1="-5" y2="-5" stroke="#8dbd45" stroke-width="1.5px" />
+            <text x="38">State</text>
+          </g>
+          <g class="key-group">
+            <line x1="0" x2="28" y1="-5" y2="-5" stroke="#df2027" stroke-width="1.5px" />
+            <text x="38">Federal</text>
+          </g>
+        </svg>
+      </div>
+
+      <button id="adjustment" style="margin-top:1em;text-transform:none;">Adjust for inflation</button>
+    </div>
+
+    <div class="chart">
+      <img src="fallback.png" alt="" class="responsive">
+    </div>
+
+    <div class="data-source">
+      <p>
+        Graphic: <a href="http://metroideas.org" target="_blank">Metro Ideas Project</a><br>
+        Sources: <em>Hamilton County comprehensive annual financial reports, Hamilton County auditor's office and Tennessee Department of Education's annual statistical reports.</em></p>
+    </div>
+  </div>
+
+  <script src="graphic.js"></script>
+</body>
+</html>

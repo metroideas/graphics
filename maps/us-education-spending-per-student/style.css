@@ -1,0 +1,44 @@
+body {
+  font-size: 12px;
+}
+
+path.state {
+  stroke: white;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #dcddde;
+  shape-rendering: crispEdges;
+}
+
+.tick {
+  font-size: 10px;
+}
+
+.y.axis path {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#tooltip {
+  position: absolute;
+  width: 150px;
+  padding: 0.5em;
+  border-radius: 3px;
+  border: 1px solid #dcddde;
+  background-color: white;
+}
+
+@media (min-width: 600px) {
+  .small-center {
+    text-align: center;
+  }
+}
+
+
+

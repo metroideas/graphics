@@ -1,0 +1,37 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="copy small-center">
+      <h1 class="headline">Graphic title</h1>
+      <p class="lead">Copy _starter folder to start a new chart.</p>
+
+      <div class="legend"><!-- Legend stuff --></div>
+    </div>
+    
+    <div id="chart"><!-- <img src="fallback.png" alt="Fallback image" class="responsive"> --></div>
+
+    <div id="data-source">
+      <p class="text-small">
+        Graphic: <a href="http://metroideas.org" target="_blank">Metro Ideas Project</a><br>
+        Sources: <em>Data sources</em>
+      </p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  
+  <script src="graphic.js"></script>
+</body>
+</html>

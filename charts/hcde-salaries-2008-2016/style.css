@@ -1,0 +1,32 @@
+body {
+  font-size: 12px;
+}
+
+line {
+  shape-rendering: crispEdges;
+}
+
+line.divider {
+  stroke-width: 1px;
+  stroke: #bcbec0;
+}
+
+text.axis {
+  fill: #6d6e70;
+  font-size: 10px;
+}
+
+.title-i {
+  color: #df2027;
+  fill: #df2027;
+}
+
+#chart .row,
+#chart .span-6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
