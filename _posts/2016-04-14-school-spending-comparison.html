@@ -11,6 +11,6 @@ description: Comparison of school spending to the district average of $7,400 per
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pym/0.4.5/pym.min.js"></script>
 <script>
-  var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+  var url   = "{{ page.embed_source | absolute_url }}";
   new pym.Parent("chart", url, {});
 </script>

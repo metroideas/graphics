@@ -13,7 +13,7 @@ description: "Choropleth showing voter turnout in Chattanooga's 2017 city electi
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/style.min.css" | absolute_url }}">
 </head>
 <body>
   {% include navbar.html %}
@@ -30,7 +30,7 @@ description: "Choropleth showing voter turnout in Chattanooga's 2017 city electi
 
     <script src="https://pym.nprapps.org/pym.v1.min.js"></script>
     <script>
-      var url   = "{{ page.embed_source | prepend: site.baseurl | prepend: site.url }}";
+      var url   = "{{ page.embed_source | absolute_url }}";
       new pym.Parent("map", url, {});
     </script>
 
